@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B189B5SZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5B189B5SZW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5B189B5SZW');
-</script>
-  
+    gtag('config', 'G-5B189B5SZW');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ultimate Streamer iOS Application</title>
-
+  
   <!-- Standard favicon -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -25,78 +23,68 @@
 <!-- Android + PWA icons -->
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1e1e1e;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    a.button {
-      display: inline-block;
-      margin: 1rem 0;
-      padding: 0.75rem 1.5rem;
-      background-color: #007aff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+    
+  <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <header>
-    <img src="app-icon-512.png" alt="Ultimate Streamer App Icon" width="128" height="128" style="margin-top: 0.5rem; margin-bottom: 1rem; border-radius: 24px;">
+  <header class="hero">
+    <img src="assets/app-icon-large@3x.png" alt="Ultimate Streamer App Icon" class="app-icon"/>
     <h1>Ultimate Streamer</h1>
-    <p>Stream your sports events like a pro. Instantly. From your phone.</p>
+    <p class="subtitle">
+      A powerful live-streaming app built for sports creators.<br/>
+      Broadcast with pro-level overlays, instant replays & ads — right from your iPhone.
+    </p>
+    <p class="subtitle">
+      Release — SOON!<br />Become a β-tester: <a href="feedback.html">apply via email</a>.
+    </p>
+    <!--
+    <a href="https://apps.apple.com/app/id6745222525" class="app-store-button">
+      <img src="assets/app-store-badge@3x.png" alt="Download on App Store"/>
+    </a>
+    -->
+    <p class="note">Requires iOS 15.0 or later</p>
+    <img src="assets/app-preview@3x.png" alt="App Screenshot" class="phone-preview"/>
   </header>
 
-  <main>
-    <p><strong>Ultimate Streamer</strong> is a simple and powerful app for live streaming sports games with score overlays, replays, and more.</p>
+  <section class="features">
+    <div class="feature">
+      <h3>🎯 Smart Score Overlays</h3>
+      <p>Make your sports stream clear and professional. Show scores, teams, and timers directly on screen — perfect for any match or tournament.</p>
+    </div>
+    <div class="feature">
+      <h3>⚡ Instant Replay</h3>
+      <p>Capture highlight-worthy plays with one tap. Replays appear instantly in the stream so your audience never misses a thing.</p>
+    </div>
+    <div class="feature">
+      <h3>💰 Monetize Your Broadcast</h3>
+      <p>Add your sponsor’s logo or team badge. Display ads or a watermark — fully customisable, perfect for monetisation and team identity.</p>
+    </div>
+    <div class="feature">
+      <h3>🔋 Battery & Network Indicators</h3>
+      <p>Stay in control with built-in battery and connection indicators — so you always know when to keep streaming or take a break.</p>
+    </div>
+  </section>
 
-    <section style="margin-top: 3rem;">
-      <h2>📺 Example Streams</h2>
-      <p>Here are two real games streamed using the Ultimate Streamer app:</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem;">
-        <iframe width="360" height="203" src="https://www.youtube.com/embed/DbKnLuctm6w" 
-                title="Ultimate Game 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-        <iframe width="360" height="203" src="https://www.youtube.com/embed/W1y0ptpzYWU" 
-                title="Ultimate Game 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-      </div>
-    </section>
-    <br />
-    
-    <a class="button" href="https://apps.apple.com/app/id6745222525">Download on the App Store</a>
-    <br/>
-    <a href="privacy-policy.html">Privacy Policy</a> · <a href="feedback.html">Contact Us</a>
-  </main>
+  <section class="samples">
+    <h2>Sample Streams</h2>
+    <p>Here are two real games streamed using the Ultimate Streamer app:</p>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/DbKnLuctm6w"
+          title="Ultimate Game 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/W1y0ptpzYWU"
+          title="Ultimate Game 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+    </div>
+  </section>
 
   <footer>
-    © 2025 Dmytro Babych
+    <div class="footer-links">
+      <a href="feedback.html">Contact Us</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+    <p>Made with ❤️ for sports creators.</p>
+    <p>© 2025 Dmytro Babych</p>
   </footer>
-
 </body>
 </html>
