@@ -117,6 +117,11 @@ footer {
   font-weight: 300;
 }
 
+footer a {
+  color: #8D4D4D;
+  text-decoration: none;
+}
+
 .footer-links {
   margin-bottom: 10px;
 }
