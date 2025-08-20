@@ -25,6 +25,67 @@
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
     
   <link href="styles.css" rel="stylesheet"/>
+
+<script>
+(() => {
+  self.addEventListener('DOMContentLoaded', async () => {
+    try {
+      // 1) Кеш у localStorage, щоб не стукатись в API кожного разу
+      let cc = self.localStorage.getItem('geo_cc');
+
+      // 2) Якщо ще не знаємо країну — звертаємось до публічного GeoIP
+      // Варіант без ключа (є ліміти, зате просто). Можна замінити на інший сервіс з API-ключем.
+      if (!cc) {
+        const controller = new self.AbortController();
+        const timeoutId = self.setTimeout(() => controller.abort(), 2500); // таймаут 2.5с на випадок блокування
+        let resp, data;
+
+        try {
+          resp = await self.fetch('https://ipwho.is/?fields=country_code', {
+            signal: controller.signal,
+            headers: { 'Accept': 'application/json' },
+            cache: 'no-store'
+          });
+          self.clearTimeout(timeoutId);
+          if (resp && resp.ok) {
+            data = await resp.json();
+            cc = data && data.country_code ? String(data.country_code).toUpperCase() : '';
+          }
+        } catch (_) {
+          // Замовкло (adblock, мережа, CORS тощо) — підемо у fallback
+        }
+      }
+
+      // 3) Fallback: пробуємо вгадати за часовим поясом
+      if (!cc) {
+        const tz = (self.Intl && self.Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+        if (tz.includes('Europe/Kyiv')) { cc = 'UA'; }
+        else if (tz.includes('Pacific/Auckland')) { cc = 'NZ'; }
+      }
+
+      // 4) Нормалізація та кешування
+      cc = cc || 'OTHER';
+      self.localStorage.setItem('geo_cc', cc);
+
+      // 5) Показуємо тільки релевантний блок; решту видаляємо, щоб не мигтіло
+      self.document.querySelectorAll('[data-geo]').forEach((el) => {
+        const want = el.getAttribute('data-geo');
+        const match = (want === cc) || (want === 'OTHER' && cc !== 'UA' && cc !== 'NZ');
+        if (match) {
+          el.hidden = false;
+        } else {
+          el.remove();
+        }
+      });
+    } catch (e) {
+      // Якщо щось пішло не так — покажемо "OTHER"
+      const fallback = self.document.querySelector('[data-geo="OTHER"]');
+      if (fallback) { fallback.hidden = false; }
+    }
+  });
+})();
+</script>
+    
 </head>
 <body>
   <header class="hero">
@@ -34,15 +95,30 @@
       A powerful live-streaming app built for sports creators.<br/>
       Broadcast with pro-level overlays, instant replays & ads — right from your iPhone.
     </p>
-    <p class="subtitle">
-      Release — SOON!<br />Become a β-tester: <a href="feedback.html">apply via email</a>.
-    </p>
-    <!--
-    <a href="https://apps.apple.com/app/id6745222525" class="app-store-button">
-      <img src="assets/app-store-badge@3x.png" alt="Download on App Store"/>
-    </a>
-    -->
-    <p class="note">Requires iOS 15.0 or later</p>
+    <section data-geo="UA" hidden>
+        <a href="https://apps.apple.com/us/app/ultimate-sports-streamer/id6745222525" class="app-store-button">
+          <img src="assets/app-store-badge@3x.png" alt="Download on App Store"/>
+        </a>
+    </section>
+    <section data-geo="NZ" hidden>
+        <a href="https://apps.apple.com/us/app/ultimate-sports-streamer/id6745222525" class="app-store-button">
+          <img src="assets/app-store-badge@3x.png" alt="Download on App Store"/>
+        </a>
+    </section>
+    <section data-geo="OTHER" hidden>
+        <p class="subtitle">
+          Release — SOON!<br />Become a β-tester: <a href="feedback.html">apply via email</a>.
+        </p>
+    </section>
+    <noscript>
+      <!-- Фолбек, якщо JS вимкнено -->
+      <section>
+        <a href="https://apps.apple.com/us/app/ultimate-sports-streamer/id6745222525" class="app-store-button">
+          <img src="assets/app-store-badge@3x.png" alt="Download on App Store"/>
+        </a>
+      </section>
+    </noscript>
+    <p class="note">Available in Ukraine and New Zealand only at the moment.<br />Requires iOS 15.0 or later</p>
     <img src="assets/app-preview@3x.png" srcset="assets/app-preview@1x.png 1x, assets/app-preview@2x.png 2x, assets/app-preview@3x.png 3x" alt="App Screenshot" class="phone-preview"/>
   </header>
 
