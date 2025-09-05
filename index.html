@@ -219,17 +219,65 @@
     </div>
   </section>
 
-<section class="faq">
-  <h2>FAQ: Sports Live Streaming from iPhone</h2>
+<section class="faq" id="faq">
+  <h2 class="faq-title">FAQ: Sports Live Streaming from iPhone</h2>
 
-  <h3>Can I stream to YouTube from iPhone?</h3>
-  <p>Yes. Ultimate Streamer lets you go live to YouTube with overlays and replays.</p>
+  <!-- data-accordion="single" => відкрита тільки одна секція одночасно -->
+  <div class="faq-list" data-accordion="single">
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
+        Is the app free?
+      </button>
+      <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true">
+        <p>Ultimate Streamer is free to download. Advanced features are available with a subscription or one-time credits.</p>
+      </div>
+    </div>
 
-  <h3>Does the app include a scoreboard overlay?</h3>
-  <p>Yes. You can show scores, teams and timers during football, basketball, ultimate frisbee and other sports.</p>
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
+        Can I stream to YouTube from iPhone?
+      </button>
+      <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true">
+        <p>Yes. Ultimate Streamer lets you go live to YouTube with overlays and replays.</p>
+      </div>
+    </div>
 
-  <h3>Is instant replay supported on iPhone?</h3>
-  <p>Yes. Capture highlights with one tap and send instant replays to your live stream.</p>
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
+        Does the app include a scoreboard overlay?
+      </button>
+      <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true">
+        <p>Yes. You can show scores, teams and timers during football, basketball, ultimate frisbee and other sports.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
+        Is instant replay supported on iPhone?
+      </button>
+      <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true">
+        <p>Yes. Capture highlights with one tap and send instant replays to your live stream.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
+        Are my sensitive data transmitted to third parties?
+      </button>
+      <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true">
+        <p>We don’t require registration, and we don’t upload your private data to our servers. See our Privacy Policy for details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">
+        Do you offer support?
+      </button>
+      <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" aria-hidden="true">
+        <p>Yes. Contact us via email on the <a href="feedback.html">Contact Us</a> page.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script type="application/ld+json">
@@ -254,6 +302,72 @@
     }
   ]
 }
+</script>
+
+<script>
+(() => {
+  self.addEventListener('DOMContentLoaded', () => {
+    const root = self.document.querySelector('.faq-list');
+    if (!root) { return; }
+
+    const single = root.getAttribute('data-accordion') === 'single';
+    const items = self.Array.from(root.querySelectorAll('.faq-item'));
+
+    const closeItem = (item) => {
+      const btn = item.querySelector('.faq-q');
+      const panel = item.querySelector('.faq-a');
+      if (!btn || !panel) { return; }
+      item.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      panel.style.height = '0px';
+      panel.setAttribute('aria-hidden', 'true');
+    };
+
+    const openItem = (item) => {
+      const btn = item.querySelector('.faq-q');
+      const panel = item.querySelector('.faq-a');
+      if (!btn || !panel) { return; }
+      if (single) {
+        items.forEach((it) => { if (it !== item) { closeItem(it); } });
+      }
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      panel.style.height = panel.scrollHeight + 'px';
+      panel.setAttribute('aria-hidden', 'false');
+    };
+
+    items.forEach((item) => {
+      const btn = item.querySelector('.faq-q');
+      const panel = item.querySelector('.faq-a');
+      if (!btn || !panel) { return; }
+
+      /* ініціалізація */
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+      panel.style.height = '0px';
+
+      const toggle = () => {
+        const isOpen = item.classList.contains('open');
+        if (isOpen) { closeItem(item); } else { openItem(item); }
+      };
+
+      btn.addEventListener('click', toggle);
+      btn.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault();
+          toggle();
+        }
+      });
+    });
+
+    /* відкриття по якорю, якщо треба: /#faq-q-2 */
+    const hash = self.location.hash.slice(1);
+    if (hash) {
+      const btn = self.document.getElementById(hash);
+      if (btn && btn.classList.contains('faq-q')) { btn.click(); }
+    }
+  });
+})();
 </script>
     
   <footer>
