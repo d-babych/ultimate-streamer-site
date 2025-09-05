@@ -131,3 +131,75 @@ footer a {
   color: #8D4D4D;
   text-decoration: none;
 }
+
+/* FAQ */
+.faq {
+  /*background: #FFF2A8;*/          /* теплий жовтий як на прикладі */
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin: 40px auto;
+  max-width: 960px;
+}
+
+.faq-title {
+  margin: 0 0 12px;
+  text-align: center;            /* заголовок по центру, як на скріні */
+}
+
+.faq-list {
+  margin-top: 12px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;              /* ліве вирівнювання пунктів */
+  background: transparent;
+  border: 0;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-q:focus-visible {
+  outline: 2px solid rgba(0,0,0,.5);
+  outline-offset: 2px;
+}
+
+/* Плюс/ікс справа */
+.faq-q::after {
+  content: '+';
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.faq-item.open .faq-q::after {
+  content: '×';
+}
+
+/* Панель відповіді з анімацією висоти */
+.faq-a {
+  height: 0;
+  overflow: hidden;
+  transition: height .25s ease;
+  will-change: height;
+}
+.faq-item.open .faq-a {
+  /* висоту виставляємо у JS для плавного розгортання */
+}
+
+.faq-a p {
+  margin: 0 0 16px;
+  color: #2b2b2b;
+}
+
+/* Менше руху — менше анімацій */
+@media (prefers-reduced-motion: reduce) {
+  .faq-a { transition: none; }
+}
