@@ -85,7 +85,7 @@
       let cc = self.localStorage.getItem('geo_cc');
 
       // Список країн, де показуємо кнопку App Store
-      const ALLOWED = new self.Set(['AU','NZ','CA','UA','DK','SE','NO','NL']);
+      const ALLOWED = new self.Set(['AU','NZ','CA','UA','DK','SE','NO','NL','IE','ZA']);
 
       // Спроба визначити країну через GeoIP
       if (!cc) {
@@ -117,6 +117,8 @@
         else if (tz.includes('Europe/Stockholm')) { cc = 'SE'; }
         else if (tz.includes('Europe/Oslo')) { cc = 'NO'; }
         else if (tz.includes('Europe/Amsterdam')) { cc = 'NL'; }
+        else if (tz.includes('Europe/Dublin')) { cc = 'IE'; }
+        else if (tz.includes('Africa/Johannesburg')) { cc = 'ZA'; }
         // Канадські часові пояси
         else if (
           tz.includes('America/Toronto') || tz.includes('America/Vancouver') ||
@@ -181,7 +183,7 @@
       </section>
     </noscript>
     <p class="note">
-      Available in: Australia, New Zealand, Canada, Ukraine, Denmark, Sweden, Norway, Netherlands.<br />
+      Available in: Australia, New Zealand, Canada, Ukraine, Denmark, Sweden, Norway, Netherlands, Ireland, South Africa.<br />
       Requires iOS 15.0 or later
     </p>
     <img src="assets/app-preview@3x.png" srcset="assets/app-preview@1x.png 1x, assets/app-preview@2x.png 2x, assets/app-preview@3x.png 3x" alt="Sports live streaming app with overlays, scoreboards and instant replays on iPhone" class="phone-preview" loading="lazy" />
