@@ -85,7 +85,12 @@
       let cc = self.localStorage.getItem('geo_cc');
 
       // Список країн, де показуємо кнопку App Store
-      const ALLOWED = new self.Set(['AU','NZ','CA','UA','DK','SE','NO','NL','IE','ZA']);
+      const ALLOWED = new self.Set([
+        'AU','NZ','CA','UA','DK','SE','NO','NL','IE','ZA',
+        // нові країни:
+        'SA','PH','EG','PL','AR','AE','SG','CZ','RO','HU',
+        'KZ','SK','BG','LT','SI','LV','EE'
+      ]);
 
       // Спроба визначити країну через GeoIP
       if (!cc) {
@@ -128,6 +133,24 @@
           tz.includes('America/Whitehorse') || tz.includes('America/Yellowknife') ||
           tz.includes('America/Iqaluit')
         ) { cc = 'CA'; }
+        // --- нові країни: fallback за таймзоною ---
+        else if (tz.includes('Asia/Riyadh')) { cc = 'SA'; }             // Саудівська Аравія
+        else if (tz.includes('Asia/Manila')) { cc = 'PH'; }             // Філіппіни
+        else if (tz.includes('Africa/Cairo')) { cc = 'EG'; }            // Єгипет
+        else if (tz.includes('Europe/Warsaw')) { cc = 'PL'; }           // Польща
+        else if (tz.includes('America/Argentina/')) { cc = 'AR'; }      // Аргентина
+        else if (tz.includes('Asia/Dubai')) { cc = 'AE'; }              // ОАЕ
+        else if (tz.includes('Asia/Singapore')) { cc = 'SG'; }          // Сінґапур
+        else if (tz.includes('Europe/Prague')) { cc = 'CZ'; }           // Чехія
+        else if (tz.includes('Europe/Bucharest')) { cc = 'RO'; }        // Румунія
+        else if (tz.includes('Europe/Budapest')) { cc = 'HU'; }         // Угорщина
+        else if (tz.includes('Asia/Almaty') || tz.includes('Asia/Aqtau') || tz.includes('Asia/Aqtobe') || tz.includes('Asia/Atyrau') || tz.includes('Asia/Oral')) { cc = 'KZ'; } // Казахстан
+        else if (tz.includes('Europe/Bratislava')) { cc = 'SK'; }       // Словаччина
+        else if (tz.includes('Europe/Sofia')) { cc = 'BG'; }            // Болгарія
+        else if (tz.includes('Europe/Vilnius')) { cc = 'LT'; }          // Литва
+        else if (tz.includes('Europe/Ljubljana')) { cc = 'SI'; }        // Словенія
+        else if (tz.includes('Europe/Riga')) { cc = 'LV'; }             // Латвія
+        else if (tz.includes('Europe/Tallinn')) { cc = 'EE'; }          // Естонія
       }
 
       // Нормалізація + кеш
@@ -183,7 +206,7 @@
       </section>
     </noscript>
     <p class="note">
-      Available in: Australia, New Zealand, Canada, Ukraine, Denmark, Sweden, Norway, Netherlands, Ireland, South Africa.<br />
+      Available in: Australia, New Zealand, Canada, Ukraine, Denmark, Sweden, Norway, Netherlands, Ireland, South Africa, Saudi Arabia, Philippines, Egypt, Poland, Argentina, United Arab Emirates, Singapore, Czechia, Romania, Hungary, Kazakhstan, Slovakia, Bulgaria, Lithuania, Slovenia, Latvia, Estonia.<br />
       Requires iOS 15.0 or later
     </p>
     <img src="assets/app-preview@3x.png" srcset="assets/app-preview@1x.png 1x, assets/app-preview@2x.png 2x, assets/app-preview@3x.png 3x" alt="Sports live streaming app with overlays, scoreboards and instant replays on iPhone" class="phone-preview" loading="lazy" />
