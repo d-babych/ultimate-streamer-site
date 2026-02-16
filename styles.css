@@ -538,3 +538,46 @@ footer a {
     font-size: 32px;
   }
 }
+
+/* === Feature split: PiP variant (text left, image right) === */
+.feature-split--pip .feature-split__card {
+  grid-template-columns: 1fr 1fr; /* як у базі, лишаємо */
+  min-height: 480px;
+}
+
+/* Для PiP блоку картинка справа: робимо паддінги "рамки" як на макеті */
+.feature-split--pip .feature-split__media {
+  position: relative;
+  padding: 0px 48px 0px 0;   /* top, right, bottom, left */
+  overflow: hidden;
+}
+
+/*
+  Важливо: у тебе зараз .feature-split__img absolute + inset:0,
+  це "прилипає" до країв і не дає фіксованих відступів.
+  Для PiP варіанту робимо нормальний flow: width 100%, height auto.
+*/
+.feature-split--pip .feature-split__img {
+  position: relative;
+  /* інсет з урахуванням padding-а: робимо руками */
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0;
+
+  width: auto;
+  height: 100%;
+
+  object-fit: cover;         /* заповнює висоту, кроп якщо треба */
+  object-position: left center; /* фокус зліва => обрізання справа */
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* На вузьких екранах (коли 2fr/3fr) — трохи інші відступи, щоб не з’їдати ширину */
+@media (max-width: 640px) {
+  .feature-split--pip .feature-split__media {
+    padding: 0 20px 0 0;
+  }
+}
