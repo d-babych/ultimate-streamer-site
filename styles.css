@@ -687,3 +687,77 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* === Trusted by teams === */
+
+.trusted {
+  margin: 42px 0 0;
+  width: 100%;
+  padding: 42px 0;
+  background: rgba(89,53,0,0.08); /* темніше тло, як на скріні */
+  text-align: center;
+}
+
+.trusted__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.trusted__title {
+  margin: 0 0 20px;
+  font-size: 48px;    /* Trusted... */
+  font-weight: 800;   /* Heavy */
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #000;
+}
+
+.trusted__subtitle {
+  margin: 0 0 48px;
+  font-size: 21px;    /* Coaches... */
+  font-weight: 400;   /* Regular */
+  line-height: 1.2;
+  color: #000;
+}
+
+.trusted__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+.trusted__item {
+  padding: 0 10px 0 20px;
+}
+
+.trusted__author {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;   /* bold */
+  line-height: 1.33;
+  color: #4c4c4c;
+}
+
+.trusted__quote {
+  margin: 0;
+  font-size: 18px;    /* цитати */
+  font-weight: 400;   /* regular */
+  line-height: 1.33;
+  color: #4c4c4c;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .trusted__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .trusted__quote {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
