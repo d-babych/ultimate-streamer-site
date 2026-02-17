@@ -83,25 +83,17 @@
     try {
       // === Кеш країни ===
       let cc = self.localStorage.getItem('geo_cc');
-
+      // Нормалізуємо старий кеш: тепер блокуємо ТІЛЬКИ BY та RU.
+      // Будь-яка інша країна => OTHER (тобто не заблокована).
+      if (cc && cc !== 'BY' && cc !== 'RU') {
+        cc = 'OTHER';
+        self.localStorage.setItem('geo_cc', cc);
+      }
+      
       // === Список країн, де додаток НЕДОСТУПНИЙ ===
       const BLOCKED = new self.Set([
-        'AT', // Austria
         'BY', // Belarus
-        'BE', // Belgium
-        'CN', // China mainland
-        'FI', // Finland
-        'FR', // France
-        'DE', // Germany
-        'IT', // Italy
-        'JP', // Japan
-        'LU', // Luxembourg
-        'MT', // Malta
-        'RU', // Russia
-        'ES', // Spain
-        'CH', // Switzerland
-        'GB', // United Kingdom
-        'US'  // United States
+        'RU' // Russia
       ]);
 
       // === Спроба визначити країну через GeoIP ===
@@ -130,33 +122,9 @@
         const tz = (self.Intl && self.Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
 
         // Білорусь
-        if (tz.includes('Europe/Minsk')) { cc = 'BY'; }
-        // Австрія
-        else if (tz.includes('Europe/Vienna')) { cc = 'AT'; }
-        // Бельгія
-        else if (tz.includes('Europe/Brussels')) { cc = 'BE'; }
-        // Фінляндія
-        else if (tz.includes('Europe/Helsinki')) { cc = 'FI'; }
-        // Франція
-        else if (tz.includes('Europe/Paris')) { cc = 'FR'; }
-        // Німеччина
-        else if (tz.includes('Europe/Berlin')) { cc = 'DE'; }
-        // Італія
-        else if (tz.includes('Europe/Rome')) { cc = 'IT'; }
-        // Люксембург
-        else if (tz.includes('Europe/Luxembourg')) { cc = 'LU'; }
-        // Мальта
-        else if (tz.includes('Europe/Malta')) { cc = 'MT'; }
-        // Іспанія (материк + Канари)
-        else if (tz.includes('Europe/Madrid') || tz.includes('Atlantic/Canary')) { cc = 'ES'; }
-        // Швейцарія
-        else if (tz.includes('Europe/Zurich')) { cc = 'CH'; }
-        // Китай (mainland)
-        else if (tz.includes('Asia/Shanghai') || tz.includes('Asia/Urumqi')) { cc = 'CN'; }
-        // Японія
-        else if (tz.includes('Asia/Tokyo')) { cc = 'JP'; }
-        // Велика Британія
-        else if (tz.includes('Europe/London')) { cc = 'GB'; }
+        if (tz.includes('Europe/Minsk')) {
+          cc = 'BY';
+        }
         // Росія (основні часові пояси)
         else if (
           tz.includes('Europe/Moscow') ||
@@ -178,14 +146,12 @@
           tz.includes('Asia/Srednekolymsk') ||
           tz.includes('Asia/Kamchatka') ||
           tz.includes('Asia/Anadyr')
-        ) { cc = 'RU'; }
-
-        // ВАЖЛИВО: ми свідомо НЕ мапимо таймзони США на 'US',
-        // щоб не переплутати з Канадою й іншими країнами.
-        // Якщо GeoIP не спрацював і таймзона не у списку вище —
-        // краще показати кнопку завантаження, ніж сказати, що додатку "нема".
+        ) {
+          cc = 'RU';
+        }
+        // Якщо не впізнали — залишаємо cc порожнім, нижче стане OTHER
       }
-
+      
       // === Нормалізація + кеш ===
       // Якщо країну так і не визначили — вважаємо, що це "OTHER" (тобто не заблокована).
       cc = cc || 'OTHER';
