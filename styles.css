@@ -761,3 +761,209 @@ footer a {
     margin: 0 auto;
   }
 }
+
+
+
+/* === Internal page layout (1024..1280) === */
+.page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  text-align: left; /* внутрішні сторінки зазвичай читабельніші ліворуч */
+}
+
+/* “тіло має розтягуватись до 1280, але не вужче ніж 1024” */
+.page-article {
+  width: 100%;
+  max-width: 1000px;
+  margin: 110px auto 0; /* місце під sticky nav */
+}
+
+/* Mobile fallback: не ламаємо мобільний, але desktop тримає 1024..1280 */
+@media (max-width: 1040px) {
+  .page-article {
+    width: 100%;
+    margin-top: 98px;
+  }
+}
+
+.page-article__header {
+  margin: 0 0 18px;
+}
+
+.page-article__title {
+  width: 75%;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #000;
+}
+
+@media (max-width: 560px) {
+  .page-article__title {
+    width: 100%;
+    font-size: 34px;
+  }
+}
+
+.page-article__content {
+  max-width: 920px; /* комфортна ширина читання */
+  font-size: 18px;
+  line-height: 1.55;
+  color: #222;
+}
+
+.page-article__content p {
+  margin: 0 0 18px;
+  color: #222;
+}
+
+.page-article__content h2 {
+  margin: 42px 0 27px;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #000;
+}
+
+@media (max-width: 560px) {
+  .page-article__content h2 {
+    font-size: 24px;
+  }
+}
+
+/* === Sticky top menu for internal pages === */
+.page-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: rgba(255, 246, 230, 0.90);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page-nav__inner {
+  max-width: 1280px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+@media (max-width: 1040px) {
+  .page-nav__inner {
+    width: 100%;
+  }
+}
+
+.page-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+}
+
+.page-nav__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  display: block;
+}
+
+.page-nav__name {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.page-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.page-nav__links::-webkit-scrollbar { display: none; }
+
+.page-nav__links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.page-nav__links a:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* CTA button right */
+.page-nav__store {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  padding: 10px 14px;
+  border-radius: 99px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+
+  color: #fff;
+  background: #000;
+}
+
+.page-nav__store:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 720px) {
+  .page-nav__store {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-nav__name { display: none; } /* щоб не тиснуло */
+}
+
+
+
+.article-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 24px auto;
+}
