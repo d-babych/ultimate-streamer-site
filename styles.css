@@ -386,6 +386,10 @@ footer a {
   color: #000;
 }
 
+.feature__title a {
+  color: #000;
+}
+
 /* Текст блоку */
 .feature__text {
   margin: 0;
@@ -966,4 +970,27 @@ footer a {
   max-width: 800px;
   height: auto;
   margin: 24px auto;
+}
+
+
+/* Highlight block for important statements in articles */
+
+p.article-highlight {
+  margin: 34px 0 34px 15%;
+  padding: 18px 22px 18px 28px;
+
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1.35;
+
+  color: #000;
+
+  background: rgba(30, 30, 0, 0.05);
+}
+
+@media (max-width: 640px) {
+  p.article-highlight {
+    font-size: 24px;
+    padding: 16px 18px 16px 22px;
+  }
 }
