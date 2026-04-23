@@ -972,6 +972,14 @@ footer a {
   margin: 24px auto;
 }
 
+.article-image-vertical {
+  display: block;
+  width: auto;
+  max-width: 800px;
+  height: 360px;
+  margin: 24px auto;
+}
+
 
 /* Highlight block for important statements in articles */
 
