@@ -43,6 +43,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
     
+<!-- AppStore link for Safari -->
+<meta name="apple-itunes-app" content="app-id=6745222525" />
+
 <link href="styles.css" rel="stylesheet"/>
     
  <!-- JSON-LD: SoftwareApplication + Product (підвищує релевантність під “app”) -->
@@ -76,113 +79,6 @@
     "image": "https://ultimate-streamer.com/assets/app-preview@3x.png"
   }
   </script>
-
-<script>
-(() => {
-  self.addEventListener('DOMContentLoaded', async () => {
-    try {
-      // === Кеш країни ===
-      let cc = self.localStorage.getItem('geo_cc');
-      // Нормалізуємо старий кеш: тепер блокуємо ТІЛЬКИ BY та RU.
-      // Будь-яка інша країна => OTHER (тобто не заблокована).
-      if (cc && cc !== 'BY' && cc !== 'RU') {
-        cc = 'OTHER';
-        self.localStorage.setItem('geo_cc', cc);
-      }
-      
-      // === Список країн, де додаток НЕДОСТУПНИЙ ===
-      const BLOCKED = new self.Set([
-        'BY', // Belarus
-        'RU' // Russia
-      ]);
-
-      // === Спроба визначити країну через GeoIP ===
-      if (!cc) {
-        const controller = new self.AbortController();
-        const timeoutId = self.setTimeout(() => controller.abort(), 2500);
-        try {
-          const resp = await self.fetch('https://ipwho.is/?fields=country_code', {
-            signal: controller.signal,
-            headers: { 'Accept': 'application/json' },
-            cache: 'no-store'
-          });
-          self.clearTimeout(timeoutId);
-          if (resp && resp.ok) {
-            const data = await resp.json();
-            cc = data && data.country_code ? self.String(data.country_code).toUpperCase() : '';
-          }
-        } catch (_) {
-          // ігноруємо — підемо у fallback за таймзоною
-        }
-      }
-
-      // === Fallback за часовим поясом: пробуємо впізнати ТІЛЬКИ заблоковані країни ===
-      // Ідея: краще "не доблокувати", ніж помилково заблокувати країну, де додаток є.
-      if (!cc) {
-        const tz = (self.Intl && self.Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
-
-        // Білорусь
-        if (tz.includes('Europe/Minsk')) {
-          cc = 'BY';
-        }
-        // Росія (основні часові пояси)
-        else if (
-          tz.includes('Europe/Moscow') ||
-          tz.includes('Europe/Kaliningrad') ||
-          tz.includes('Europe/Samara') ||
-          tz.includes('Asia/Yekaterinburg') ||
-          tz.includes('Asia/Omsk') ||
-          tz.includes('Asia/Novosibirsk') ||
-          tz.includes('Asia/Barnaul') ||
-          tz.includes('Asia/Tomsk') ||
-          tz.includes('Asia/Novokuznetsk') ||
-          tz.includes('Asia/Krasnoyarsk') ||
-          tz.includes('Asia/Irkutsk') ||
-          tz.includes('Asia/Yakutsk') ||
-          tz.includes('Asia/Vladivostok') ||
-          tz.includes('Asia/Khandyga') ||
-          tz.includes('Asia/Magadan') ||
-          tz.includes('Asia/Sakhalin') ||
-          tz.includes('Asia/Srednekolymsk') ||
-          tz.includes('Asia/Kamchatka') ||
-          tz.includes('Asia/Anadyr')
-        ) {
-          cc = 'RU';
-        }
-        // Якщо не впізнали — залишаємо cc порожнім, нижче стане OTHER
-      }
-      
-      // === Нормалізація + кеш ===
-      // Якщо країну так і не визначили — вважаємо, що це "OTHER" (тобто не заблокована).
-      cc = cc || 'OTHER';
-      self.localStorage.setItem('geo_cc', cc);
-
-      // === Логіка показу блоків STORE / OTHER ===
-      const isBlocked = BLOCKED.has(cc);
-
-      self.document.querySelectorAll('[data-geo]').forEach((el) => {
-        const geo = el.getAttribute('data-geo');
-        const shouldShowStore = (geo === 'STORE' && !isBlocked);
-        const shouldShowBeta  = (geo === 'OTHER' && isBlocked);
-
-        if (shouldShowStore || shouldShowBeta) {
-          el.hidden = false;
-        } else {
-          el.remove();
-        }
-      });
-    } catch (e) {
-      // === ОСТАННІЙ ФОЛЛБЕК ===
-      // Якщо щось пішло не так (нема GeoIP, помилка коду, що завгодно) —
-      // краще показати кнопку для завантаження, ніж напис "Release — SOON".
-      const storeFallback = self.document.querySelector('[data-geo="STORE"]');
-      if (storeFallback) {
-        storeFallback.hidden = false;
-      }
-    }
-  });
-})();
-</script>
     
 </head>
 <body>
@@ -193,24 +89,11 @@
       Turn your iPhone into a sports production tool.<br />
       Scoreboards, replays and live control — without extra equipment.
     </p>
-    <section data-geo="STORE" hidden>
-      <a href="https://apps.apple.com/ua/app/ultimate-sports-streamer/id6745222525" class="app-store-button" rel="noopener">
+    <section>
+      <a href="https://apps.apple.com/app/id6745222525" class="app-store-button" rel="noopener">
         <img src="assets/app-store-badge@3x.png" alt="Download Ultimate Streamer on the App Store" width="121" height="40" loading="lazy" />
       </a>
     </section>
-    <section data-geo="OTHER" hidden>
-        <p class="subtitle">
-          Release — SOON!<br />Become a β-tester: <a href="feedback.html">apply via email</a>.
-        </p>
-    </section>
-    <noscript>
-      <!-- Фолбек, якщо JS вимкнено -->
-      <section>
-        <a href="https://apps.apple.com/ua/app/ultimate-sports-streamer/id6745222525" class="app-store-button" rel="noopener">
-          <img src="assets/app-store-badge@3x.png" alt="Download Ultimate Streamer on the App Store" width="121" height="40" loading="lazy" />
-        </a>
-      </section>
-    </noscript>
     
     <div class="hero-previews" aria-label="Ultimate Streamer preview">
       <img
