@@ -1114,3 +1114,43 @@ p.article-highlight {
     width: min(100%, 72vw);
   }
 }
+
+
+/* === Handheld article media layout tweaks === */
+
+.article-image--half {
+  width: 50%;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-image--two-thirds {
+  width: 67%;
+  max-width: 67%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-image--full {
+  width: 100%;
+  max-width: 100%;
+  margin: 24px auto 32px;
+}
+
+.article-video-full {
+  margin: 24px 0 32px;
+}
+
+.article-video-full .article-intro-media__frame {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .article-image--half,
+  .article-image--two-thirds {
+    width: 100%;
+    max-width: 100%;
+  }
+}
