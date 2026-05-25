@@ -25,15 +25,18 @@
 <!-- Android + PWA icons -->
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link href="styles.css" rel="stylesheet"/>
+
 
   <style>
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 5.5rem 2rem 2rem;
       line-height: 1.6;
       background-color: #f3f4f5;
+      text-align: left;
     }
 
     .container {
@@ -49,7 +52,8 @@
       color: #333;
     }
 
-    input, textarea {
+    .container input,
+    .container textarea {
       width: 100%;
       padding: 12px;
       margin-bottom: 16px;
@@ -59,12 +63,12 @@
       font-family: Arial, sans-serif;
     }
 
-    textarea {
+    .container textarea {
       resize: vertical;
       height: 120px;
     }
 
-    button {
+    .container button {
       background-color: #2f7cf6;
       color: white;
       padding: 12px 20px;
@@ -75,7 +79,7 @@
       width: 100%;
     }
 
-    button:hover {
+    .container button:hover {
       background-color: #1e64d1;
     }
 
@@ -89,7 +93,76 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <nav class="page-nav" aria-label="Primary" data-site-nav>
+    <div class="page-nav__inner">
+      <a class="page-nav__brand" href="/" aria-label="Ultimate Streamer home">
+        <img
+          class="page-nav__icon"
+          src="icon-180.png"
+          alt="Ultimate Streamer app icon"
+          width="32"
+          height="32"
+          loading="eager"
+        />
+        <span class="page-nav__name">Ultimate Streamer</span>
+      </a>
+
+      <button class="page-nav__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+        <span class="page-nav__toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <div class="page-nav__menu" id="primary-navigation">
+        <ul class="page-nav__links">
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Sports</button>
+            <ul class="page-nav__submenu" aria-label="Sports pages">
+              <li><a href="ultimate-frisbee-live-streaming.html">Ultimate frisbee</a></li>
+              <li><a href="flag-football-live-streaming.html">Flag Football</a></li>
+              <li><a href="basketball-live-streaming.html">Basketball</a></li>
+              <li><a href="index.html#sports">Volleyball</a></li>
+              <li><a href="index.html#sports">Tennis</a></li>
+              <li><a href="index.html#sports">Padel</a></li>
+              <li><a href="index.html#sports">Soccer</a></li>
+              <li><a href="youth-sports-live-streaming.html">Youth Sports</a></li>
+            </ul>
+          </li>
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Features</button>
+            <ul class="page-nav__submenu" aria-label="Feature pages">
+              <li><a href="index.html#replays">Replays</a></li>
+              <li><a href="index.html#picture-in-picture">Picture in picture</a></li>
+              <li><a href="index.html#ads">Ads</a></li>
+              <li><a href="index.html#remote-control">Remote Control</a></li>
+              <li><a href="index.html#setups">Setups</a></li>
+              <li><a href="how-to-enable-youtube-channel-for-live-streaming.html">YouTube streaming</a></li>
+              <li><a href="index.html#rtmp-streaming">RTMP Streaming</a></li>
+            </ul>
+          </li>
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Guides</button>
+            <ul class="page-nav__submenu" aria-label="Guides">
+              <li><a href="how-to-start-a-sports-live-stream-in-3-minutes.html">Start a sports live stream</a></li>
+              <li><a href="how-to-enable-youtube-channel-for-live-streaming.html">Enable YouTube Live</a></li>
+              <li><a href="how-to-redeem-app-store-offer-code-on-iphone.html">Redeem an App Store offer code</a></li>
+            </ul>
+          </li>
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Blog</button>
+            <ul class="page-nav__submenu" aria-label="Blog articles">
+              <li><a href="make-your-team-visible-online.html">Make your team visible online</a></li>
+              <li><a href="handheld-sports-streaming-iphone.html">Streaming by hand</a></li>
+              <li><a href="best-sports-live-streaming-apps-with-scoreboard-overlays.html">Best apps with scoreboard overlays</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <a class="page-nav__store" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
+          <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="121" height="40" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </nav>
+<div class="container">
     <h1>Send Feedback to Ultimate Streamer</h1>
 
     <form action="https://api.web3forms.com/submit" method="POST">
@@ -104,5 +177,6 @@
       <button type="submit">Send Feedback</button>
     </form>
   </div>
+  <script src="navigation.js" defer></script>
 </body>
 </html>

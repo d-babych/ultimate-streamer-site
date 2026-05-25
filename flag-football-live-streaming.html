@@ -103,9 +103,9 @@ gtag('config', 'G-5B189B5SZW');
 </head>
 
 <body>
-  <nav class="page-nav" aria-label="Primary">
+  <nav class="page-nav" aria-label="Primary" data-site-nav>
     <div class="page-nav__inner">
-      <a class="page-nav__brand" href="/" aria-label="Back to home">
+      <a class="page-nav__brand" href="/" aria-label="Ultimate Streamer home">
         <img
           class="page-nav__icon"
           src="icon-180.png"
@@ -117,23 +117,63 @@ gtag('config', 'G-5B189B5SZW');
         <span class="page-nav__name">Ultimate Streamer</span>
       </a>
 
-      <div class="page-nav__right">
-        <div class="page-nav__links" aria-label="Sections">
-          <a href="feedback.html">Contact</a>
-        </div>
+      <button class="page-nav__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+        <span class="page-nav__toggle-lines" aria-hidden="true"></span>
+      </button>
 
-        <a
-          class="page-nav__store"
-          href="https://apps.apple.com/app/id6745222525"
-          rel="noopener"
-        >
-          Available on the App Store
+      <div class="page-nav__menu" id="primary-navigation">
+        <ul class="page-nav__links">
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Sports</button>
+            <ul class="page-nav__submenu" aria-label="Sports pages">
+              <li><a href="ultimate-frisbee-live-streaming.html">Ultimate frisbee</a></li>
+              <li><a href="flag-football-live-streaming.html">Flag Football</a></li>
+              <li><a href="basketball-live-streaming.html">Basketball</a></li>
+              <li><a href="index.html#sports">Volleyball</a></li>
+              <li><a href="index.html#sports">Tennis</a></li>
+              <li><a href="index.html#sports">Padel</a></li>
+              <li><a href="index.html#sports">Soccer</a></li>
+              <li><a href="youth-sports-live-streaming.html">Youth Sports</a></li>
+            </ul>
+          </li>
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Features</button>
+            <ul class="page-nav__submenu" aria-label="Feature pages">
+              <li><a href="index.html#replays">Replays</a></li>
+              <li><a href="index.html#picture-in-picture">Picture in picture</a></li>
+              <li><a href="index.html#ads">Ads</a></li>
+              <li><a href="index.html#remote-control">Remote Control</a></li>
+              <li><a href="index.html#setups">Setups</a></li>
+              <li><a href="how-to-enable-youtube-channel-for-live-streaming.html">YouTube streaming</a></li>
+              <li><a href="index.html#rtmp-streaming">RTMP Streaming</a></li>
+            </ul>
+          </li>
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Guides</button>
+            <ul class="page-nav__submenu" aria-label="Guides">
+              <li><a href="how-to-start-a-sports-live-stream-in-3-minutes.html">Start a sports live stream</a></li>
+              <li><a href="how-to-enable-youtube-channel-for-live-streaming.html">Enable YouTube Live</a></li>
+              <li><a href="how-to-redeem-app-store-offer-code-on-iphone.html">Redeem an App Store offer code</a></li>
+            </ul>
+          </li>
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Blog</button>
+            <ul class="page-nav__submenu" aria-label="Blog articles">
+              <li><a href="make-your-team-visible-online.html">Make your team visible online</a></li>
+              <li><a href="handheld-sports-streaming-iphone.html">Streaming by hand</a></li>
+              <li><a href="best-sports-live-streaming-apps-with-scoreboard-overlays.html">Best apps with scoreboard overlays</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <a class="page-nav__store" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
+          <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="121" height="40" loading="lazy" />
         </a>
       </div>
     </div>
   </nav>
 
-  <main class="page">
+<main class="page">
     <article class="page-article">
       <header class="page-article__header">
         <h1 class="page-article__title">Flag Football Live Streaming from iPhone</h1>
@@ -477,5 +517,6 @@ gtag('config', 'G-5B189B5SZW');
     <p>Made with ❤️ for sports creators.</p>
     <p>© 2025–2026 <a href="https://www.linkedin.com/in/dmytro-babych-a8581b2/">Dmytro Babych</a></p>
   </footer>
+  <script src="navigation.js" defer></script>
 </body>
 </html>
