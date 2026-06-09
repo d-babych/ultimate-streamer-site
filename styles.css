@@ -852,7 +852,7 @@ footer a {
   right: 0;
   z-index: 1000;
 
-  background: rgba(255, 246, 230, 0.90);
+  background: rgba(255, 246, 230, 0.75);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
