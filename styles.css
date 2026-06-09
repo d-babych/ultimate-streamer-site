@@ -189,6 +189,10 @@ footer a {
 /* Менше руху — менше анімацій */
 @media (prefers-reduced-motion: reduce) {
   .faq-a { transition: none; }
+
+  .typing-cursor {
+    animation: none;
+  }
 }
 
 
@@ -900,6 +904,27 @@ footer a {
 .page-nav__name {
   font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+.typing-word {
+  display: inline-block;
+  text-align: left;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin: 0 4px 0 1px;
+  background: currentColor;
+  vertical-align: -0.13em;
+  animation: typing-cursor-blink 1s steps(1) infinite;
+}
+
+@keyframes typing-cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .page-nav__toggle {

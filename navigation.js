@@ -55,4 +55,43 @@
   tapQuery.addEventListener('change', () => {
     closeMenu();
   });
+
+  const typingWord = document.querySelector('[data-typing-brand] [data-typing-word]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const words = ['Ultimate', 'Basketball', 'Soccer', 'Padel', 'Football', 'Tennis', 'Hockey'];
+
+  if (typingWord && !reducedMotion.matches) {
+    const typeDelay = 95;
+    const deleteDelay = 55;
+    const holdDelay = 1400;
+
+    const wait = (delay) => new Promise((resolve) => {
+      window.setTimeout(resolve, delay);
+    });
+
+    const setWord = async (word) => {
+      while (typingWord.textContent.length < word.length) {
+        typingWord.textContent = word.slice(0, typingWord.textContent.length + 1);
+        await wait(typeDelay);
+      }
+    };
+
+    const deleteWord = async () => {
+      while (typingWord.textContent.length > 0) {
+        typingWord.textContent = typingWord.textContent.slice(0, -1);
+        await wait(deleteDelay);
+      }
+    };
+
+    (async () => {
+      let index = 0;
+
+      while (true) {
+        await wait(holdDelay);
+        await deleteWord();
+        index = (index + 1) % words.length;
+        await setWord(words[index]);
+      }
+    })();
+  }
 })();
