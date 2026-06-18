@@ -1,0 +1,33 @@
+# Ultimate Streamer
+
+Ultimate Streamer is an iPhone sports live streaming app for YouTube and RTMP broadcasts. It helps teams, clubs, schools, parents and tournament organizers stream live games with scoreboard overlays, game timers, instant replays, sponsor ads, team branding, remote score control, Picture-in-Picture and adaptive bitrate.
+
+## Primary Pages
+
+- [Ultimate Streamer home](https://ultimate-streamer.com/): Product overview, feature summary, pricing, examples and FAQ.
+- [Basketball live streaming](https://ultimate-streamer.com/basketball-live-streaming.html): Basketball streaming from iPhone with scoreboard overlay, game clock, quarters, replays, sponsor ads and remote score control.
+- [Ultimate frisbee live streaming](https://ultimate-streamer.com/ultimate-frisbee-live-streaming.html): Ultimate frisbee streaming from iPhone with scoreboard overlay, game timer, replays, sponsor ads and tournament-friendly workflows.
+- [Flag football live streaming](https://ultimate-streamer.com/flag-football-live-streaming.html): Flag football streaming from iPhone with scoreboard overlay, timer, replays, sponsor ads and remote score control.
+- [Youth sports live streaming](https://ultimate-streamer.com/youth-sports-live-streaming.html): Youth sports streaming for parents, schools, clubs and youth tournaments.
+
+## Guides
+
+- [How to start a sports live stream in 3 minutes](https://ultimate-streamer.com/how-to-start-a-sports-live-stream-in-3-minutes.html)
+- [How to enable YouTube Live streaming](https://ultimate-streamer.com/how-to-enable-youtube-channel-for-live-streaming.html)
+- [Best sports live streaming apps with scoreboard overlays](https://ultimate-streamer.com/best-sports-live-streaming-apps-with-scoreboard-overlays.html)
+- [Handheld sports streaming from iPhone](https://ultimate-streamer.com/handheld-sports-streaming-iphone.html)
+- [Make your team visible online](https://ultimate-streamer.com/make-your-team-visible-online.html)
+- [How to redeem an App Store offer code on iPhone](https://ultimate-streamer.com/how-to-redeem-app-store-offer-code-on-iphone.html)
+
+## App Facts
+
+- Platform: iPhone / iOS
+- App Store ID: 6745222525
+- Streaming destinations: YouTube Live and RTMP-compatible platforms
+- Core features: scoreboard overlays, game timer, sport presets, instant replays, sponsor video ads, team logos, remote score control, Picture-in-Picture, adaptive bitrate and HD 1080 output
+- Common use cases: youth sports, amateur sports, school sports, club games, tournaments, basketball, ultimate frisbee and flag football
+
+## Site Metadata
+
+- Sitemap: https://ultimate-streamer.com/sitemap.xml
+- Robots: https://ultimate-streamer.com/robots.txt
