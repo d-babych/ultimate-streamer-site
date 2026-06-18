@@ -8,6 +8,10 @@ Ultimate Streamer is an iPhone sports live streaming app for YouTube and RTMP br
 - [Basketball live streaming](https://ultimate-streamer.com/basketball-live-streaming.html): Basketball streaming from iPhone with scoreboard overlay, game clock, quarters, replays, sponsor ads and remote score control.
 - [Ultimate frisbee live streaming](https://ultimate-streamer.com/ultimate-frisbee-live-streaming.html): Ultimate frisbee streaming from iPhone with scoreboard overlay, game timer, replays, sponsor ads and tournament-friendly workflows.
 - [Flag football live streaming](https://ultimate-streamer.com/flag-football-live-streaming.html): Flag football streaming from iPhone with scoreboard overlay, timer, replays, sponsor ads and remote score control.
+- [Tennis live streaming](https://ultimate-streamer.com/tennis-live-streaming.html): Tennis streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control.
+- [Padel live streaming](https://ultimate-streamer.com/padel-live-streaming.html): Padel streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control.
+- [Volleyball live streaming](https://ultimate-streamer.com/volleyball-live-streaming.html): Volleyball streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control.
+- [Badminton live streaming](https://ultimate-streamer.com/badminton-live-streaming.html): Badminton streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control.
 - [Youth sports live streaming](https://ultimate-streamer.com/youth-sports-live-streaming.html): Youth sports streaming for parents, schools, clubs and youth tournaments.
 
 ## Guides
@@ -25,7 +29,7 @@ Ultimate Streamer is an iPhone sports live streaming app for YouTube and RTMP br
 - App Store ID: 6745222525
 - Streaming destinations: YouTube Live and RTMP-compatible platforms
 - Core features: scoreboard overlays, game timer, sport presets, instant replays, sponsor video ads, team logos, remote score control, Picture-in-Picture, adaptive bitrate and HD 1080 output
-- Common use cases: youth sports, amateur sports, school sports, club games, tournaments, basketball, ultimate frisbee and flag football
+- Common use cases: youth sports, amateur sports, school sports, club games, tournaments, basketball, ultimate frisbee, flag football, tennis, padel, volleyball and badminton
 
 ## Site Metadata
 
