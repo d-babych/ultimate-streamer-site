@@ -389,6 +389,35 @@ footer a {
   row-gap: 48px;
 }
 
+.features__grid--media {
+  column-gap: 24px;
+  row-gap: 32px;
+}
+
+.feature--media {
+  background: #fff;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.feature__media {
+  background: #1c1c1e;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.feature__media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.feature--media .feature__content {
+  padding: 24px 24px 28px;
+}
+
 /* Заголовок блоку */
 .feature__title {
   margin: 0 0 16px;
