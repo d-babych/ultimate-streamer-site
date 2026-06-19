@@ -1684,6 +1684,10 @@ video.float-right {
   box-sizing: border-box;
 }
 
+.bball-features__header .features__subtitle {
+  margin-bottom: 0;
+}
+
 .bball-features__grid {
   max-width: 1024px;
   margin: 0 auto;
@@ -1692,6 +1696,10 @@ video.float-right {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   box-sizing: border-box;
+}
+
+.bball-features__grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @media (max-width: 720px) {

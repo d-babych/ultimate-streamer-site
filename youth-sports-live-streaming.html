@@ -303,38 +303,50 @@ gtag('config', 'G-5B189B5SZW');
     </article>
   </div>
 
-  <section class="features" aria-label="Youth sports streaming benefits">
-    <div class="features__inner">
-      <p class="features__kicker">Built for youth sports</p>
-
+  <section class="bball-features" aria-label="Youth sports streaming benefits">
+    <div class="bball-features__header reveal">
       <h2 class="features__title">Make every game easier to watch.</h2>
-
       <p class="features__subtitle">
         Ultimate Streamer adds the sports context that parents, players and coaches need during a live broadcast.
       </p>
+    </div>
 
-      <div class="features__grid">
-        <article class="feature">
-          <h3 class="feature__title">Scoreboard<br/>Overlay</h3>
-          <p class="feature__text">
+    <div class="bball-features__grid bball-features__grid--three">
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Scoreboard Overlay</h3>
+          <p class="bball-card__text">
             Show team names, score, timer and game segment directly on the stream, so viewers always know what is happening.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="feature">
-          <h3 class="feature__title">Instant<br/>Replays</h3>
-          <p class="feature__text">
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Instant Replays</h3>
+          <p class="bball-card__text">
             Capture important goals, baskets, touchdowns, blocks or key moments and replay them during the broadcast.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="feature">
-          <h3 class="feature__title">Remote<br/>Score Control</h3>
-          <p class="feature__text">
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Remote Score Control</h3>
+          <p class="bball-card__text">
             Keep the camera stable while a parent, coach or volunteer updates the score from another iPhone.
           </p>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -768,6 +780,26 @@ gtag('config', 'G-5B189B5SZW');
         if (btn && btn.classList.contains('faq-q')) { btn.click(); }
       }
     });
+  })();
+  </script>
+  <script>
+  (() => {
+    const els = Array.from(document.querySelectorAll('.reveal'));
+    if (!els.length) { return; }
+
+    function check() {
+      const vh = window.innerHeight;
+      els.forEach((el) => {
+        if (el.classList.contains('is-visible')) { return; }
+        const top = el.getBoundingClientRect().top;
+        if (top < vh * 0.92) {
+          el.classList.add('is-visible');
+        }
+      });
+    }
+
+    check();
+    window.addEventListener('scroll', check, { passive: true });
   })();
   </script>
 </main>
