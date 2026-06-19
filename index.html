@@ -194,7 +194,7 @@
     
   </header>
 
-  <section class="features" id="features" aria-label="Production tools that matter">
+  <section class="features features--hero-follow" id="features" aria-label="Production tools that matter">
     <div class="features__inner">
       <p class="features__kicker">Production tools that matter</p>
 
@@ -785,6 +785,47 @@
       const btn = self.document.getElementById(hash);
       if (btn && btn.classList.contains('faq-q')) { btn.click(); }
     }
+  });
+})();
+</script>
+<script>
+(() => {
+  self.addEventListener('DOMContentLoaded', () => {
+    const revealSelector = [
+      '#features .features__inner',
+      '#features .feature--media',
+      '.feature-split__card',
+      '.why-card',
+      '.samples',
+      '#sports .features__inner',
+      '#sports .feature',
+      '#guides .features__inner',
+      '#guides .feature',
+      '.trusted',
+      '.trusted__item',
+      '.pricing',
+      '.plan',
+      '.faq',
+      '.faq-item'
+    ].join(',');
+
+    const els = Array.from(self.document.querySelectorAll(revealSelector));
+    els.forEach((el) => el.classList.add('reveal'));
+    if (!els.length) { return; }
+
+    function check() {
+      const vh = self.innerHeight;
+      els.forEach((el) => {
+        if (el.classList.contains('is-visible')) { return; }
+        const top = el.getBoundingClientRect().top;
+        if (top < vh * 0.92) {
+          el.classList.add('is-visible');
+        }
+      });
+    }
+
+    check();
+    self.addEventListener('scroll', check, { passive: true });
   });
 })();
 </script>

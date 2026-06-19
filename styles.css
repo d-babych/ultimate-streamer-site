@@ -348,6 +348,10 @@ footer a {
   text-align: left;
 }
 
+.features--hero-follow {
+  margin-top: 40px;
+}
+
 .features__inner {
   padding: 0 20px;
 }
@@ -404,6 +408,10 @@ footer a {
   background: #1c1c1e;
   overflow: hidden;
   line-height: 0;
+}
+
+.feature--media .feature__media {
+  background: #fff;
 }
 
 .feature__media video {
