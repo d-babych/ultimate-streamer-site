@@ -40,6 +40,10 @@ h1 {
   font-weight: 800;
 }
 
+[data-typing-brand] {
+  line-height: 0.9;
+}
+
 .subtitle {
   margin: 0 0 32px;
   font-size: 16px;
@@ -966,6 +970,16 @@ footer a {
 @keyframes typing-cursor-blink {
   50% {
     opacity: 0;
+  }
+}
+
+.typing-break {
+  display: block;
+}
+
+@media (min-width: 481px) {
+  .typing-break {
+    display: none;
   }
 }
 
