@@ -5,6 +5,7 @@ Ultimate Streamer is an iPhone sports live streaming app for YouTube and RTMP br
 ## Primary Pages
 
 - [Ultimate Streamer home](https://ultimate-streamer.com/): Product overview, feature summary, pricing, examples and FAQ.
+- [Instant Replays](https://ultimate-streamer.com/instant-replays.html): Save big moments during a live game, replay them in the broadcast, then export and share highlights after the match.
 - [Basketball live streaming](https://ultimate-streamer.com/basketball-live-streaming.html): Basketball streaming from iPhone with scoreboard overlay, game clock, quarters, replays, sponsor ads and remote score control.
 - [Ultimate frisbee live streaming](https://ultimate-streamer.com/ultimate-frisbee-live-streaming.html): Ultimate frisbee streaming from iPhone with scoreboard overlay, game timer, replays, sponsor ads and tournament-friendly workflows.
 - [Flag football live streaming](https://ultimate-streamer.com/flag-football-live-streaming.html): Flag football streaming from iPhone with scoreboard overlay, timer, replays, sponsor ads and remote score control.

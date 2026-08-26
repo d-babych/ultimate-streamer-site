@@ -2,6 +2,24 @@
   const nav = document.querySelector('[data-site-nav]');
   if (!nav) return;
 
+  // Keep the single feature destination available from every legacy page.
+  // New landing pages may include this item in their static markup already.
+  const links = nav.querySelector('.page-nav__links');
+  if (links && !links.querySelector('[data-features-nav]')) {
+    const featureItem = document.createElement('li');
+    featureItem.className = 'page-nav__item';
+    featureItem.setAttribute('data-features-nav', '');
+    featureItem.innerHTML = `
+      <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>Features</button>
+      <ul class="page-nav__submenu" aria-label="Feature pages">
+        <li><a href="instant-replays.html">Instant Replays</a></li>
+      </ul>
+    `;
+    const sportsItem = links.querySelector('.page-nav__item');
+    if (sportsItem) sportsItem.insertAdjacentElement('afterend', featureItem);
+    else links.prepend(featureItem);
+  }
+
   const toggle = nav.querySelector('[data-nav-toggle]');
   const roots = Array.from(nav.querySelectorAll('[data-nav-root]'));
   const items = roots.map((root) => root.closest('.page-nav__item')).filter(Boolean);

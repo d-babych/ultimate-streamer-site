@@ -1591,6 +1591,79 @@ video.float-right {
   color: rgba(255,255,255,0.42);
 }
 
+/* === Instant Replays landing page === */
+.replays-hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+}
+
+.replays-hero__inner {
+  width: 100%;
+  max-width: 800px;
+  padding: 138px 20px 84px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.replays-hero__kicker,
+.replays-features__kicker {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.replays-hero__kicker { color: #f5c56c; }
+
+.replays-hero h1 {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  color: #fff;
+}
+
+.replays-hero__inner > p:not(.replays-hero__kicker):not(.replays-hero__note) {
+  max-width: 650px;
+  margin: 0 auto 32px;
+  font-size: 21px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.76);
+}
+
+.replays-hero__cta {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.replays-hero__cta:hover { opacity: 0.88; }
+
+.replays-hero__cta img { width: auto; height: 54px; }
+
+.replays-hero__note {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+}
+
+.replays-features { margin-top: 88px; }
+
+.replays-features__kicker { color: #8D4D4D; }
+
+@media (max-width: 640px) {
+  .replays-hero { min-height: 460px; }
+  .replays-hero__inner { padding-top: 112px; padding-bottom: 64px; }
+  .replays-hero h1 { font-size: 40px; }
+  .replays-hero__inner > p:not(.replays-hero__kicker):not(.replays-hero__note) { font-size: 18px; }
+}
+
 @media (max-width: 640px) {
   .bball-hero { min-height: 460px; }
   .bball-hero__title { font-size: 36px; }
