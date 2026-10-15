@@ -7,36 +7,47 @@ ogTitle: "Youth Sports Live Streaming App for iPhone"
 ogDescription: "Broadcast youth games with scoreboards, timer, replays and sponsor graphics using only an iPhone."
 twitterDescription: "Stream youth sports to YouTube from iPhone with scoreboard overlays, game timer and replays."
 lastmod: "2026-06-19"
+faq:
+  title: "FAQ: Youth Sports Live Streaming"
+  reveal: false
+  items:
+    - q: "Can I stream youth sports to YouTube from an iPhone?"
+      a: >-
+        Yes. Ultimate Streamer lets you stream youth sports to YouTube directly from an iPhone and
+        add sports overlays such as score, timer, team names and game segment.
+    - q: "Do youth clubs need OBS, a laptop or a production crew?"
+      a: >-
+        No. The app is designed for simple sports broadcasts from iPhone without OBS, a laptop,
+        capture card or a dedicated production crew.
+    - q: "Can parents or volunteers run the stream?"
+      a: >-
+        Yes. The app is built for parents, coaches and volunteers. One person can hold the phone, or
+        the phone can stay on a tripod while another person controls the score from a second iPhone.
+    - q: "Why is a scoreboard overlay important for youth sports?"
+      a: >-
+        A scoreboard overlay answers the most common viewer questions: what is the score, who is
+        ahead, how much time is left and which part of the game is being played.
+    - q: "Which youth sports can be streamed with Ultimate Streamer?"
+      a: >-
+        Ultimate Streamer can be used for many youth and amateur sports, including basketball, flag
+        football, ultimate frisbee, football, volleyball, handball and school tournaments.
+article:
+  description: "How schools, youth clubs and tournament organizers can stream youth sports to YouTube from an iPhone with scoreboards, timer, replays, sponsor graphics and remote score control using Ultimate Streamer."
+  datePublished: "2026-05-03"
+  dateModified: "2026-05-03"
+app:
+  description: "Youth and amateur sports live streaming app for iPhone with scoreboards, replays, sponsor graphics, YouTube and RTMP streaming."
+trusted:
+  title: "Used by youth and amateur sports teams."
+  subtitle: >-
+    Clubs use Ultimate Streamer because it makes broadcasts practical, affordable and easier for
+    parents and fans to follow.
+  reveal: false
+  items: [vedmedi-youth, vinwolves, ufdf]
 ---
 {% extends "base.njk" %}
 
 {% block head_extra %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Youth Sports Live Streaming App for iPhone",
-  "description": "How schools, youth clubs and tournament organizers can stream youth sports to YouTube from an iPhone with scoreboards, timer, replays, sponsor graphics and remote score control using Ultimate Streamer.",
-  "author": {
-    "@type": "Organization",
-    "name": "Ultimate Streamer"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ultimate Streamer",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ultimate-streamer.com/assets/app-preview@3x.png"
-    }
-  },
-  "datePublished": "2026-05-03",
-  "dateModified": "2026-05-03",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ultimate-streamer.com/youth-sports-live-streaming.html"
-  }
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,28 +64,10 @@ lastmod: "2026-06-19"
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Ultimate Streamer",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS",
-  "description": "Youth and amateur sports live streaming app for iPhone with scoreboards, replays, sponsor graphics, YouTube and RTMP streaming.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  },
-  "url": "https://ultimate-streamer.com/",
-  "image": "https://ultimate-streamer.com/assets/app-preview@3x.png"
-}
-</script>
 {% endblock %}
 
 {% block content %}
   
-
 
 <main>
 <div class="page">
@@ -212,7 +205,7 @@ lastmod: "2026-06-19"
     <div class="bball-features__grid bball-features__grid--three">
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Scoreboard Overlay</h3>
@@ -224,7 +217,7 @@ lastmod: "2026-06-19"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Instant Replays</h3>
@@ -236,7 +229,7 @@ lastmod: "2026-06-19"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Remote Score Control</h3>
@@ -306,71 +299,7 @@ lastmod: "2026-06-19"
     </article>
   </div>
 
-  <section class="trusted">
-    <div class="trusted__inner">
-      <h2 class="trusted__title">Used by youth and amateur sports teams.</h2>
-
-      <p class="trusted__subtitle">
-        Clubs use Ultimate Streamer because it makes broadcasts practical, affordable and easier for parents and fans to follow.
-      </p>
-
-      <div class="trusted__grid">
-        <div class="trusted__item">
-          <a href="https://www.youtube.com/@BCVedmedi" rel="noopener">
-            <img
-              src="https://yt3.googleusercontent.com/6VhZ_tAZi9UKdxkGhrDTO4vxokYjB8oenB92OBicyLd6FiMC-PUQWQH-lHsNGYHlhEZ7GahaGA=s160-c-k-c0x00ffffff-no-rj"
-              alt="BC Vedmedi logo"
-              loading="lazy"
-              style="width:72px;height:72px;border-radius:50%;object-fit:contain;margin:0 0 16px;"
-            />
-          </a>
-          <p class="trusted__author"><a href="https://www.youtube.com/@BCVedmedi" rel="noopener">BC Vedmedi</a></p>
-          <p class="trusted__quote">
-            “Our basketball club was looking for a simple app that would let us stream games directly from a phone, even without stable internet or a professional crew, while still showing the score and period time for parents and fans.
-            Streamer arrived at the perfect time and offered even more features than we expected, which was a great bonus.
-            Previously, we only uploaded recorded games to our YouTube channel, but now we stream in real time, attract more viewers, and see how other players share highlight clips with our logo on social media.
-            As a result, the outreach of our 15+ year-old YouTube channel has grown significantly.”
-          </p>
-        </div>
-
-        <div class="trusted__item">
-          <a href="https://www.youtube.com/@vinwolves" rel="noopener">
-            <img
-              src="https://yt3.googleusercontent.com/Gwn0If0VJI8viY_c-slLycC1Qo_OmQyqsSOYe_WMOOJ_mYlFeIZifaN2k9_pyLnamIuEcsncjw=s160-c-k-c0x00ffffff-no-rj"
-              alt="Vinnytski Wolves logo"
-              loading="lazy"
-              style="width:72px;height:72px;border-radius:50%;object-fit:contain;margin:0 0 16px;"
-            />
-          </a>
-          <p class="trusted__author"><a href="https://www.youtube.com/@vinwolves" rel="noopener">Vinnytski Wolves</a></p>
-          <p class="trusted__quote">
-            “Used this app to stream a flag football tournament, and it was a game-changer!
-            Scoring and replays worked flawlessly.
-            Hard to believe I managed a full professional-grade stream using just a single iPhone.
-            5/5 stars.”
-          </p>
-        </div>
-
-        <div class="trusted__item">
-          <a href="https://ufdf.org/" rel="noopener">
-            <img
-              src="https://ufdf.org/assets/ufdf-logotype-v-03-outlines@2x.png"
-              alt="Ukrainian Flying Disc Federation logo"
-              loading="lazy"
-              style="width:auto;height:72px;object-fit:contain;margin:0 0 16px;"
-            />
-          </a>
-          <p class="trusted__author"><a href="https://ufdf.org/" rel="noopener">Ukrainian Flying Disc Federation</a></p>
-          <p class="trusted__quote">
-            “We have used the app many times: for international competitions, Ukrainian championships and even games at the World Championship.
-            The app is very easy to set up, and anyone can start using it right away.
-            The functionality is flexible yet simple, which allows us to create high-quality broadcasts. Sometimes they are even better than those made by organizers.
-            This is definitely a great solution for sport! We will continue using it.”
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include "partials/trusted.njk" %}
 
   <section class="samples">
     <h2><strong>Real</strong> youth sports streams.</h2>
@@ -490,7 +419,7 @@ lastmod: "2026-06-19"
       <div class="features__grid">
         <article class="feature">
           <h3 class="feature__title">
-            <a href="best-sports-live-streaming-apps-with-scoreboard-overlays.html">Sports Apps<br/>with Scoreboards</a>
+            <a href="/best-sports-live-streaming-apps-with-scoreboard-overlays.html">Sports Apps<br/>with Scoreboards</a>
           </h3>
           <p class="feature__text">
             What to look for when choosing an app for live sports scoreboards, timer and replays.
@@ -499,7 +428,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="basketball-live-streaming.html">Basketball<br/>Live Streaming</a>
+            <a href="/basketball-live-streaming.html">Basketball<br/>Live Streaming</a>
           </h3>
           <p class="feature__text">
             Stream youth basketball with score, period time, replays and sponsor-ready branding.
@@ -508,7 +437,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="flag-football-live-streaming.html">Flag Football<br/>Live Streaming</a>
+            <a href="/flag-football-live-streaming.html">Flag Football<br/>Live Streaming</a>
           </h3>
           <p class="feature__text">
             Broadcast youth flag football games with a simple iPhone setup and clear scoreboard.
@@ -517,7 +446,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="handheld-sports-streaming-iphone.html">Handheld iPhone<br/>Streaming</a>
+            <a href="/handheld-sports-streaming-iphone.html">Handheld iPhone<br/>Streaming</a>
           </h3>
           <p class="feature__text">
             Why a simple handheld stream can be enough for amateur teams, youth clubs and families.
@@ -527,178 +456,8 @@ lastmod: "2026-06-19"
     </div>
   </section>
 
-  <section class="faq" id="faq">
-    <h2 class="faq-title">FAQ: Youth Sports Live Streaming</h2>
+  {% include "partials/faq.njk" %}
 
-    <div class="faq-list" data-accordion="single">
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
-          Can I stream youth sports to YouTube from an iPhone?
-        </button>
-        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true">
-          <p>Yes. Ultimate Streamer lets you stream youth sports to YouTube directly from an iPhone and add sports overlays such as score, timer, team names and game segment.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
-          Do youth clubs need OBS, a laptop or a production crew?
-        </button>
-        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true">
-          <p>No. The app is designed for simple sports broadcasts from iPhone without OBS, a laptop, capture card or a dedicated production crew.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
-          Can parents or volunteers run the stream?
-        </button>
-        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true">
-          <p>Yes. The app is built for parents, coaches and volunteers. One person can hold the phone, or the phone can stay on a tripod while another person controls the score from a second iPhone.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
-          Why is a scoreboard overlay important for youth sports?
-        </button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true">
-          <p>A scoreboard overlay answers the most common viewer questions: what is the score, who is ahead, how much time is left and which part of the game is being played.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
-          Which youth sports can be streamed with Ultimate Streamer?
-        </button>
-        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true">
-          <p>Ultimate Streamer can be used for many youth and amateur sports, including basketball, flag football, ultimate frisbee, football, volleyball, handball and school tournaments.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Can I stream youth sports to YouTube from an iPhone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer lets you stream youth sports to YouTube directly from an iPhone and add sports overlays such as score, timer, team names and game segment."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do youth clubs need OBS, a laptop or a production crew?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. The app is designed for simple sports broadcasts from iPhone without OBS, a laptop, capture card or a dedicated production crew."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can parents or volunteers run the stream?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. The app is built for parents, coaches and volunteers. One person can hold the phone, or the phone can stay on a tripod while another person controls the score from a second iPhone."}
-      },
-      {
-        "@type":"Question",
-        "name":"Why is a scoreboard overlay important for youth sports?",
-        "acceptedAnswer":{"@type":"Answer","text":"A scoreboard overlay answers the most common viewer questions: what is the score, who is ahead, how much time is left and which part of the game is being played."}
-      },
-      {
-        "@type":"Question",
-        "name":"Which youth sports can be streamed with Ultimate Streamer?",
-        "acceptedAnswer":{"@type":"Answer","text":"Ultimate Streamer can be used for many youth and amateur sports, including basketball, flag football, ultimate frisbee, football, volleyball, handball and school tournaments."}
-      }
-    ]
-  }
-  </script>
-
-  <script>
-  (() => {
-    self.addEventListener('DOMContentLoaded', () => {
-      const root = self.document.querySelector('.faq-list');
-      if (!root) { return; }
-
-      const single = root.getAttribute('data-accordion') === 'single';
-      const items = self.Array.from(root.querySelectorAll('.faq-item'));
-
-      const closeItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-
-        item.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        panel.style.height = '0px';
-        panel.setAttribute('aria-hidden', 'true');
-      };
-
-      const openItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-
-        if (single) {
-          items.forEach((it) => {
-            if (it !== item) { closeItem(it); }
-          });
-        }
-
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        panel.style.height = panel.scrollHeight + 'px';
-        panel.setAttribute('aria-hidden', 'false');
-      };
-
-      items.forEach((item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-
-        btn.setAttribute('aria-expanded', 'false');
-        panel.setAttribute('aria-hidden', 'true');
-        panel.style.height = '0px';
-
-        const toggle = () => {
-          const isOpen = item.classList.contains('open');
-          if (isOpen) { closeItem(item); } else { openItem(item); }
-        };
-
-        btn.addEventListener('click', toggle);
-        btn.addEventListener('keydown', (ev) => {
-          if (ev.key === 'Enter' || ev.key === ' ') {
-            ev.preventDefault();
-            toggle();
-          }
-        });
-      });
-
-      const hash = self.location.hash.slice(1);
-      if (hash) {
-        const btn = self.document.getElementById(hash);
-        if (btn && btn.classList.contains('faq-q')) { btn.click(); }
-      }
-    });
-  })();
-  </script>
-  <script>
-  (() => {
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!els.length) { return; }
-
-    function check() {
-      const vh = window.innerHeight;
-      els.forEach((el) => {
-        if (el.classList.contains('is-visible')) { return; }
-        const top = el.getBoundingClientRect().top;
-        if (top < vh * 0.92) {
-          el.classList.add('is-visible');
-        }
-      });
-    }
-
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-  })();
-  </script>
+  
 </main>
 {% endblock %}

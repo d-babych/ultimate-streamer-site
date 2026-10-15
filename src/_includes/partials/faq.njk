@@ -1,0 +1,16 @@
+<section class="faq{% if faq.reveal != false %} reveal{% endif %}" id="faq">
+  <h2 class="faq-title">{{ faq.title }}</h2>
+
+  <div class="faq-list" data-accordion="single">
+    {%- for item in faq.items %}
+    <div class="faq-item">
+      <button class="faq-q" id="faq-q-{{ loop.index }}" aria-expanded="false" aria-controls="faq-a-{{ loop.index }}">{{ item.q }}</button>
+      <div class="faq-a" id="faq-a-{{ loop.index }}" role="region" aria-labelledby="faq-q-{{ loop.index }}" aria-hidden="true">
+        {%- for para in item.a | asList %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

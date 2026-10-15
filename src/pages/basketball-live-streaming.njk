@@ -8,27 +8,59 @@ ogTitle: "Basketball Live Streaming App for iPhone with Scoreboard"
 ogDescription: "Broadcast basketball games to YouTube or RTMP with a scoreboard overlay, game clock, quarters, instant replays, sponsor ads and remote score control using only an iPhone."
 twitterDescription: "Stream basketball to YouTube from iPhone with a live scoreboard overlay, game clock, quarters, replays, sponsor ads and remote score control."
 lastmod: "2026-06-18"
+faq:
+  title: "FAQ: Basketball Live Streaming"
+  items:
+    - q: "Does Ultimate Streamer support quarters and a game clock for basketball?"
+      a: >-
+        Yes. The basketball match preset includes quarters, a game clock and a score for both teams.
+        The live scoreboard overlay stays visible on the basketball stream, and you can adjust the
+        format if your league uses halves instead of quarters.
+    - q: "Can I stream basketball to YouTube directly from iPhone?"
+      a: >-
+        Yes. Ultimate Streamer connects to your YouTube account and creates a basketball live stream
+        directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube inside
+        the app, set up the scoreboard and tap Go Live.
+    - q: "Can someone else control the basketball scoreboard from a different phone?"
+      a: >-
+        Yes. Remote Control lets a second person update the score, quarters and game clock from
+        their own iPhone over the internet. No local Wi-Fi network is needed — it works over mobile
+        data. The main phone can stay on the tripod filming the court.
+    - q: "Do I need Wi-Fi to stream a basketball game?"
+      a: >-
+        Wi-Fi usually gives the most stable basketball stream, but many clubs stream full games on
+        mobile data (LTE or 5G). Results depend on signal strength at the gym or venue. Ultimate
+        Streamer works with both Wi-Fi and cellular data and uses adaptive bitrate when conditions
+        change.
+    - q: "Can I stream basketball to something other than YouTube?"
+      a: >-
+        Yes. The app supports any RTMP-compatible streaming server — Facebook Live, Twitch, a custom
+        server or your league's own streaming platform. Enter your RTMP URL and stream key, then
+        stream basketball with the same scoreboard, timer and replay tools.
+    - q: "How much does it cost?"
+      a: >-
+        Ultimate Streamer is free to download. It uses a freemium model: you can start streaming for
+        free, and additional features — such as advanced replay tools, branding options and sponsor
+        ads — are available as in-app purchases or a subscription. You can try the core basketball
+        live streaming features at no cost.
+    - q: "Do I need a tripod or special equipment?"
+      a: >-
+        No special equipment is required. All you need is an iPhone and an internet connection. That
+        said, a basic tripod or phone mount that gives your iPhone a stable, elevated view of the
+        court will significantly improve basketball stream quality. Most clubs use an inexpensive
+        tripod costing $20–30.
+app:
+  description: "Basketball live streaming app for iPhone with live scoreboard overlay, game clock, quarters, instant replays, sponsor video ads, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080."
+trusted:
+  title: "Used by real basketball clubs."
+  subtitle: >-
+    Ultimate Streamer helps basketball clubs stream games live, grow their audience, share
+    highlights and make their YouTube channels more active.
+  items: [vedmedi-basketball]
 ---
 {% extends "base.njk" %}
 
 {% block head_extra %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Ultimate Streamer",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS",
-  "description": "Basketball live streaming app for iPhone with live scoreboard overlay, game clock, quarters, instant replays, sponsor video ads, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  },
-  "url": "https://ultimate-streamer.com/",
-  "image": "https://ultimate-streamer.com/assets/app-preview@3x.png"
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +82,6 @@ lastmod: "2026-06-18"
 {% block content %}
   
 
-
 <main>
 
   <!-- ===================== HERO ===================== -->
@@ -59,12 +90,11 @@ lastmod: "2026-06-18"
       <h1 class="bball-hero__title">Basketball Live Streaming from iPhone</h1>
       <p class="bball-hero__subtitle">Stream games to YouTube or RTMP with a live scoreboard overlay, game clock, quarters, instant replays, sponsor ads and remote score control. Built for youth leagues, school teams and amateur clubs.</p>
       <a class="bball-hero__cta" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-        <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
+        <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
       </a>
       <p class="bball-hero__note">Free to download · iPhone only</p>
     </div>
   </section>
-
 
   <!-- ===================== INTRO ===================== -->
   <section aria-label="Why Ultimate Streamer for basketball">
@@ -93,7 +123,6 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== PROOF OF CONCEPT VIDEO ===================== -->
   <!-- ===================== FEATURE GROUPS ===================== -->
   <section class="bball-features" aria-label="Basketball streaming features">
@@ -107,7 +136,7 @@ lastmod: "2026-06-18"
       <article class="bball-card reveal">
         <div class="bball-card__screens">
           <!-- TODO: replace with composed basketball scoreboard image -->
-          <video src="assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Basketball Scoreboard Overlay</h3>
@@ -124,7 +153,7 @@ lastmod: "2026-06-18"
       <article class="bball-card reveal">
         <div class="bball-card__screens">
           <!-- TODO: replace with composed replay image (picker + sequence) -->
-          <video src="assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Instant Replays</h3>
@@ -142,7 +171,7 @@ lastmod: "2026-06-18"
       <article class="bball-card reveal">
         <div class="bball-card__screens">
           <!-- TODO: replace with composed branding image (logo + ad insert) -->
-          <video src="assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Team Branding &amp; Sponsor Ads</h3>
@@ -158,7 +187,7 @@ lastmod: "2026-06-18"
       <article class="bball-card reveal">
         <div class="bball-card__screens">
           <!-- TODO: replace with composed remote control image -->
-          <video src="assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Remote Score Control</h3>
@@ -170,7 +199,7 @@ lastmod: "2026-06-18"
       <article class="bball-card reveal">
         <div class="bball-card__screens">
           <!-- TODO: replace with composed PiP image -->
-          <video src="assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Picture-in-Picture</h3>
@@ -182,7 +211,7 @@ lastmod: "2026-06-18"
       <article class="bball-card reveal">
         <div class="bball-card__screens">
           <!-- TODO: replace with composed streaming settings image -->
-          <video src="assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">YouTube, RTMP &amp; HD Quality</h3>
@@ -198,36 +227,8 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== SOCIAL PROOF ===================== -->
-  <section class="trusted reveal">
-    <div class="trusted__inner">
-      <h2 class="trusted__title">Used by real basketball clubs.</h2>
-      <p class="trusted__subtitle">
-        Ultimate Streamer helps basketball clubs stream games live, grow their audience, share highlights and make their YouTube channels more active.
-      </p>
-      <div class="trusted__grid">
-        <div class="trusted__item">
-          <a href="https://www.youtube.com/@BCVedmedi" rel="noopener">
-            <img
-              src="https://yt3.googleusercontent.com/6VhZ_tAZi9UKdxkGhrDTO4vxokYjB8oenB92OBicyLd6FiMC-PUQWQH-lHsNGYHlhEZ7GahaGA=s160-c-k-c0x00ffffff-no-rj"
-              alt="BC Vedmedi logo"
-              loading="lazy"
-              style="width:72px;height:72px;border-radius:50%;object-fit:contain;margin:0 0 16px;"
-            />
-          </a>
-          <p class="trusted__author"><a href="https://www.youtube.com/@BCVedmedi" rel="noopener">BC Vedmedi</a></p>
-          <p class="trusted__quote">
-            "Our basketball club needed a simple way to stream games directly from a phone, even without perfect internet or a professional crew, while still showing the score and period time for parents and fans.
-            Ultimate Streamer arrived at the right moment and gave us more than a basic live stream: scoreboard, replays and branding for our club.
-            Previously, we only uploaded recorded games to YouTube, but now we stream in real time, attract more viewers and see players share highlight clips with our logo on social media.
-            As a result, the reach of our 15+ year-old YouTube channel has grown significantly."
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  {% include "partials/trusted.njk" %}
 
   <!-- ===================== MORE SAMPLES ===================== -->
   <section class="samples reveal" aria-label="More basketball stream examples">
@@ -251,215 +252,20 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== CTA ===================== -->
   <section class="bball-cta reveal" aria-label="Download Ultimate Streamer">
     <h2 class="bball-cta__title">Ready to stream your next basketball game?</h2>
     <p class="bball-cta__subtitle">Download Ultimate Streamer, connect YouTube or RTMP, add your basketball scoreboard and go live from your iPhone in minutes.</p>
     <a class="bball-cta__link" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-      <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
+      <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
     </a>
     <p class="bball-cta__note">Free to download · iPhone only</p>
   </section>
 
-
   <!-- ===================== FAQ ===================== -->
-  <section class="faq reveal" id="faq">
-    <h2 class="faq-title">FAQ: Basketball Live Streaming</h2>
+  {% include "partials/faq.njk" %}
 
-    <div class="faq-list" data-accordion="single">
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
-          Does Ultimate Streamer support quarters and a game clock for basketball?
-        </button>
-        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true">
-          <p>Yes. The basketball match preset includes quarters, a game clock and a score for both teams. The live scoreboard overlay stays visible on the basketball stream, and you can adjust the format if your league uses halves instead of quarters.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
-          Can I stream basketball to YouTube directly from iPhone?
-        </button>
-        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true">
-          <p>Yes. Ultimate Streamer connects to your YouTube account and creates a basketball live stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube inside the app, set up the scoreboard and tap Go Live.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
-          Can someone else control the basketball scoreboard from a different phone?
-        </button>
-        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true">
-          <p>Yes. Remote Control lets a second person update the score, quarters and game clock from their own iPhone over the internet. No local Wi-Fi network is needed — it works over mobile data. The main phone can stay on the tripod filming the court.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
-          Do I need Wi-Fi to stream a basketball game?
-        </button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true">
-          <p>Wi-Fi usually gives the most stable basketball stream, but many clubs stream full games on mobile data (LTE or 5G). Results depend on signal strength at the gym or venue. Ultimate Streamer works with both Wi-Fi and cellular data and uses adaptive bitrate when conditions change.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
-          Can I stream basketball to something other than YouTube?
-        </button>
-        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true">
-          <p>Yes. The app supports any RTMP-compatible streaming server — Facebook Live, Twitch, a custom server or your league's own streaming platform. Enter your RTMP URL and stream key, then stream basketball with the same scoreboard, timer and replay tools.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">
-          How much does it cost?
-        </button>
-        <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" aria-hidden="true">
-          <p>Ultimate Streamer is free to download. It uses a freemium model: you can start streaming for free, and additional features — such as advanced replay tools, branding options and sponsor ads — are available as in-app purchases or a subscription. You can try the core basketball live streaming features at no cost.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-7" aria-expanded="false" aria-controls="faq-a-7">
-          Do I need a tripod or special equipment?
-        </button>
-        <div class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7" aria-hidden="true">
-          <p>No special equipment is required. All you need is an iPhone and an internet connection. That said, a basic tripod or phone mount that gives your iPhone a stable, elevated view of the court will significantly improve basketball stream quality. Most clubs use an inexpensive tripod costing $20–30.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Does Ultimate Streamer support quarters and a game clock for basketball?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. The basketball match preset includes quarters, a game clock and a score for both teams. The live scoreboard overlay stays visible on the basketball stream, and you can adjust the format if your league uses halves instead of quarters."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can I stream basketball to YouTube directly from iPhone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer connects to your YouTube account and creates a basketball live stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube inside the app, set up the scoreboard and tap Go Live."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can someone else control the basketball scoreboard from a different phone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Remote Control lets a second person update the score, quarters and game clock from their own iPhone over the internet. No local Wi-Fi network is needed — it works over mobile data. The main phone can stay on the tripod filming the court."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do I need Wi-Fi to stream a basketball game?",
-        "acceptedAnswer":{"@type":"Answer","text":"Wi-Fi usually gives the most stable basketball stream, but many clubs stream full games on mobile data (LTE or 5G). Ultimate Streamer works with both Wi-Fi and cellular data and uses adaptive bitrate when conditions change."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can I stream basketball to something other than YouTube?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. The app supports any RTMP-compatible streaming server — Facebook Live, Twitch, a custom server or your league's own streaming platform. Enter your RTMP URL and stream key, then stream basketball with the same scoreboard, timer and replay tools."}
-      },
-      {
-        "@type":"Question",
-        "name":"How much does it cost?",
-        "acceptedAnswer":{"@type":"Answer","text":"Ultimate Streamer is free to download. It uses a freemium model: you can start streaming for free, and additional features such as advanced replay tools, branding options and sponsor ads are available as in-app purchases or a subscription."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do I need a tripod or special equipment?",
-        "acceptedAnswer":{"@type":"Answer","text":"No special equipment is required. All you need is an iPhone and an internet connection. A basic tripod or phone mount improves basketball stream quality but is not required."}
-      }
-    ]
-  }
-  </script>
-
-  <script>
-  (() => {
-    self.addEventListener('DOMContentLoaded', () => {
-      const root = self.document.querySelector('.faq-list');
-      if (!root) { return; }
-
-      const single = root.getAttribute('data-accordion') === 'single';
-      const items = self.Array.from(root.querySelectorAll('.faq-item'));
-
-      const closeItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        item.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        panel.style.height = '0px';
-        panel.setAttribute('aria-hidden', 'true');
-      };
-
-      const openItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        if (single) {
-          items.forEach((it) => { if (it !== item) { closeItem(it); } });
-        }
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        panel.style.height = panel.scrollHeight + 'px';
-        panel.setAttribute('aria-hidden', 'false');
-      };
-
-      items.forEach((item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        btn.setAttribute('aria-expanded', 'false');
-        panel.setAttribute('aria-hidden', 'true');
-        panel.style.height = '0px';
-        const toggle = () => {
-          const isOpen = item.classList.contains('open');
-          if (isOpen) { closeItem(item); } else { openItem(item); }
-        };
-        btn.addEventListener('click', toggle);
-        btn.addEventListener('keydown', (ev) => {
-          if (ev.key === 'Enter' || ev.key === ' ') {
-            ev.preventDefault();
-            toggle();
-          }
-        });
-      });
-
-      const hash = self.location.hash.slice(1);
-      if (hash) {
-        const btn = self.document.getElementById(hash);
-        if (btn && btn.classList.contains('faq-q')) { btn.click(); }
-      }
-    });
-  })();
-  </script>
-
+  
 </main>
 
-  <script>
-  (() => {
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!els.length) { return; }
-
-    function check() {
-      const vh = window.innerHeight;
-      els.forEach((el, i) => {
-        if (el.classList.contains('is-visible')) { return; }
-        const top = el.getBoundingClientRect().top;
-        if (top < vh * 0.92) {
-          el.classList.add('is-visible');
-        }
-      });
-    }
-
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-  })();
-  </script>
 {% endblock %}

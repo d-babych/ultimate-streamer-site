@@ -8,27 +8,43 @@ ogTitle: "Flag Football Live Streaming App for iPhone with Scoreboard"
 ogDescription: "Broadcast flag football games to YouTube or RTMP with a scoreboard overlay, game timer, instant replays, sponsor ads and remote score control using only an iPhone."
 twitterDescription: "Broadcast flag football games to YouTube or RTMP with a scoreboard overlay, game timer, instant replays, sponsor ads and remote score control using only an iPhone."
 lastmod: "2026-06-18"
+faq:
+  title: "FAQ: Flag Football Live Streaming"
+  items:
+    - q: "Can I stream flag football to YouTube directly from iPhone?"
+      a: >-
+        Yes. Ultimate Streamer connects to your YouTube account and creates a flag football live
+        stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube,
+        set up the scoreboard and tap Go Live.
+    - q: "Does Ultimate Streamer support a flag football scoreboard overlay?"
+      a: >-
+        Yes. You can show team names, score, timer and game information directly on the live stream,
+        so viewers can follow every drive and key play.
+    - q: "Can someone else control the flag football scoreboard from a different phone?"
+      a: >-
+        Yes. Remote Control lets a second person update the score and timer from their own iPhone
+        over the internet while the main phone films the field.
+    - q: "Can I stream flag football to RTMP platforms?"
+      a: >-
+        Yes. Ultimate Streamer supports YouTube and any RTMP-compatible destination, including
+        Facebook Live, Twitch, custom servers and league streaming platforms.
+    - q: "Do I need a tripod or special equipment for flag football streaming?"
+      a: >-
+        No special equipment is required. You can start with an iPhone and internet connection. A
+        tripod or phone mount gives a more stable view of the field and usually improves stream
+        quality.
+app:
+  description: "Flag football live streaming app for iPhone with live scoreboard overlay, game timer, instant replays, sponsor video ads, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080."
+trusted:
+  title: "Used by real flag football teams."
+  subtitle: >-
+    Ultimate Streamer helps teams create simple, practical and good-looking broadcasts from real
+    games.
+  items: [vinwolves]
 ---
 {% extends "base.njk" %}
 
 {% block head_extra %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Ultimate Streamer",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS",
-  "description": "Flag football live streaming app for iPhone with live scoreboard overlay, game timer, instant replays, sponsor video ads, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  },
-  "url": "https://ultimate-streamer.com/",
-  "image": "https://ultimate-streamer.com/assets/app-preview@3x.png"
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +66,6 @@ lastmod: "2026-06-18"
 {% block content %}
   
 
-
 <main>
 
   <!-- ===================== HERO ===================== -->
@@ -59,12 +74,11 @@ lastmod: "2026-06-18"
       <h1 class="bball-hero__title">Flag Football Live Streaming from iPhone</h1>
       <p class="bball-hero__subtitle">Stream flag football games to YouTube or RTMP with a live scoreboard overlay, game timer, instant replays, sponsor ads, team branding and remote score control. Built for youth teams, clubs and tournament organizers.</p>
       <a class="bball-hero__cta" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-        <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
+        <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
       </a>
       <p class="bball-hero__note">Free to download · iPhone only</p>
     </div>
   </section>
-
 
   <!-- ===================== INTRO ===================== -->
   <section aria-label="Why Ultimate Streamer for flag football">
@@ -93,7 +107,6 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== FEATURE GROUPS ===================== -->
   <section class="bball-features" aria-label="Flag football streaming features">
     <div class="bball-features__header reveal">
@@ -104,7 +117,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Flag Football Scoreboard Overlay</h3>
@@ -119,7 +132,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Instant Replays</h3>
@@ -135,7 +148,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Team Branding &amp; Sponsor Ads</h3>
@@ -149,7 +162,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Remote Score Control</h3>
@@ -159,7 +172,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Picture-in-Picture</h3>
@@ -169,7 +182,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">YouTube, RTMP &amp; HD Quality</h3>
@@ -185,36 +198,8 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== SOCIAL PROOF ===================== -->
-  <section class="trusted reveal">
-    <div class="trusted__inner">
-      <h2 class="trusted__title">Used by real flag football teams.</h2>
-      <p class="trusted__subtitle">
-        Ultimate Streamer helps teams create simple, practical and good-looking broadcasts from real games.
-      </p>
-      <div class="trusted__grid">
-        <div class="trusted__item">
-          <a href="https://www.youtube.com/@vinwolves" rel="noopener">
-            <img
-              src="https://yt3.googleusercontent.com/Gwn0If0VJI8viY_c-slLycC1Qo_OmQyqsSOYe_WMOOJ_mYlFeIZifaN2k9_pyLnamIuEcsncjw=s160-c-k-c0x00ffffff-no-rj"
-              alt="Vinnytski Wolves logo"
-              loading="lazy"
-              style="width:72px;height:72px;border-radius:50%;object-fit:contain;margin:0 0 16px;"
-            />
-          </a>
-          <p class="trusted__author"><a href="https://www.youtube.com/@vinwolves" rel="noopener">Vinnytski Wolves</a></p>
-          <p class="trusted__quote">
-            “Used this app to stream a flag football tournament, and it was a game-changer!
-            Scoring and replays worked flawlessly.
-            Hard to believe I managed a full professional-grade stream using just a single iPhone.
-            5/5 stars.”
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  {% include "partials/trusted.njk" %}
 
   <!-- ===================== MORE SAMPLES ===================== -->
   <section class="samples reveal" aria-label="More flag football stream examples">
@@ -240,161 +225,20 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== CTA ===================== -->
   <section class="bball-cta reveal" aria-label="Download Ultimate Streamer">
     <h2 class="bball-cta__title">Ready to stream your next flag football game?</h2>
     <p class="bball-cta__subtitle">Download Ultimate Streamer, connect YouTube or RTMP, add your flag football scoreboard and go live from your iPhone in minutes.</p>
     <a class="bball-cta__link" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-      <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
+      <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
     </a>
     <p class="bball-cta__note">Free to download · iPhone only</p>
   </section>
 
-
   <!-- ===================== FAQ ===================== -->
-  <section class="faq reveal" id="faq">
-    <h2 class="faq-title">FAQ: Flag Football Live Streaming</h2>
+  {% include "partials/faq.njk" %}
 
-    <div class="faq-list" data-accordion="single">
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">Can I stream flag football to YouTube directly from iPhone?</button>
-        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true"><p>Yes. Ultimate Streamer connects to your YouTube account and creates a flag football live stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube, set up the scoreboard and tap Go Live.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Does Ultimate Streamer support a flag football scoreboard overlay?</button>
-        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true"><p>Yes. You can show team names, score, timer and game information directly on the live stream, so viewers can follow every drive and key play.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">Can someone else control the flag football scoreboard from a different phone?</button>
-        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true"><p>Yes. Remote Control lets a second person update the score and timer from their own iPhone over the internet while the main phone films the field.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">Can I stream flag football to RTMP platforms?</button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true"><p>Yes. Ultimate Streamer supports YouTube and any RTMP-compatible destination, including Facebook Live, Twitch, custom servers and league streaming platforms.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Do I need a tripod or special equipment for flag football streaming?</button>
-        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true"><p>No special equipment is required. You can start with an iPhone and internet connection. A tripod or phone mount gives a more stable view of the field and usually improves stream quality.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Can I stream flag football to YouTube directly from iPhone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer connects to your YouTube account and creates a flag football live stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube, set up the scoreboard and tap Go Live."}
-      },
-      {
-        "@type":"Question",
-        "name":"Does Ultimate Streamer support a flag football scoreboard overlay?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. You can show team names, score, timer and game information directly on the live stream, so viewers can follow every drive and key play."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can someone else control the flag football scoreboard from a different phone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Remote Control lets a second person update the score and timer from their own iPhone over the internet while the main phone films the field."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can I stream flag football to RTMP platforms?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer supports YouTube and any RTMP-compatible destination, including Facebook Live, Twitch, custom servers and league streaming platforms."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do I need a tripod or special equipment for flag football streaming?",
-        "acceptedAnswer":{"@type":"Answer","text":"No special equipment is required. You can start with an iPhone and internet connection. A tripod or phone mount gives a more stable view of the field and usually improves stream quality."}
-      }
-    ]
-  }
-  </script>
-
-  <script>
-  (() => {
-    self.addEventListener('DOMContentLoaded', () => {
-      const root = self.document.querySelector('.faq-list');
-      if (!root) { return; }
-
-      const single = root.getAttribute('data-accordion') === 'single';
-      const items = self.Array.from(root.querySelectorAll('.faq-item'));
-
-      const closeItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        item.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        panel.style.height = '0px';
-        panel.setAttribute('aria-hidden', 'true');
-      };
-
-      const openItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        if (single) {
-          items.forEach((it) => { if (it !== item) { closeItem(it); } });
-        }
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        panel.style.height = panel.scrollHeight + 'px';
-        panel.setAttribute('aria-hidden', 'false');
-      };
-
-      items.forEach((item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        btn.setAttribute('aria-expanded', 'false');
-        panel.setAttribute('aria-hidden', 'true');
-        panel.style.height = '0px';
-        const toggle = () => {
-          const isOpen = item.classList.contains('open');
-          if (isOpen) { closeItem(item); } else { openItem(item); }
-        };
-        btn.addEventListener('click', toggle);
-        btn.addEventListener('keydown', (ev) => {
-          if (ev.key === 'Enter' || ev.key === ' ') {
-            ev.preventDefault();
-            toggle();
-          }
-        });
-      });
-
-      const hash = self.location.hash.slice(1);
-      if (hash) {
-        const btn = self.document.getElementById(hash);
-        if (btn && btn.classList.contains('faq-q')) { btn.click(); }
-      }
-    });
-  })();
-  </script>
-
+  
 </main>
 
-  <script>
-  (() => {
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!els.length) { return; }
-
-    function check() {
-      const vh = window.innerHeight;
-      els.forEach((el) => {
-        if (el.classList.contains('is-visible')) { return; }
-        const top = el.getBoundingClientRect().top;
-        if (top < vh * 0.92) {
-          el.classList.add('is-visible');
-        }
-      });
-    }
-
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-  })();
-  </script>
 {% endblock %}

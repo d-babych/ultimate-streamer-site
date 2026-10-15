@@ -1,7 +1,13 @@
+import { paragraphs, toScript } from "./lib/schema.js";
+
 export default function (eleventyConfig) {
   // Everything in public/ is copied to the site root as is (assets, css, icons, CNAME, robots.txt, ...).
   eleventyConfig.addPassthroughCopy({ public: "." });
   eleventyConfig.addWatchTarget("public/");
+
+  // JSON-LD and FAQ helpers (see lib/schema.js and src/_data/eleventyComputed.js)
+  eleventyConfig.addFilter("ldScript", toScript);
+  eleventyConfig.addFilter("asList", paragraphs);
 
   // Pages that have a lastmod date, home page first, then newest first.
   eleventyConfig.addFilter("sortSitemap", (pages) =>

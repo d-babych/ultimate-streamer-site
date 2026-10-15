@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
 {% include "partials/head.njk" %}
+{%- for ld in jsonLd %}
+<script type="application/ld+json">
+{{ ld | ldScript | safe }}
+</script>
+{%- endfor %}
 {%- block head_extra %}{% endblock %}
 </head>
-<body>
+<body{% if revealSelectors %} data-reveal-selectors="{{ revealSelectors | join(', ') }}"{% endif %}>
   {% include "partials/nav.njk" %}
 {% block content %}{% endblock %}
   {%- if footer != false %}
   {% include "partials/footer.njk" %}
   {%- endif %}
   <script src="/navigation.js" defer></script>
+  <script src="/site.js" defer></script>
 </body>
 </html>

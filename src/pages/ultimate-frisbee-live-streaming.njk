@@ -8,27 +8,44 @@ ogTitle: "Ultimate Frisbee Live Streaming App for iPhone with Scoreboard"
 ogDescription: "Broadcast ultimate frisbee games to YouTube or RTMP with a scoreboard overlay, game timer, instant replays, sponsor ads and remote score control using only an iPhone."
 twitterDescription: "Broadcast ultimate frisbee games to YouTube or RTMP with a scoreboard overlay, game timer, instant replays, sponsor ads and remote score control using only an iPhone."
 lastmod: "2026-06-18"
+faq:
+  title: "FAQ: Ultimate Frisbee Live Streaming"
+  items:
+    - q: "Can I stream ultimate frisbee to YouTube directly from iPhone?"
+      a: >-
+        Yes. Ultimate Streamer connects to your YouTube account and creates an ultimate frisbee live
+        stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube
+        inside the app, set up the scoreboard and tap Go Live.
+    - q: "Does Ultimate Streamer support ultimate frisbee scoreboards?"
+      a: >-
+        Yes. You can show team names, score, game timer and game status as a live scoreboard
+        overlay. This helps viewers follow each point even if they join the stream late.
+    - q: "Can someone else control the ultimate scoreboard from a different phone?"
+      a: >-
+        Yes. Remote Control lets a second person update the score and timer from their own iPhone
+        over the internet while the main phone films the field.
+    - q: "Can I stream ultimate frisbee to RTMP platforms?"
+      a: >-
+        Yes. Ultimate Streamer supports YouTube and any RTMP-compatible platform, so clubs and
+        tournament organizers can stream to custom servers, Facebook Live, Twitch or league
+        platforms.
+    - q: "Do I need a tripod or production crew for ultimate frisbee streaming?"
+      a: >-
+        No production crew is required. An iPhone and internet connection are enough to start. A
+        tripod or phone mount improves stability, and handheld streaming can work well for sideline
+        coverage.
+app:
+  description: "Ultimate frisbee live streaming app for iPhone with live scoreboard overlay, game timer, instant replays, sponsor video ads, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080."
+trusted:
+  title: "Used by real ultimate organizers."
+  subtitle: >-
+    Ultimate Streamer has been used for club games, national championships and even World
+    Championships.
+  items: [ufdf]
 ---
 {% extends "base.njk" %}
 
 {% block head_extra %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Ultimate Streamer",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS",
-  "description": "Ultimate frisbee live streaming app for iPhone with live scoreboard overlay, game timer, instant replays, sponsor video ads, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  },
-  "url": "https://ultimate-streamer.com/",
-  "image": "https://ultimate-streamer.com/assets/app-preview@3x.png"
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +67,6 @@ lastmod: "2026-06-18"
 {% block content %}
   
 
-
 <main>
 
   <!-- ===================== HERO ===================== -->
@@ -59,12 +75,11 @@ lastmod: "2026-06-18"
       <h1 class="bball-hero__title">Ultimate Frisbee Live Streaming from iPhone</h1>
       <p class="bball-hero__subtitle">Stream ultimate games to YouTube or RTMP with a live scoreboard overlay, game timer, instant replays, sponsor ads, team branding and remote score control. Built for clubs, federations and tournament organizers.</p>
       <a class="bball-hero__cta" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-        <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
+        <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
       </a>
       <p class="bball-hero__note">Free to download · iPhone only</p>
     </div>
   </section>
-
 
   <!-- ===================== INTRO ===================== -->
   <section aria-label="Why Ultimate Streamer for ultimate frisbee">
@@ -93,7 +108,6 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== FEATURE GROUPS ===================== -->
   <section class="bball-features" aria-label="Ultimate frisbee streaming features">
     <div class="bball-features__header reveal">
@@ -104,7 +118,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Ultimate Scoreboard Overlay</h3>
@@ -119,7 +133,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Instant Replays</h3>
@@ -135,7 +149,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Team Branding &amp; Sponsor Ads</h3>
@@ -149,7 +163,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Remote Score Control</h3>
@@ -159,7 +173,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Picture-in-Picture</h3>
@@ -169,7 +183,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">YouTube, RTMP &amp; HD Quality</h3>
@@ -185,36 +199,8 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== SOCIAL PROOF ===================== -->
-  <section class="trusted reveal">
-    <div class="trusted__inner">
-      <h2 class="trusted__title">Used by real ultimate organizers.</h2>
-      <p class="trusted__subtitle">
-        Ultimate Streamer has been used for club games, national championships and even World Championships.
-      </p>
-      <div class="trusted__grid">
-        <div class="trusted__item">
-            <a href="https://ufdf.org/" rel="noopener">
-          <img
-            src="https://ufdf.org/assets/ufdf-logotype-v-03-outlines@2x.png"
-            alt="Ukrainian Flying Disc Federation logo"
-            loading="lazy"
-            style="width:auto;height:72px;object-fit:contain;margin:0 0 16px;"
-          />
-          </a>
-          <p class="trusted__author"><a href="https://ufdf.org/" rel="noopener">Ukrainian Flying Disc Federation</a></p>
-          <p class="trusted__quote">
-            “We have used the app many times: for international competitions, Ukrainian championships and even games at the World Championship.
-            The app is very easy to set up, and anyone can start using it right away.
-            The functionality is flexible yet simple, which allows us to create high-quality broadcasts. Sometimes they are even better than those made by organizers.
-            This is definitely a great solution for sport! We will continue using it.”
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  {% include "partials/trusted.njk" %}
 
   <!-- ===================== MORE SAMPLES ===================== -->
   <section class="samples reveal" aria-label="More ultimate frisbee stream examples">
@@ -258,161 +244,20 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== CTA ===================== -->
   <section class="bball-cta reveal" aria-label="Download Ultimate Streamer">
     <h2 class="bball-cta__title">Ready to stream your next ultimate game?</h2>
     <p class="bball-cta__subtitle">Download Ultimate Streamer, connect YouTube or RTMP, add your ultimate scoreboard and go live from your iPhone in minutes.</p>
     <a class="bball-cta__link" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-      <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
+      <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
     </a>
     <p class="bball-cta__note">Free to download · iPhone only</p>
   </section>
 
-
   <!-- ===================== FAQ ===================== -->
-  <section class="faq reveal" id="faq">
-    <h2 class="faq-title">FAQ: Ultimate Frisbee Live Streaming</h2>
+  {% include "partials/faq.njk" %}
 
-    <div class="faq-list" data-accordion="single">
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">Can I stream ultimate frisbee to YouTube directly from iPhone?</button>
-        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true"><p>Yes. Ultimate Streamer connects to your YouTube account and creates an ultimate frisbee live stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube inside the app, set up the scoreboard and tap Go Live.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Does Ultimate Streamer support ultimate frisbee scoreboards?</button>
-        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true"><p>Yes. You can show team names, score, game timer and game status as a live scoreboard overlay. This helps viewers follow each point even if they join the stream late.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">Can someone else control the ultimate scoreboard from a different phone?</button>
-        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true"><p>Yes. Remote Control lets a second person update the score and timer from their own iPhone over the internet while the main phone films the field.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">Can I stream ultimate frisbee to RTMP platforms?</button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true"><p>Yes. Ultimate Streamer supports YouTube and any RTMP-compatible platform, so clubs and tournament organizers can stream to custom servers, Facebook Live, Twitch or league platforms.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Do I need a tripod or production crew for ultimate frisbee streaming?</button>
-        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true"><p>No production crew is required. An iPhone and internet connection are enough to start. A tripod or phone mount improves stability, and handheld streaming can work well for sideline coverage.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Can I stream ultimate frisbee to YouTube directly from iPhone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer connects to your YouTube account and creates an ultimate frisbee live stream directly from the app. No laptop, no OBS, no capture card — just sign in to YouTube inside the app, set up the scoreboard and tap Go Live."}
-      },
-      {
-        "@type":"Question",
-        "name":"Does Ultimate Streamer support ultimate frisbee scoreboards?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. You can show team names, score, game timer and game status as a live scoreboard overlay. This helps viewers follow each point even if they join the stream late."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can someone else control the ultimate scoreboard from a different phone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Remote Control lets a second person update the score and timer from their own iPhone over the internet while the main phone films the field."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can I stream ultimate frisbee to RTMP platforms?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer supports YouTube and any RTMP-compatible platform, so clubs and tournament organizers can stream to custom servers, Facebook Live, Twitch or league platforms."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do I need a tripod or production crew for ultimate frisbee streaming?",
-        "acceptedAnswer":{"@type":"Answer","text":"No production crew is required. An iPhone and internet connection are enough to start. A tripod or phone mount improves stability, and handheld streaming can work well for sideline coverage."}
-      }
-    ]
-  }
-  </script>
-
-  <script>
-  (() => {
-    self.addEventListener('DOMContentLoaded', () => {
-      const root = self.document.querySelector('.faq-list');
-      if (!root) { return; }
-
-      const single = root.getAttribute('data-accordion') === 'single';
-      const items = self.Array.from(root.querySelectorAll('.faq-item'));
-
-      const closeItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        item.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        panel.style.height = '0px';
-        panel.setAttribute('aria-hidden', 'true');
-      };
-
-      const openItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        if (single) {
-          items.forEach((it) => { if (it !== item) { closeItem(it); } });
-        }
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        panel.style.height = panel.scrollHeight + 'px';
-        panel.setAttribute('aria-hidden', 'false');
-      };
-
-      items.forEach((item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        btn.setAttribute('aria-expanded', 'false');
-        panel.setAttribute('aria-hidden', 'true');
-        panel.style.height = '0px';
-        const toggle = () => {
-          const isOpen = item.classList.contains('open');
-          if (isOpen) { closeItem(item); } else { openItem(item); }
-        };
-        btn.addEventListener('click', toggle);
-        btn.addEventListener('keydown', (ev) => {
-          if (ev.key === 'Enter' || ev.key === ' ') {
-            ev.preventDefault();
-            toggle();
-          }
-        });
-      });
-
-      const hash = self.location.hash.slice(1);
-      if (hash) {
-        const btn = self.document.getElementById(hash);
-        if (btn && btn.classList.contains('faq-q')) { btn.click(); }
-      }
-    });
-  })();
-  </script>
-
+  
 </main>
 
-  <script>
-  (() => {
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!els.length) { return; }
-
-    function check() {
-      const vh = window.innerHeight;
-      els.forEach((el) => {
-        if (el.classList.contains('is-visible')) { return; }
-        const top = el.getBoundingClientRect().top;
-        if (top < vh * 0.92) {
-          el.classList.add('is-visible');
-        }
-      });
-    }
-
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-  })();
-  </script>
 {% endblock %}

@@ -8,32 +8,43 @@ ogTitle: "Padel Live Streaming App for iPhone with Scoreboard"
 ogDescription: "Broadcast padel matches from iPhone with a live scoreboard overlay, match score, replays, sponsor ads, club branding and remote score control."
 twitterDescription: "Broadcast padel matches from iPhone with a live scoreboard overlay, match score, replays, sponsor ads, club branding and remote score control."
 lastmod: "2026-06-18"
+faq:
+  title: "FAQ: Padel Live Streaming"
+  items:
+    - q: "Can I stream padel to YouTube directly from iPhone?"
+      a: >-
+        Yes. Ultimate Streamer creates a padel live stream directly from iPhone. Sign in to YouTube,
+        add the scoreboard overlay, set player names and go live without OBS, a laptop or capture
+        hardware.
+    - q: "Does Ultimate Streamer support a padel scoreboard overlay?"
+      a: >-
+        Yes. You can show player names, score and match timer as a padel scoreboard overlay, so
+        viewers know the match state as soon as they open the stream.
+    - q: "Can someone else control the padel scoreboard from a different phone?"
+      a: >-
+        Yes. Remote Control lets a scorekeeper update the padel scoreboard from another iPhone while
+        the main phone stays mounted near the court.
+    - q: "Can I stream padel to RTMP platforms?"
+      a: >-
+        Yes. Padel streams can go to YouTube Live or any RTMP-compatible destination, including
+        Facebook Live, Twitch, custom servers, club websites and league platforms.
+    - q: "Do I need a tripod or special equipment for padel streaming?"
+      a: >-
+        No special equipment is required. An iPhone and internet connection are enough to start. A
+        wall, fence or tripod mount usually gives the cleanest view through the glass.
+app:
+  description: "Padel live streaming app for iPhone with live padel scoreboard overlay, match score, instant replays, sponsor video ads, club branding, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080."
+trusted:
+  title: "Used by real sports organizers."
+  subtitle: >-
+    Ultimate Streamer helps sports clubs and event organizers create live broadcasts that are
+    easy to start, easy to follow and useful for sponsors.
+  items: [ufdf]
 ---
 {% extends "base.njk" %}
 
-{% block head_extra %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Ultimate Streamer",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS",
-  "description": "Padel live streaming app for iPhone with live padel scoreboard overlay, match score, instant replays, sponsor video ads, club branding, remote score control, adaptive bitrate and YouTube or RTMP streaming in HD 1080.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  },
-  "url": "https://ultimate-streamer.com/",
-  "image": "https://ultimate-streamer.com/assets/app-preview@3x.png"
-}
-</script>
-{% endblock %}
-
 {% block content %}
   
-
 
 <main>
 
@@ -43,12 +54,11 @@ lastmod: "2026-06-18"
       <h1 class="bball-hero__title">Padel Live Streaming from iPhone</h1>
       <p class="bball-hero__subtitle">Stream padel matches to YouTube or RTMP with live score, player names, replay clips, sponsor ads and remote score control. Built for busy padel clubs, academies, leagues and weekend tournaments.</p>
       <a class="bball-hero__cta" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-        <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
+        <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="eager"/>
       </a>
       <p class="bball-hero__note">Free to download · iPhone only</p>
     </div>
   </section>
-
 
   <!-- ===================== INTRO ===================== -->
   <section aria-label="Why Ultimate Streamer for padel">
@@ -63,7 +73,6 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== FEATURE GROUPS ===================== -->
   <section class="bball-features" aria-label="Padel streaming features">
     <div class="bball-features__header reveal">
@@ -74,7 +83,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/tennis-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/tennis-scoreboard-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Padel Scoreboard Overlay</h3>
@@ -89,7 +98,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Instant Replays</h3>
@@ -105,7 +114,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Branding &amp; Sponsor Ads</h3>
@@ -119,7 +128,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/tennis-remote-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/tennis-remote-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Remote Score Control</h3>
@@ -129,7 +138,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">Picture-in-Picture</h3>
@@ -139,7 +148,7 @@ lastmod: "2026-06-18"
 
       <article class="bball-card reveal">
         <div class="bball-card__screens">
-          <video src="assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
+          <video src="/assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="bball-card__body">
           <h3 class="bball-card__title">YouTube, RTMP &amp; HD Quality</h3>
@@ -155,191 +164,23 @@ lastmod: "2026-06-18"
     </div>
   </section>
 
-
   <!-- ===================== SOCIAL PROOF ===================== -->
-  <section class="trusted reveal">
-    <div class="trusted__inner">
-      <h2 class="trusted__title">Used by real sports organizers.</h2>
-      <p class="trusted__subtitle">
-        Ultimate Streamer helps sports clubs and event organizers create live broadcasts that are easy to start, easy to follow and useful for sponsors.
-      </p>
-      <div class="trusted__grid">
-        <div class="trusted__item">
-            <a href="https://ufdf.org/" rel="noopener">
-          <img
-            src="https://ufdf.org/assets/ufdf-logotype-v-03-outlines@2x.png"
-            alt="Ukrainian Flying Disc Federation logo"
-            loading="lazy"
-            style="width:auto;height:72px;object-fit:contain;margin:0 0 16px;"
-          />
-          </a>
-          <p class="trusted__author"><a href="https://ufdf.org/" rel="noopener">Ukrainian Flying Disc Federation</a></p>
-          <p class="trusted__quote">
-            “We have used the app many times: for international competitions, Ukrainian championships and even games at the World Championship.
-            The app is very easy to set up, and anyone can start using it right away.
-            The functionality is flexible yet simple, which allows us to create high-quality broadcasts. Sometimes they are even better than those made by organizers.
-            This is definitely a great solution for sport! We will continue using it.”
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  {% include "partials/trusted.njk" %}
 
   <!-- ===================== CTA ===================== -->
   <section class="bball-cta reveal" aria-label="Download Ultimate Streamer">
     <h2 class="bball-cta__title">Ready to stream your next padel match?</h2>
     <p class="bball-cta__subtitle">Download Ultimate Streamer, choose your padel scoreboard, connect YouTube or RTMP, and turn the next court into a live broadcast.</p>
     <a class="bball-cta__link" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Download Ultimate Streamer on the App Store">
-      <img src="assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
+      <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="162" height="54" loading="lazy"/>
     </a>
     <p class="bball-cta__note">Free to download · iPhone only</p>
   </section>
 
-
   <!-- ===================== FAQ ===================== -->
-  <section class="faq reveal" id="faq">
-    <h2 class="faq-title">FAQ: Padel Live Streaming</h2>
+  {% include "partials/faq.njk" %}
 
-    <div class="faq-list" data-accordion="single">
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">Can I stream padel to YouTube directly from iPhone?</button>
-        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true"><p>Yes. Ultimate Streamer creates a padel live stream directly from iPhone. Sign in to YouTube, add the scoreboard overlay, set player names and go live without OBS, a laptop or capture hardware.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Does Ultimate Streamer support a padel scoreboard overlay?</button>
-        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true"><p>Yes. You can show player names, score and match timer as a padel scoreboard overlay, so viewers know the match state as soon as they open the stream.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">Can someone else control the padel scoreboard from a different phone?</button>
-        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true"><p>Yes. Remote Control lets a scorekeeper update the padel scoreboard from another iPhone while the main phone stays mounted near the court.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">Can I stream padel to RTMP platforms?</button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true"><p>Yes. Padel streams can go to YouTube Live or any RTMP-compatible destination, including Facebook Live, Twitch, custom servers, club websites and league platforms.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Do I need a tripod or special equipment for padel streaming?</button>
-        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true"><p>No special equipment is required. An iPhone and internet connection are enough to start. A wall, fence or tripod mount usually gives the cleanest view through the glass.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Can I stream padel to YouTube directly from iPhone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer creates a padel live stream directly from iPhone. Sign in to YouTube, add the scoreboard overlay, set player names and go live without OBS, a laptop or capture hardware."}
-      },
-      {
-        "@type":"Question",
-        "name":"Does Ultimate Streamer support a padel scoreboard overlay?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. You can show player names, score and match timer as a padel scoreboard overlay, so viewers know the match state as soon as they open the stream."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can someone else control the padel scoreboard from a different phone?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Remote Control lets a scorekeeper update the padel scoreboard from another iPhone while the main phone stays mounted near the court."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can I stream padel to RTMP platforms?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Padel streams can go to YouTube Live or any RTMP-compatible destination, including Facebook Live, Twitch, custom servers, club websites and league platforms."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do I need a tripod or special equipment for padel streaming?",
-        "acceptedAnswer":{"@type":"Answer","text":"No special equipment is required. An iPhone and internet connection are enough to start. A wall, fence or tripod mount usually gives the cleanest view through the glass."}
-      }
-    ]
-  }
-  </script>
-
-  <script>
-  (() => {
-    self.addEventListener('DOMContentLoaded', () => {
-      const root = self.document.querySelector('.faq-list');
-      if (!root) { return; }
-
-      const single = root.getAttribute('data-accordion') === 'single';
-      const items = self.Array.from(root.querySelectorAll('.faq-item'));
-
-      const closeItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        item.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        panel.style.height = '0px';
-        panel.setAttribute('aria-hidden', 'true');
-      };
-
-      const openItem = (item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        if (single) {
-          items.forEach((it) => { if (it !== item) { closeItem(it); } });
-        }
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        panel.style.height = panel.scrollHeight + 'px';
-        panel.setAttribute('aria-hidden', 'false');
-      };
-
-      items.forEach((item) => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        if (!btn || !panel) { return; }
-        btn.setAttribute('aria-expanded', 'false');
-        panel.setAttribute('aria-hidden', 'true');
-        panel.style.height = '0px';
-        const toggle = () => {
-          const isOpen = item.classList.contains('open');
-          if (isOpen) { closeItem(item); } else { openItem(item); }
-        };
-        btn.addEventListener('click', toggle);
-        btn.addEventListener('keydown', (ev) => {
-          if (ev.key === 'Enter' || ev.key === ' ') {
-            ev.preventDefault();
-            toggle();
-          }
-        });
-      });
-
-      const hash = self.location.hash.slice(1);
-      if (hash) {
-        const btn = self.document.getElementById(hash);
-        if (btn && btn.classList.contains('faq-q')) { btn.click(); }
-      }
-    });
-  })();
-  </script>
-
+  
 </main>
 
-  <script>
-  (() => {
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!els.length) { return; }
-
-    function check() {
-      const vh = window.innerHeight;
-      els.forEach((el) => {
-        if (el.classList.contains('is-visible')) { return; }
-        const top = el.getBoundingClientRect().top;
-        if (top < vh * 0.92) {
-          el.classList.add('is-visible');
-        }
-      });
-    }
-
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-  })();
-  </script>
 {% endblock %}

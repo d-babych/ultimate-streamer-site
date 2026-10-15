@@ -8,28 +8,53 @@ ogTitle: "Ultimate Streamer — Sports Live Streaming App for iPhone"
 ogDescription: "Stream sports to YouTube from your iPhone with overlays, scoreboards and instant replays."
 twitterDescription: "Stream sports to YouTube with overlays, scoreboards and instant replays."
 lastmod: "2026-06-19"
+revealSelectors: ["#features .features__inner", "#features .feature--media", ".feature-split__card", ".why-card", ".samples", "#sports .features__inner", "#sports .feature", "#guides .features__inner", "#guides .feature", ".trusted", ".trusted__item", ".pricing", ".plan", ".faq", ".faq-item"]
+faq:
+  title: "FAQ: Sports Live Streaming from iPhone"
+  reveal: false
+  items:
+    - q: "Is the app free?"
+      a: >-
+        Ultimate Streamer is free to download. Advanced features are available with a subscription
+        or one-time credits.
+    - q: "Can I stream to YouTube from iPhone?"
+      a: >-
+        Yes. Ultimate Streamer lets you go live to YouTube with overlays and replays.
+    - q: "Does the app include a scoreboard overlay?"
+      a: >-
+        Yes. You can show scores, teams and timers during football, basketball, ultimate frisbee and
+        other sports.
+    - q: "Is instant replay supported on iPhone?"
+      a: >-
+        Yes. Capture highlights with one tap and send instant replays to your live stream.
+    - q: "Are my sensitive data transmitted to third parties?"
+      a: >-
+        We don’t require registration, and we don’t upload your private data to our servers. See our
+        Privacy Policy for details.
+    - q: "Do you offer support?"
+      a: >-
+        Yes. Contact us via email on the <a href="/feedback.html">Contact Us</a> page.
+    - q: "How do I redeem an App Store offer code?"
+      a:
+        - >-
+          If you received an App Store promo or offer code for Ultimate Streamer, redeem it in the App
+          Store first, then restore purchases inside the app.
+        - >-
+          <a href="/how-to-redeem-app-store-offer-code-on-iphone.html">Read the full step-by-step
+          guide</a>
+app:
+  description: "Sports live streaming app for iPhone with overlays, scoreboards and instant replays. Stream to YouTube."
+  category: "MultimediaApplication"
+trusted:
+  title: "Trusted by teams."
+  subtitle: >-
+    Coaches, players and organisers<br/> use Ultimate Streamer to broadcast their competitions.
+  reveal: false
+  items: [liubov-m, serhii-k, zhyvanka]
 ---
 {% extends "base.njk" %}
 
 {% block head_extra %}
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Ultimate Streamer",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "iOS",
-    "description": "Sports live streaming app for iPhone with overlays, scoreboards and instant replays. Stream to YouTube.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD"
-    },
-    "url": "https://ultimate-streamer.com/",
-    "image": "https://ultimate-streamer.com/assets/app-preview@3x.png",
-    "softwareVersion": "1.0"
-  }
-  </script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,7 +82,7 @@ lastmod: "2026-06-19"
   
 <main>
 <header class="hero">
-    <img src="assets/app-icon-large.png" srcset="assets/app-icon-large.png 1x, assets/app-icon-large@2x.png 2x, assets/app-icon-large@3x.png 3x" alt="Ultimate Streamer — sports live streaming app icon for iPhone" class="app-icon" width="256" height="256" loading="eager" />
+    <img src="/assets/app-icon-large.png" srcset="/assets/app-icon-large.png 1x, /assets/app-icon-large@2x.png 2x, /assets/app-icon-large@3x.png 3x" alt="Ultimate Streamer — sports live streaming app icon for iPhone" class="app-icon" width="256" height="256" loading="eager" />
     <h1 data-typing-brand>
       <span class="typing-word" data-typing-word>Ultimate</span><span class="typing-cursor" aria-hidden="true"></span>
       <br class="typing-break" />
@@ -69,14 +94,14 @@ lastmod: "2026-06-19"
     </p>
     <section>
       <a href="https://apps.apple.com/app/id6745222525" class="app-store-button" rel="noopener">
-        <img src="assets/app-store-badge@3x.png" alt="Download Ultimate Streamer on the App Store" width="121" height="40" loading="lazy" />
+        <img src="/assets/app-store-badge@3x.png" alt="Download Ultimate Streamer on the App Store" width="121" height="40" loading="lazy" />
       </a>
     </section>
     
     <div class="hero-previews" aria-label="Ultimate Streamer preview">
       <img
-        src="assets/app-preview-stream@3x.png"
-        srcset="assets/app-preview-stream.png 1x, assets/app-preview-stream@2x.png 2x, assets/app-preview-stream@3x.png 3x"
+        src="/assets/app-preview-stream@3x.png"
+        srcset="/assets/app-preview-stream.png 1x, /assets/app-preview-stream@2x.png 2x, /assets/app-preview-stream@3x.png 3x"
         alt="Stream preview"
         class="hero-previews__stream"
         loading="lazy"
@@ -84,8 +109,8 @@ lastmod: "2026-06-19"
 
       <div class="hero-previews__remoteCrop" aria-hidden="true">
         <img
-          src="assets/app-preview-remote@3x.png"
-          srcset="assets/app-preview-remote.png 1x, assets/app-preview-remote@2x.png 2x, assets/app-preview-remote@3x.png 3x"
+          src="/assets/app-preview-remote@3x.png"
+          srcset="/assets/app-preview-remote.png 1x, /assets/app-preview-remote@2x.png 2x, /assets/app-preview-remote@3x.png 3x"
           alt=""
           class="hero-previews__remote"
           loading="lazy"
@@ -102,13 +127,13 @@ lastmod: "2026-06-19"
       <h2 class="features__title">Run your stream like a real show.</h2>
 
       <p class="features__subtitle">
-        Stream your kid's game, an amateur match or a local tournament from your iPhone <a href="how-to-start-a-sports-live-stream-in-3-minutes.html">in minutes</a>. Ultimate Streamer helps you create a professional-looking sports live stream without cameras, laptops, OBS or a production team.
+        Stream your kid's game, an amateur match or a local tournament from your iPhone <a href="/how-to-start-a-sports-live-stream-in-3-minutes.html">in minutes</a>. Ultimate Streamer helps you create a professional-looking sports live stream without cameras, laptops, OBS or a production team.
       </p>
 
       <div class="features__grid features__grid--media">
           <article class="feature feature--media">
             <div class="feature__media">
-              <video src="assets/videos/create-sports-site.mp4" autoplay muted loop playsinline></video>
+              <video src="/assets/videos/create-sports-site.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="feature__content">
             <h3 class="feature__title">Smart Scoreboards<br/> with Sport Presets</h3>
@@ -120,7 +145,7 @@ lastmod: "2026-06-19"
 
         <article class="feature feature--media" id="ads">
           <div class="feature__media">
-            <video src="assets/videos/index-branding-site.mp4" autoplay muted loop playsinline></video>
+            <video src="/assets/videos/index-branding-site.mp4" autoplay muted loop playsinline></video>
           </div>
           <div class="feature__content">
           <h3 class="feature__title">Sponsor Ads & Logos</h3>
@@ -132,7 +157,7 @@ lastmod: "2026-06-19"
 
         <article class="feature feature--media" id="replays">
           <div class="feature__media">
-            <video src="assets/videos/index-replay-site.mp4" autoplay muted loop playsinline></video>
+            <video src="/assets/videos/index-replay-site.mp4" autoplay muted loop playsinline></video>
           </div>
           <div class="feature__content">
           <h3 class="feature__title">Instant Replays</h3>
@@ -150,8 +175,8 @@ lastmod: "2026-06-19"
       <div class="feature-split__card">
         <div class="feature-split__media" aria-hidden="true">
           <img
-            src="assets/app-preview-remote@3x.png"
-            srcset="assets/app-preview-remote.png 1x, assets/app-preview-remote@2x.png 2x, assets/app-preview-remote@3x.png 3x"
+            src="/assets/app-preview-remote@3x.png"
+            srcset="/assets/app-preview-remote.png 1x, /assets/app-preview-remote@2x.png 2x, /assets/app-preview-remote@3x.png 3x"
             alt=""
             class="feature-split__img"
             loading="lazy"
@@ -199,8 +224,8 @@ lastmod: "2026-06-19"
 
         <div class="feature-split__media" aria-hidden="true">
           <img
-            src="assets/app-preview-pip@3x.png"
-            srcset="assets/app-preview-pip.png 1x, assets/app-preview-pip@2x.png 2x, assets/app-preview-pip@3x.png 3x"
+            src="/assets/app-preview-pip@3x.png"
+            srcset="/assets/app-preview-pip.png 1x, /assets/app-preview-pip@2x.png 2x, /assets/app-preview-pip@3x.png 3x"
             alt=""
             class="feature-split__img"
             loading="lazy"
@@ -219,14 +244,14 @@ lastmod: "2026-06-19"
         <article class="why-card">
           <h3 class="why-card__title"><strong>Tailored<br/>for sports</strong>,<br/>not vlogging.</h3>
           <p class="why-card__text">
-            Scorekeeping, timer and replays are <a href="how-to-start-a-sports-live-stream-in-3-minutes.html">simple to set up</a> and effortless to use during the game.
+            Scorekeeping, timer and replays are <a href="/how-to-start-a-sports-live-stream-in-3-minutes.html">simple to set up</a> and effortless to use during the game.
           </p>
         </article>
 
         <article class="why-card">
             <h3 class="why-card__title">Stream what<br/><strong>matters</strong>.</h3>
           <p class="why-card__text">
-            Your child's game, your team, your tournament — the moment matters. <a href="handheld-sports-streaming-iphone.html">Stream by hand</a> and don't overthink it.
+            Your child's game, your team, your tournament — the moment matters. <a href="/handheld-sports-streaming-iphone.html">Stream by hand</a> and don't overthink it.
           </p>
         </article>
 
@@ -240,7 +265,7 @@ lastmod: "2026-06-19"
         <article class="why-card">
           <h3 class="why-card__title">Streaming<br/> Platforms.</h3>
           <p class="why-card__text">
-          <a href="how-to-enable-youtube-channel-for-live-streaming.html">Go live on YouTube</a> or any <span id="rtmp-streaming">RTMP platform</span>.
+          <a href="/how-to-enable-youtube-channel-for-live-streaming.html">Go live on YouTube</a> or any <span id="rtmp-streaming">RTMP platform</span>.
           </p>
         </article>
       </div>
@@ -279,7 +304,7 @@ lastmod: "2026-06-19"
       <div class="features__grid">
         <article class="feature">
           <h3 class="feature__title">
-            <a href="ultimate-frisbee-live-streaming.html">Ultimate Frisbee</a>
+            <a href="/ultimate-frisbee-live-streaming.html">Ultimate Frisbee</a>
           </h3>
           <p class="feature__text">
             Fast games, score overlays, replays and remote scorekeeping for ultimate tournaments and clubs.
@@ -288,7 +313,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="basketball-live-streaming.html">Basketball</a>
+            <a href="/basketball-live-streaming.html">Basketball</a>
           </h3>
           <p class="feature__text">
             Stream basketball games with score, period time, replays and sponsor-ready branding.
@@ -297,7 +322,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="flag-football-live-streaming.html">Flag Football</a>
+            <a href="/flag-football-live-streaming.html">Flag Football</a>
           </h3>
           <p class="feature__text">
             Broadcast flag football games with a simple iPhone setup, scoreboard and instant replays.
@@ -306,7 +331,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="tennis-live-streaming.html">Tennis</a>
+            <a href="/tennis-live-streaming.html">Tennis</a>
           </h3>
           <p class="feature__text">
             Stream tennis matches with a scoreboard overlay, match timer, replays and sponsor-ready branding.
@@ -315,7 +340,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="padel-live-streaming.html">Padel</a>
+            <a href="/padel-live-streaming.html">Padel</a>
           </h3>
           <p class="feature__text">
             Broadcast padel matches from iPhone with score overlays, replays, RTMP support and remote score control.
@@ -324,7 +349,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="volleyball-live-streaming.html">Volleyball</a>
+            <a href="/volleyball-live-streaming.html">Volleyball</a>
           </h3>
           <p class="feature__text">
             Stream volleyball games with score, set context, instant replays and team branding.
@@ -333,7 +358,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="badminton-live-streaming.html">Badminton</a>
+            <a href="/badminton-live-streaming.html">Badminton</a>
           </h3>
           <p class="feature__text">
             Stream badminton matches with score overlays, match timer, replays and a simple iPhone setup.
@@ -342,7 +367,7 @@ lastmod: "2026-06-19"
 
         <article class="feature">
           <h3 class="feature__title">
-            <a href="youth-sports-live-streaming.html">Youth Sports</a>
+            <a href="/youth-sports-live-streaming.html">Youth Sports</a>
           </h3>
           <p class="feature__text">
             Help parents, schools and clubs follow youth games live with a simple phone-based broadcast.
@@ -364,35 +389,35 @@ lastmod: "2026-06-19"
 
       <div class="features__grid">
         <article class="feature">
-          <h3 class="feature__title"><a href="make-your-team-visible-online.html">Make Your Team Visible Online: Stream Games Without a Big Budget</a></h3>
+          <h3 class="feature__title"><a href="/make-your-team-visible-online.html">Make Your Team Visible Online: Stream Games Without a Big Budget</a></h3>
           <p class="feature__text">
           Discover how Ultimate Streamer makes sports live streaming simple, affordable, and professional.
           </p>
         </article>
 
         <article class="feature">
-          <h3 class="feature__title"><a href="how-to-start-a-sports-live-stream-in-3-minutes.html">How to Start a Sports Live Stream in 3 Minutes</a></h3>
+          <h3 class="feature__title"><a href="/how-to-start-a-sports-live-stream-in-3-minutes.html">How to Start a Sports Live Stream in 3 Minutes</a></h3>
           <p class="feature__text">
           Step-by-step guide to streaming sports from your iPhone using the Ultimate Streamer sports streaming app.
           </p>
         </article>
 
         <article class="feature">
-          <h3 class="feature__title"><a href="handheld-sports-streaming-iphone.html">Handheld Sports Streaming: Why One iPhone Can Be Enough</a></h3>
+          <h3 class="feature__title"><a href="/handheld-sports-streaming-iphone.html">Handheld Sports Streaming: Why One iPhone Can Be Enough</a></h3>
           <p class="feature__text">
             A real story about streaming amateur sports by hand and why simple live broadcasts matter.
           </p>
         </article>
 
         <article class="feature">
-          <h3 class="feature__title"><a href="how-to-enable-youtube-channel-for-live-streaming.html">How to Enable YouTube Live Streaming on Your Channel</a></h3>
+          <h3 class="feature__title"><a href="/how-to-enable-youtube-channel-for-live-streaming.html">How to Enable YouTube Live Streaming on Your Channel</a></h3>
           <p class="feature__text">
             Learn how to verify your channel, activate YouTube Live, and prepare it for sports streaming from iPhone using Ultimate Streamer.
           </p>
         </article>
 
         <article class="feature">
-          <h3 class="feature__title"><a href="best-sports-live-streaming-apps-with-scoreboard-overlays.html">Best Sports Live Streaming Apps with Scoreboard Overlays</a></h3>
+          <h3 class="feature__title"><a href="/best-sports-live-streaming-apps-with-scoreboard-overlays.html">Best Sports Live Streaming Apps with Scoreboard Overlays</a></h3>
           <p class="feature__text">
             Learn what matters when choosing a sports streaming app with scoreboards, timer, replays and remote control.
           </p>
@@ -404,48 +429,7 @@ lastmod: "2026-06-19"
   <br /><br /><br />
 
   
-  <section class="trusted">
-    <div class="trusted__inner">
-
-      <h2 class="trusted__title">
-        Trusted by teams.
-      </h2>
-
-      <p class="trusted__subtitle">
-        Coaches, players and organisers<br/>
-        use Ultimate Streamer to broadcast their competitions.
-      </p>
-
-      <div class="trusted__grid">
-
-        <div class="trusted__item">
-          <p class="trusted__author">Liubov M.</p>
-          <p class="trusted__quote">
-            “Amazing application, intuitive and very user friendly interface!
-            It has everything you need for comfortable game broadcasting.”
-          </p>
-        </div>
-
-        <div class="trusted__item">
-          <p class="trusted__author">Serhii K.</p>
-          <p class="trusted__quote">
-            “It’s easy to learn and set up. Most importantly, it’s extremely
-            useful when there is no time to connect expensive broadcasting system.”
-          </p>
-        </div>
-
-        <div class="trusted__item">
-          <p class="trusted__author">Zhyvanka</p>
-          <p class="trusted__quote">
-            “A very good application for game broadcasting. The functionality
-            allows you to make a professional stream in a few clicks.”
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
+  {% include "partials/trusted.njk" %}
 
   
   <section class="pricing" aria-label="Pricing and plans">
@@ -507,228 +491,8 @@ lastmod: "2026-06-19"
     </div>
   </section>
 
+{% include "partials/faq.njk" %}
 
-<section class="faq" id="faq">
-  <h2 class="faq-title">FAQ: Sports Live Streaming from iPhone</h2>
 
-  <!-- data-accordion="single" => відкрита тільки одна секція одночасно -->
-  <div class="faq-list" data-accordion="single">
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
-        Is the app free?
-      </button>
-      <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true">
-        <p>Ultimate Streamer is free to download. Advanced features are available with a subscription or one-time credits.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
-        Can I stream to YouTube from iPhone?
-      </button>
-      <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true">
-        <p>Yes. Ultimate Streamer lets you go live to YouTube with overlays and replays.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
-        Does the app include a scoreboard overlay?
-      </button>
-      <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true">
-        <p>Yes. You can show scores, teams and timers during football, basketball, ultimate frisbee and other sports.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
-        Is instant replay supported on iPhone?
-      </button>
-      <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true">
-        <p>Yes. Capture highlights with one tap and send instant replays to your live stream.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
-        Are my sensitive data transmitted to third parties?
-      </button>
-      <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true">
-        <p>We don’t require registration, and we don’t upload your private data to our servers. See our Privacy Policy for details.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">
-        Do you offer support?
-      </button>
-      <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" aria-hidden="true">
-        <p>Yes. Contact us via email on the <a href="feedback.html">Contact Us</a> page.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item">
-      <button class="faq-q" id="faq-q-7" aria-expanded="false" aria-controls="faq-a-7">
-        How do I redeem an App Store offer code?
-      </button>
-      <div class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7" aria-hidden="true">
-        <p>
-          If you received an App Store promo or offer code for Ultimate Streamer,
-          redeem it in the App Store first, then restore purchases inside the app.
-        </p>
-        <p>
-          <a href="how-to-redeem-app-store-offer-code-on-iphone.html">
-            Read the full step-by-step guide
-          </a>
-        </p>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"Can I stream to YouTube from iPhone?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. Ultimate Streamer lets you go live to both YouTube with overlays and replays."}
-    },
-    {
-      "@type":"Question",
-      "name":"Does the app include a scoreboard overlay?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. You can show scores, teams and timers during football, basketball, ultimate frisbee and other sports."}
-    },
-    {
-      "@type":"Question",
-      "name":"Is instant replay supported on iPhone?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. Capture highlights with one tap and send instant replays to your live stream."}
-    },
-    {
-      "@type":"Question",
-      "name":"Are my sensitive data transmitted to third parties?",
-      "acceptedAnswer":{"@type":"Answer","text":"We don’t require registration, and we don’t upload your private data to our servers. See our Privacy Policy for details."}
-    },
-    {
-     "@type":"Question",
-     "name":"How do I redeem an App Store offer code?",
-     "acceptedAnswer":{
-       "@type":"Answer",
-       "text":"Redeem the code in the App Store, then open Ultimate Streamer and restore purchases. Full guide available on the website."
-     }
-    }
-  ]
-}
-</script>
-
-<script>
-(() => {
-  self.addEventListener('DOMContentLoaded', () => {
-    const root = self.document.querySelector('.faq-list');
-    if (!root) { return; }
-
-    const single = root.getAttribute('data-accordion') === 'single';
-    const items = self.Array.from(root.querySelectorAll('.faq-item'));
-
-    const closeItem = (item) => {
-      const btn = item.querySelector('.faq-q');
-      const panel = item.querySelector('.faq-a');
-      if (!btn || !panel) { return; }
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      panel.style.height = '0px';
-      panel.setAttribute('aria-hidden', 'true');
-    };
-
-    const openItem = (item) => {
-      const btn = item.querySelector('.faq-q');
-      const panel = item.querySelector('.faq-a');
-      if (!btn || !panel) { return; }
-      if (single) {
-        items.forEach((it) => { if (it !== item) { closeItem(it); } });
-      }
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-      panel.style.height = panel.scrollHeight + 'px';
-      panel.setAttribute('aria-hidden', 'false');
-    };
-
-    items.forEach((item) => {
-      const btn = item.querySelector('.faq-q');
-      const panel = item.querySelector('.faq-a');
-      if (!btn || !panel) { return; }
-
-      /* ініціалізація */
-      btn.setAttribute('aria-expanded', 'false');
-      panel.setAttribute('aria-hidden', 'true');
-      panel.style.height = '0px';
-
-      const toggle = () => {
-        const isOpen = item.classList.contains('open');
-        if (isOpen) { closeItem(item); } else { openItem(item); }
-      };
-
-      btn.addEventListener('click', toggle);
-      btn.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter' || ev.key === ' ') {
-          ev.preventDefault();
-          toggle();
-        }
-      });
-    });
-
-    /* відкриття по якорю, якщо треба: /#faq-q-2 */
-    const hash = self.location.hash.slice(1);
-    if (hash) {
-      const btn = self.document.getElementById(hash);
-      if (btn && btn.classList.contains('faq-q')) { btn.click(); }
-    }
-  });
-})();
-</script>
-<script>
-(() => {
-  self.addEventListener('DOMContentLoaded', () => {
-    const revealSelector = [
-      '#features .features__inner',
-      '#features .feature--media',
-      '.feature-split__card',
-      '.why-card',
-      '.samples',
-      '#sports .features__inner',
-      '#sports .feature',
-      '#guides .features__inner',
-      '#guides .feature',
-      '.trusted',
-      '.trusted__item',
-      '.pricing',
-      '.plan',
-      '.faq',
-      '.faq-item'
-    ].join(',');
-
-    const els = Array.from(self.document.querySelectorAll(revealSelector));
-    els.forEach((el) => el.classList.add('reveal'));
-    if (!els.length) { return; }
-
-    function check() {
-      const vh = self.innerHeight;
-      els.forEach((el) => {
-        if (el.classList.contains('is-visible')) { return; }
-        const top = el.getBoundingClientRect().top;
-        if (top < vh * 0.92) {
-          el.classList.add('is-visible');
-        }
-      });
-    }
-
-    check();
-    self.addEventListener('scroll', check, { passive: true });
-  });
-})();
-</script>
 </main>
 {% endblock %}
