@@ -4,13 +4,13 @@
     <p class="trusted__subtitle">{{ trusted.subtitle | safe }}</p>
     <div class="trusted__grid">
       {%- for id in trusted.items %}
-      {%- set t = testimonials[id] %}
+      {%- set m = testimonials[id] %}
       <div class="trusted__item">
-        {%- if t.logo %}
-        <a href="{{ t.url }}" rel="noopener"><img src="{{ t.logo }}" alt="{{ t.author }} logo" loading="lazy" style="{% if t.logoRound %}width:72px;height:72px;border-radius:50%;{% else %}width:auto;height:72px;{% endif %}object-fit:contain;margin:0 0 16px;" /></a>
+        {%- if m.logo %}
+        <a href="{{ m.url }}" rel="noopener"><img src="{{ m.logo }}" alt="{{ t.logoAlt | fmt({ name: m.author }) }}" loading="lazy" style="{% if m.logoRound %}width:72px;height:72px;border-radius:50%;{% else %}width:auto;height:72px;{% endif %}object-fit:contain;margin:0 0 16px;" /></a>
         {%- endif %}
-        <p class="trusted__author">{% if t.url %}<a href="{{ t.url }}" rel="noopener">{{ t.author }}</a>{% else %}{{ t.author }}{% endif %}</p>
-        <p class="trusted__quote">{{ t.quote }}</p>
+        <p class="trusted__author">{% if m.url %}<a href="{{ m.url }}" rel="noopener">{{ m.author }}</a>{% else %}{{ m.author }}{% endif %}</p>
+        <p class="trusted__quote">{{ m.quote }}</p>
       </div>
       {%- endfor %}
     </div>

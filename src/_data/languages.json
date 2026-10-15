@@ -1,0 +1,6 @@
+{
+  "en": { "name": "English", "native": "English", "htmlLang": "en", "hreflang": "en", "ogLocale": "en_US", "prefix": "", "default": true },
+  "es": { "name": "Spanish (Latin America)", "native": "Español", "htmlLang": "es-419", "hreflang": "es-419", "ogLocale": "es_LA", "prefix": "/es" },
+  "pt": { "name": "Portuguese (Brazil)", "native": "Português", "htmlLang": "pt-BR", "hreflang": "pt-BR", "ogLocale": "pt_BR", "prefix": "/pt" },
+  "uk": { "name": "Ukrainian", "native": "Українська", "htmlLang": "uk", "hreflang": "uk", "ogLocale": "uk_UA", "prefix": "/uk" }
+}

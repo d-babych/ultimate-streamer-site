@@ -1,11 +1,11 @@
-<nav class="page-nav" aria-label="Primary" data-site-nav>
+<nav class="page-nav" aria-label="{{ t.navAriaLabel }}" data-site-nav>
     <div class="page-nav__inner">
-      <a class="page-nav__brand" href="/" aria-label="{{ site.name }} home">
-        <img class="page-nav__icon" src="/icon-180.png" alt="{{ site.name }} app icon" width="32" height="32" loading="eager" />
+      <a class="page-nav__brand" href="{{ homeUrl }}" aria-label="{{ t.brandAriaLabel }}">
+        <img class="page-nav__icon" src="/icon-180.png" alt="{{ t.appIconAlt }}" width="32" height="32" loading="eager" />
         <span class="page-nav__name">{{ site.name }}</span>
       </a>
 
-      <button class="page-nav__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+      <button class="page-nav__toggle" type="button" aria-label="{{ t.menuToggleLabel }}" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
         <span class="page-nav__toggle-lines" aria-hidden="true"></span>
       </button>
 
@@ -13,18 +13,30 @@
         <ul class="page-nav__links">
           {%- for group in nav.groups %}
           <li class="page-nav__item">
-            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>{{ group.label }}</button>
-            <ul class="page-nav__submenu" aria-label="{{ group.aria }}">
-              {%- for item in group.items %}
-              <li><a href="/{{ item.href }}">{{ item.label }}</a></li>
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>{{ t.groups[group.id] }}</button>
+            <ul class="page-nav__submenu" aria-label="{{ t.groupAria[group.id] }}">
+              {%- for key in group.pages %}
+              {%- set ref = collections.all | pageRef(key, lang, "navLabel") %}
+              <li><a href="{{ ref.url }}"{% if ref.lang != lang %} lang="{{ ref.lang }}"{% endif %}>{{ ref.label }}</a></li>
               {%- endfor %}
             </ul>
           </li>
           {%- endfor %}
+          {%- set alts = collections.all | alternates(translationKey) %}
+          {%- if alts.length > 1 %}
+          <li class="page-nav__item page-nav__item--lang">
+            <button class="page-nav__root" type="button" aria-expanded="false" aria-label="{{ t.languageLabel }}: {{ languages[lang].native }}" data-nav-root>{{ lang | upper }}</button>
+            <ul class="page-nav__submenu" aria-label="{{ t.languageLabel }}">
+              {%- for a in alts %}{% if a.lang != lang %}
+              <li><a href="{{ a.url }}" hreflang="{{ a.hreflang }}" lang="{{ a.htmlLang }}">{{ a.native }}</a></li>
+              {%- endif %}{% endfor %}
+            </ul>
+          </li>
+          {%- endif %}
         </ul>
 
-        <a class="page-nav__store" href="{{ site.appStoreUrl }}" rel="noopener" aria-label="Download {{ site.name }} on the App Store">
-          <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="121" height="40" loading="lazy" />
+        <a class="page-nav__store" href="{{ site.appStoreUrl }}" rel="noopener" aria-label="{{ t.storeLinkLabel }}">
+          <img src="/assets/app-store-badge@3x.png" alt="{{ t.storeBadgeAlt }}" width="121" height="40" loading="lazy" />
         </a>
       </div>
     </div>

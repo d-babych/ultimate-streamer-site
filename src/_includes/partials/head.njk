@@ -14,6 +14,15 @@ gtag('config', '{{ site.gaId }}');
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}"/>
 <link rel="canonical" href="{{ pageUrl }}"/>
+{%- set alts = collections.all | alternates(translationKey) %}
+{%- if alts.length > 1 %}
+{%- for a in alts %}
+<link rel="alternate" hreflang="{{ a.hreflang }}" href="{{ site.url }}{{ a.url }}"/>
+{%- if a.isDefault %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ a.url }}"/>
+{%- endif %}
+{%- endfor %}
+{%- endif %}
 
 <meta name="robots" content="{{ robots or 'index,follow,max-image-preview:large' }}"/>
 {%- if keywords %}
@@ -22,6 +31,10 @@ gtag('config', '{{ site.gaId }}');
 
 <meta property="og:type" content="{{ ogType or 'article' }}"/>
 <meta property="og:url" content="{{ pageUrl }}"/>
+<meta property="og:locale" content="{{ languages[lang].ogLocale }}"/>
+{%- for a in alts %}{% if a.lang != lang %}
+<meta property="og:locale:alternate" content="{{ a.ogLocale }}"/>
+{%- endif %}{% endfor %}
 <meta property="og:title" content="{{ ogTitle or title }}"/>
 <meta property="og:description" content="{{ ogDescription or description }}"/>
 <meta property="og:image" content="{{ site.url }}{{ ogImage or site.ogImage }}"/>

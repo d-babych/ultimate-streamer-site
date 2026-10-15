@@ -13,7 +13,6 @@
   "copyright": "2025–2026",
   "app": {
     "category": "SportsApplication",
-    "description": "Sports live streaming app for iPhone with overlays, scoreboards and instant replays. Stream sports to YouTube or any RTMP platform.",
     "image": "/assets/app-preview@3x.png",
     "operatingSystem": "iOS",
     "price": "0.00",

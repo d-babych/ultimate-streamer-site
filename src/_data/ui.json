@@ -1,0 +1,26 @@
+{
+  "en": {
+    "navAriaLabel": "Primary",
+    "brandAriaLabel": "Ultimate Streamer home",
+    "appIconAlt": "Ultimate Streamer app icon",
+    "menuToggleLabel": "Open navigation menu",
+    "storeLinkLabel": "Download Ultimate Streamer on the App Store",
+    "storeBadgeAlt": "Download on the App Store",
+    "logoAlt": "{name} logo",
+    "footerTagline": "Made with ❤️ for sports creators.",
+    "languageLabel": "Language",
+    "appDescription": "Sports live streaming app for iPhone with overlays, scoreboards and instant replays. Stream sports to YouTube or any RTMP platform.",
+    "groups": {
+      "sports": "Sports",
+      "features": "Features",
+      "guides": "Guides",
+      "blog": "Blog"
+    },
+    "groupAria": {
+      "sports": "Sports pages",
+      "features": "Feature pages",
+      "guides": "Guides",
+      "blog": "Blog articles"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { alternates, format, pageRef } from "./lib/lang.js";
 import { paragraphs, toScript } from "./lib/schema.js";
 
 export default function (eleventyConfig) {
@@ -8,6 +9,11 @@ export default function (eleventyConfig) {
   // JSON-LD and FAQ helpers (see lib/schema.js and src/_data/eleventyComputed.js)
   eleventyConfig.addFilter("ldScript", toScript);
   eleventyConfig.addFilter("asList", paragraphs);
+
+  // Language helpers (see lib/lang.js)
+  eleventyConfig.addFilter("pageRef", pageRef);
+  eleventyConfig.addFilter("alternates", alternates);
+  eleventyConfig.addFilter("fmt", format);
 
   // Pages that have a lastmod date, home page first, then newest first.
   eleventyConfig.addFilter("sortSitemap", (pages) =>

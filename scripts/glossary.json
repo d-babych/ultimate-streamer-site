@@ -1,0 +1,10 @@
+{
+  "forbidden": [
+    {
+      "pattern": "\\bKiev\\b",
+      "flags": "i",
+      "langs": "all",
+      "message": "write \"Kyiv\" in every language (localization guidelines, section 4)"
+    }
+  ]
+}

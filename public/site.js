@@ -57,6 +57,50 @@
     });
   }
 
+  // Home page hero: the brand word is typed out and replaced by the next word from
+  // <h1 data-typing-brand data-words="Ultimate|Basketball|..."> (the words are written in the page's language).
+  function initTyping() {
+    const brand = document.querySelector('[data-typing-brand]');
+    const typingWord = brand && brand.querySelector('[data-typing-word]');
+    const words = ((brand && brand.getAttribute('data-words')) || '').split('|').filter(Boolean);
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!typingWord || words.length < 2 || reducedMotion.matches) return;
+
+    const typeDelay = 95;
+    const deleteDelay = 55;
+    const holdDelay = 1400;
+
+    const wait = (delay) => new Promise((resolve) => {
+      window.setTimeout(resolve, delay);
+    });
+
+    const setWord = async (word) => {
+      while (typingWord.textContent.length < word.length) {
+        typingWord.textContent = word.slice(0, typingWord.textContent.length + 1);
+        await wait(typeDelay);
+      }
+    };
+
+    const deleteWord = async () => {
+      while (typingWord.textContent.length > 0) {
+        typingWord.textContent = typingWord.textContent.slice(0, -1);
+        await wait(deleteDelay);
+      }
+    };
+
+    (async () => {
+      let index = 0;
+
+      while (true) {
+        await wait(holdDelay);
+        await deleteWord();
+        index = (index + 1) % words.length;
+        await setWord(words[index]);
+      }
+    })();
+  }
+
   initReveal();
   initFaq();
+  initTyping();
 })();

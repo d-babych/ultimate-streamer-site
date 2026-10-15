@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "check": "node scripts/check.mjs",
+    "verify": "npm run build && npm run check"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "cheerio": "^1.2.0",
+    "gray-matter": "^4.0.3"
   }
 }
