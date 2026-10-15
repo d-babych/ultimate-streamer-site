@@ -1,0 +1,265 @@
+---
+title: "App de transmisión de ultimate frisbee en vivo para iPhone con marcador — Ultimate Streamer"
+description: "Transmite partidos de ultimate frisbee a YouTube o RTMP desde un iPhone con un overlay de marcador en vivo, cronómetro de juego, repeticiones instantáneas, anuncios de patrocinadores, marca y control remoto del marcador. Hecha para clubes, federaciones y torneos."
+keywords: "transmisión de ultimate frisbee en vivo, app para transmitir ultimate frisbee, stream de ultimate frisbee a YouTube, stream de ultimate desde iPhone, overlay de marcador de ultimate frisbee, app de stream de ultimate frisbee en vivo, app de transmisión deportiva en vivo, stream deportivo desde iPhone, transmisión de ultimate frisbee, stream de ultimate por RTMP"
+ogType: "website"
+ogTitle: "App de transmisión de ultimate frisbee en vivo para iPhone con marcador"
+ogDescription: "Transmite partidos de ultimate frisbee a YouTube o RTMP con un overlay de marcador, cronómetro de juego, repeticiones instantáneas, anuncios de patrocinadores y control remoto del marcador usando solo un iPhone."
+twitterDescription: "Transmite partidos de ultimate frisbee a YouTube o RTMP con un overlay de marcador, cronómetro de juego, repeticiones instantáneas, anuncios de patrocinadores y control remoto del marcador usando solo un iPhone."
+lastmod: "2026-06-18"
+sourceLastmod: "2026-06-18"
+navLabel: "Ultimate frisbee"
+faq:
+  title: "Preguntas frecuentes: transmisión de ultimate frisbee en vivo"
+  items:
+    - q: "¿Puedo hacer stream de ultimate frisbee a YouTube directamente desde el iPhone?"
+      a: >-
+        Sí. Ultimate Streamer se conecta a tu cuenta de YouTube y crea un stream de ultimate
+        frisbee en vivo directamente desde la app. Sin laptop, sin OBS, sin capturadora: solo inicia
+        sesión en YouTube dentro de la app, configura el marcador y toca «¡Transmitir en vivo!».
+    - q: "¿Ultimate Streamer admite marcadores de ultimate frisbee?"
+      a: >-
+        Sí. Puedes mostrar los nombres de los equipos, el puntaje, el cronómetro de juego y el
+        estado del partido como un overlay de marcador en vivo. Esto ayuda a los espectadores a
+        seguir cada punto aunque se conecten tarde al stream.
+    - q: "¿Otra persona puede controlar el marcador de ultimate desde otro teléfono?"
+      a: >-
+        Sí. El control remoto permite que una segunda persona actualice el puntaje y el cronómetro
+        desde su propio iPhone por internet mientras el teléfono principal filma el campo.
+    - q: "¿Puedo transmitir ultimate frisbee a plataformas RTMP?"
+      a: >-
+        Sí. Ultimate Streamer admite YouTube y cualquier plataforma compatible con RTMP, así que
+        los clubes y los organizadores de torneos pueden transmitir a servidores propios, Facebook
+        Live, Twitch o plataformas de ligas.
+    - q: "¿Necesito un trípode o un equipo de producción para transmitir ultimate frisbee?"
+      a: >-
+        No se necesita un equipo de producción. Un iPhone y una conexión a internet bastan para
+        empezar. Un trípode o un soporte para el teléfono mejora la estabilidad, y transmitir con el
+        teléfono en la mano puede funcionar bien para cubrir el partido desde la línea lateral.
+app:
+  description: "App de transmisión de ultimate frisbee en vivo para iPhone con overlay de marcador en vivo, cronómetro de juego, repeticiones instantáneas, videos publicitarios de patrocinadores, control remoto del marcador, bitrate adaptativo y stream a YouTube o RTMP en HD 1080."
+trusted:
+  title: "La usan organizadores de ultimate reales."
+  subtitle: >-
+    Ultimate Streamer se ha usado en partidos de club, campeonatos nacionales e incluso en
+    campeonatos mundiales.
+  items: [ufdf]
+---
+{% extends "base.njk" %}
+
+{% block head_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Ejemplo de stream de ultimate frisbee en vivo — Ultimate Streamer",
+  "description": "Una transmisión real de un partido de ultimate frisbee con Ultimate Streamer en iPhone. Muestra una configuración móvil sencilla para transmitir partidos de ultimate con overlays de marcador, repeticiones y herramientas de producción pensadas para torneos.",
+  "thumbnailUrl": "https://ultimate-streamer.com/assets/app-preview@3x.png",
+  "embedUrl": "https://www.youtube.com/embed/7lm6wcAOzjg",
+  "contentUrl": "https://www.youtube.com/watch?v=7lm6wcAOzjg",
+  "uploadDate": "2026-01-11",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ultimate Streamer"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="bball-hero" aria-label="Transmisión de ultimate frisbee en vivo con iPhone">
+    <div class="bball-hero__inner">
+      <h1 class="bball-hero__title">Transmisión de ultimate frisbee en vivo desde el iPhone</h1>
+      <p class="bball-hero__subtitle">Transmite partidos de ultimate a YouTube o RTMP con un overlay de marcador en vivo, cronómetro de juego, repeticiones instantáneas, anuncios de patrocinadores, marca del equipo y control remoto del marcador. Hecha para clubes, federaciones y organizadores de torneos.</p>
+      <a class="bball-hero__cta" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Descarga Ultimate Streamer en el App Store">
+        <img src="/assets/app-store-badge@3x.png" alt="Descárgala en el App Store" width="162" height="54" loading="eager"/>
+      </a>
+      <p class="bball-hero__note">Descarga gratuita · solo para iPhone</p>
+    </div>
+  </section>
+
+  <!-- ===================== INTRO ===================== -->
+  <section aria-label="Por qué Ultimate Streamer para el ultimate frisbee">
+    <div class="bball-intro-wrap reveal">
+      <div class="bball-intro__text-col">
+        <p class="bball-intro__kicker">Para clubes, federaciones, equipos y organizadores de torneos</p>
+        <h2 class="bball-intro__title">Una transmisión de ultimate completa en tu bolsillo.</h2>
+        <p class="bball-intro__text">
+          El ultimate es veloz, emocionante y lleno de cambios rápidos de impulso. Los espectadores necesitan más que una cámara apuntando al campo:
+          necesitan el puntaje, el cronómetro, los nombres de los equipos y el contexto de cada punto. Ultimate Streamer convierte cualquier iPhone en una configuración
+          de transmisión deportiva: overlay de marcador de ultimate frisbee, repeticiones instantáneas, videos de patrocinadores, marca del equipo y stream a YouTube o RTMP, en minutos
+          y sin OBS, laptop ni equipo de producción.
+        </p>
+      </div>
+      <div class="bball-intro__video">
+        <div class="frame">
+          <iframe
+            src="https://www.youtube.com/embed/7lm6wcAOzjg"
+            title="Ejemplo de stream de ultimate frisbee en vivo"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURE GROUPS ===================== -->
+  <section class="bball-features" aria-label="Funciones para transmitir ultimate frisbee">
+    <div class="bball-features__header reveal">
+      <h2 class="features__title">Transmisión de ultimate frisbee en vivo, sin complicaciones</h2>
+    </div>
+
+    <div class="bball-features__grid">
+
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="/assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Overlay de marcador de ultimate</h3>
+          <p class="bball-card__text">Muestra los nombres de los equipos, el puntaje y el cronómetro de juego durante todo el stream. Mantén orientados a los espectadores durante los puntos largos, las pausas breves y los cambios de impulso al final del partido.</p>
+          <ul class="bball-card__list">
+            <li>Puntaje y cronómetro de juego siempre visibles</li>
+            <li>Configuración rápida para partidos de club y torneos</li>
+            <li>Varios diseños y combinaciones de colores para el overlay del marcador</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Repeticiones instantáneas</h3>
+          <p class="bball-card__text">Un toque para capturar un layout, un bloqueo, un huck, un punto o un universe point. Arma secuencias de repetición que se reproducen una tras otra con transiciones animadas y un bumper personalizado.</p>
+          <ul class="bball-card__list">
+            <li>Guarda repeticiones al instante durante el partido</li>
+            <li>Combina clips de las mejores jugadas en una secuencia de repetición</li>
+            <li>Velocidades personalizadas: 0.5×, 0.75×, 1×, 1.5×</li>
+            <li>Transiciones animadas y bumper de repetición</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="/assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Marca del equipo y anuncios de patrocinadores</h3>
+          <p class="bball-card__text">Pon el logo de tu club, federación o torneo en cada cuadro. Reproduce videos de patrocinadores durante las repeticiones, los descansos o los tiempos fuera, para que cada stream de ultimate en vivo genere valor para tus aliados.</p>
+          <ul class="bball-card__list">
+            <li>Logo del club, el torneo o la federación como overlay permanente</li>
+            <li>Videos publicitarios de patrocinadores dentro de la transmisión en vivo</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="/assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Control remoto del marcador</h3>
+          <p class="bball-card__text">Deja que una persona filme desde el mejor ángulo de la línea lateral mientras otra actualiza el puntaje y el cronómetro de juego desde un segundo iPhone. No necesitas Wi-Fi local: el control remoto funciona mediante una conexión punto a punto.</p>
+        </div>
+      </article>
+
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="/assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Imagen en imagen</h3>
+          <p class="bball-card__text">Cambia a Mensajes, revisa los detalles del torneo o actualiza el chat del equipo mientras el stream de ultimate sigue en una ventana flotante. Sin interrupciones para los espectadores.</p>
+        </div>
+      </article>
+
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <video src="/assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">YouTube, RTMP y calidad HD</h3>
+          <p class="bball-card__text">Transmite ultimate en HD 1080 a YouTube o a cualquier plataforma RTMP: Facebook Live, Twitch, el servidor de tu federación o un destino personalizado. El bitrate adaptativo ayuda a que el stream siga funcionando cuando cambia el internet del campo.</p>
+          <ul class="bball-card__list">
+            <li>Transmisión en vivo a YouTube integrada</li>
+            <li>Compatible con cualquier servidor RTMP</li>
+            <li>Salida en HD 1080 con bitrate adaptativo</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== SOCIAL PROOF ===================== -->
+  {% include "partials/trusted.njk" %}
+
+  <!-- ===================== MORE SAMPLES ===================== -->
+  <section class="samples reveal" aria-label="Más ejemplos de streams de ultimate frisbee">
+    <h2><strong>Más</strong> streams de ultimate frisbee en vivo.</h2>
+    <p>Transmisiones reales de ultimate hechas con Ultimate Streamer en iPhone:</p>
+
+    <div class="videos">
+      <iframe
+        src="https://www.youtube.com/embed/cuUjj4SQtcc"
+        title="Stream de ultimate frisbee en vivo, ejemplo n.º 2"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+      <!--
+      <iframe
+        src="https://www.youtube.com/embed/wJz4Grmf-RQ"
+        title="Stream de ultimate frisbee en vivo, ejemplo n.º 3"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      -->
+
+      <iframe
+        src="https://www.youtube.com/embed/7dy9MO2V9hw"
+        title="Stream de ultimate frisbee en vivo, ejemplo n.º 4"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+      <iframe
+        src="https://www.youtube.com/embed/isBh7D3Mdmk"
+        title="Stream de ultimate frisbee en vivo, ejemplo n.º 5"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="bball-cta reveal" aria-label="Descarga Ultimate Streamer">
+    <h2 class="bball-cta__title">¿Listo para transmitir tu próximo partido de ultimate?</h2>
+    <p class="bball-cta__subtitle">Descarga Ultimate Streamer, conecta YouTube o RTMP, agrega tu marcador de ultimate y transmite en vivo desde tu iPhone en minutos.</p>
+    <a class="bball-cta__link" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Descarga Ultimate Streamer en el App Store">
+      <img src="/assets/app-store-badge@3x.png" alt="Descárgala en el App Store" width="162" height="54" loading="lazy"/>
+    </a>
+    <p class="bball-cta__note">Descarga gratuita · solo para iPhone</p>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  {% include "partials/faq.njk" %}
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,272 @@
+---
+title: "Застосунок для стріму баскетболу з iPhone з табло — Ultimate Streamer"
+description: "Стрімте баскетбольні ігри на YouTube або RTMP з iPhone з оверлеєм табло наживо, ігровим годинником, чвертями, миттєвими повторами, рекламою спонсорів і дистанційним керуванням рахунком. Створено для дитячого баскетболу, шкільних команд і клубів."
+keywords: "стрім баскетболу, застосунок для стріму баскетболу, стрім баскетболу на YouTube, стрім баскетболу з iPhone, оверлей табло баскетболу, дитячий баскетбол стрім, шкільний баскетбол стрім, застосунок для спортивних стрімів, спортивний стрім з iPhone, трансляція баскетболу, аматорський баскетбол стрім, RTMP стрім баскетболу"
+ogType: "website"
+ogTitle: "Застосунок для стріму баскетболу з iPhone з табло"
+ogDescription: "Транслюйте баскетбольні ігри на YouTube або RTMP з оверлеєм табло, ігровим годинником, чвертями, миттєвими повторами, рекламою спонсорів і дистанційним керуванням рахунком лише з iPhone."
+twitterDescription: "Стрімте баскетбол на YouTube з iPhone з оверлеєм табло наживо, ігровим годинником, чвертями, повторами, рекламою спонсорів і дистанційним керуванням рахунком."
+lastmod: "2026-06-18"
+sourceLastmod: "2026-06-18"
+navLabel: "Баскетбол"
+faq:
+  title: "Поширені запитання: стрім баскетболу"
+  items:
+    - q: "Чи підтримує Ultimate Streamer чверті та ігровий годинник для баскетболу?"
+      a: >-
+        Так. Пресет баскетбольного матчу містить чверті, ігровий годинник і рахунок обох команд.
+        Оверлей табло наживо залишається на екрані стріму, а формат можна змінити, якщо у вашій
+        лізі грають половини замість чвертей.
+    - q: "Чи можна стрімити баскетбол на YouTube безпосередньо з iPhone?"
+      a: >-
+        Так. Ultimate Streamer підключається до вашого облікового запису YouTube і створює стрім
+        баскетболу просто із застосунку. Без ноутбука, без OBS, без карти захоплення — просто
+        увійдіть в YouTube у застосунку, налаштуйте табло й натисніть «В ефір!».
+    - q: "Чи може хтось інший керувати баскетбольним табло з іншого телефона?"
+      a: >-
+        Так. Дистанційне керування дає змогу другій людині оновлювати рахунок, чверті та ігровий
+        годинник зі свого iPhone через інтернет. Локальна мережа Wi-Fi не потрібна — усе працює через
+        мобільні дані. Основний телефон може залишатися на штативі й знімати майданчик.
+    - q: "Чи потрібен Wi-Fi, щоб стрімити баскетбольну гру?"
+      a: >-
+        Wi-Fi зазвичай забезпечує найстабільніший стрім баскетболу, але багато клубів стрімлять
+        повні ігри через мобільні дані (LTE чи 5G). Результат залежить від сили сигналу в залі чи на
+        локації. Ultimate Streamer працює і з Wi-Fi, і з мобільними даними та використовує
+        адаптивний бітрейт, коли умови змінюються.
+    - q: "Чи можна стрімити баскетбол не лише на YouTube?"
+      a: >-
+        Так. Застосунок підтримує будь-який RTMP-сумісний стрімінговий сервер — Facebook Live,
+        Twitch, власний сервер або платформу вашої ліги. Введіть RTMP-адресу та ключ стріму й
+        стрімте баскетбол з тими самими інструментами табло, таймера та повторів.
+    - q: "Скільки це коштує?"
+      a: >-
+        Ultimate Streamer можна завантажити безкоштовно. Він працює за моделлю freemium: почати
+        стрімити можна безкоштовно, а додаткові можливості — наприклад, розширені інструменти
+        повторів, налаштування брендингу та реклама спонсорів — доступні як покупки в застосунку або
+        за підпискою. Основні можливості для стріму баскетболу можна спробувати безкоштовно.
+    - q: "Чи потрібен штатив або спеціальне обладнання?"
+      a: >-
+        Спеціальне обладнання не потрібне. Усе, що потрібно, — iPhone та підключення до інтернету.
+        Утім, простий штатив або тримач, що дає вашому iPhone стабільний, піднесений вигляд на
+        майданчик, суттєво покращить якість стріму баскетболу. Більшість клубів користуються
+        недорогим штативом за 20–30 доларів.
+app:
+  description: "Застосунок для стріму баскетболу з iPhone: оверлей табло наживо, ігровий годинник, чверті, миттєві повтори, відеореклама спонсорів, дистанційне керування рахунком, адаптивний бітрейт і стрім на YouTube або RTMP у HD 1080."
+trusted:
+  title: "Нам довіряють реальні баскетбольні клуби."
+  subtitle: >-
+    Ultimate Streamer допомагає баскетбольним клубам стрімити ігри наживо, розширювати аудиторію,
+    ділитися яскравими моментами й робити свої канали на YouTube активнішими.
+  items: [vedmedi-basketball]
+---
+{% extends "base.njk" %}
+
+{% block head_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Приклад стріму баскетболу — Ultimate Streamer",
+  "description": "Реальна трансляція баскетбольної гри з Ultimate Streamer на iPhone. Показує оверлей баскетбольного табло з назвами команд, рахунком, ігровим годинником, чвертями та просте мобільне налаштування стріму.",
+  "thumbnailUrl": "https://ultimate-streamer.com/assets/app-preview@3x.png",
+  "embedUrl": "https://www.youtube.com/embed/nlCIB553g3Y",
+  "contentUrl": "https://www.youtube.com/watch?v=nlCIB553g3Y",
+  "uploadDate": "2026-03-08",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ultimate Streamer"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="bball-hero" aria-label="Стрім баскетболу з iPhone">
+    <div class="bball-hero__inner">
+      <h1 class="bball-hero__title">Стрім баскетболу з iPhone</h1>
+      <p class="bball-hero__subtitle">Стрімте ігри на YouTube або RTMP з оверлеєм табло наживо, ігровим годинником, чвертями, миттєвими повторами, рекламою спонсорів і дистанційним керуванням рахунком. Створено для дитячих ліг, шкільних команд і аматорських клубів.</p>
+      <a class="bball-hero__cta" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Завантажити Ultimate Streamer в App Store">
+        <img src="/assets/app-store-badge@3x.png" alt="Завантажити в App Store" width="162" height="54" loading="eager"/>
+      </a>
+      <p class="bball-hero__note">Безкоштовне завантаження · лише для iPhone</p>
+    </div>
+  </section>
+
+  <!-- ===================== INTRO ===================== -->
+  <section aria-label="Чому Ultimate Streamer для баскетболу">
+    <div class="bball-intro-wrap reveal">
+      <div class="bball-intro__text-col">
+        <p class="bball-intro__kicker">Для батьків, тренерів, шкіл і організаторів турнірів</p>
+        <h2 class="bball-intro__title">Повноцінне налаштування баскетбольної трансляції у вашій кишені.</h2>
+        <p class="bball-intro__text">
+          Більшість клубів записують ігри й завантажують відео пізніше. Але батьки, вболівальники та гравці хочуть дивитися наживо,
+          розуміти рахунок і ділитися моментом, поки гра триває. Ultimate Streamer перетворює будь-який iPhone на систему для спортивних трансляцій:
+          оверлей баскетбольного табло, ігровий годинник, чверті, миттєві повтори, відео спонсорів і брендинг вашої команди — за лічені хвилини,
+          без OBS, ноутбука чи продакшн-команди.
+        </p>
+      </div>
+      <div class="bball-intro__video">
+        <div class="frame">
+          <iframe
+            src="https://www.youtube.com/embed/nlCIB553g3Y"
+            title="Реальна трансляція баскетболу — Ultimate Streamer"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROOF OF CONCEPT VIDEO ===================== -->
+  <!-- ===================== FEATURE GROUPS ===================== -->
+  <section class="bball-features" aria-label="Можливості для стріму баскетболу">
+    <div class="bball-features__header reveal">
+      <h2 class="features__title">Стрім баскетболу наживо — просто</h2>
+    </div>
+
+    <div class="bball-features__grid">
+
+      <!-- 1. Basketball Scoreboard -->
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <!-- TODO: replace with composed basketball scoreboard image -->
+          <video src="/assets/videos/basketball-scoreboard-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Оверлей баскетбольного табло</h3>
+          <p class="bball-card__text">Показуйте назви команд, рахунок, чверті та ігровий годинник протягом усього стріму. Налаштуйте чисту баскетбольну трансляцію за лічені секунди за допомогою пресета баскетбольного матчу.</p>
+          <ul class="bball-card__list">
+            <li>Рахунок, чверті та ігровий годинник завжди на екрані</li>
+            <li>Баскетбольний пресет для швидкого налаштування гри</li>
+            <li>Кілька дизайнів оверлея табло та кольорових схем</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2. Instant Replays -->
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <!-- TODO: replace with composed replay image (picker + sequence) -->
+          <video src="/assets/videos/ultimate-replay-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Миттєві повтори</h3>
+          <p class="bball-card__text">Один дотик, щоб зберегти швидку атаку, блок-шот, триочковий чи кидок у фінальну секунду. Створюйте послідовності повторів, що йдуть один за одним з анімованими переходами та власним бампером.</p>
+          <ul class="bball-card__list">
+            <li>Зберігайте повтори на льоту під час гри</li>
+            <li>Об’єднуйте фрагменти з яскравими моментами в послідовність повторів</li>
+            <li>Власна швидкість: 0.5×, 0.75×, 1×, 1.5×</li>
+            <li>Анімовані переходи та бампер повтору</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 3. Branding & Ads -->
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <!-- TODO: replace with composed branding image (logo + ad insert) -->
+          <video src="/assets/videos/ultimate-branding-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Брендинг команди та реклама спонсорів</h3>
+          <p class="bball-card__text">Розмістіть лого свого клубу, школи чи турніру на кожному кадрі. Показуйте відео спонсорів під час повторів, перерв чи тайм-аутів — і кожен стрім баскетболу стане цінним для партнерів.</p>
+          <ul class="bball-card__list">
+            <li>Лого команди чи турніру як постійний оверлей</li>
+            <li>Відеореклама спонсорів у прямій трансляції</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 4. Remote Score Control -->
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <!-- TODO: replace with composed remote control image -->
+          <video src="/assets/videos/basketball-remote-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Дистанційне керування рахунком</h3>
+          <p class="bball-card__text">Нехай одна людина знімає з найкращого ракурсу, а інша оновлює рахунок, чверть і ігровий годинник з другого iPhone. Локальний Wi-Fi не потрібен — дистанційне керування працює через однорангове з’єднання.</p>
+        </div>
+      </article>
+
+      <!-- 5. Picture-in-Picture -->
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <!-- TODO: replace with composed PiP image -->
+          <video src="/assets/videos/ultimate-pip-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">Картинка в картинці</h3>
+          <p class="bball-card__text">Перемикайтеся на «Повідомлення», перевіряйте дані команди чи оновлюйте груповий чат, поки стрім баскетболу триває в плаваючому вікні. Глядачі не помічають жодних перерв.</p>
+        </div>
+      </article>
+
+      <!-- 6. Streaming & Quality -->
+      <article class="bball-card reveal">
+        <div class="bball-card__screens">
+          <!-- TODO: replace with composed streaming settings image -->
+          <video src="/assets/videos/create-destination-site.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bball-card__body">
+          <h3 class="bball-card__title">YouTube, RTMP і якість HD</h3>
+          <p class="bball-card__text">Стрімте баскетбол у HD 1080 на YouTube або будь-яку RTMP-платформу — Facebook Live, Twitch, сервер своєї ліги чи власну адресу. Адаптивний бітрейт допомагає зберегти стрім, коли інтернет на локації змінюється.</p>
+          <ul class="bball-card__list">
+            <li>Вбудований стрім на YouTube</li>
+            <li>Підтримка будь-якого RTMP-сервера</li>
+            <li>Вихід у HD 1080 з адаптивним бітрейтом</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== SOCIAL PROOF ===================== -->
+  {% include "partials/trusted.njk" %}
+
+  <!-- ===================== MORE SAMPLES ===================== -->
+  <section class="samples reveal" aria-label="Більше прикладів стрімів баскетболу">
+    <h2><strong>Більше</strong> стрімів баскетболу.</h2>
+    <p>Реальні трансляції баскетболу, зроблені з Ultimate Streamer на iPhone:</p>
+    <div class="videos">
+      <iframe
+        src="https://www.youtube.com/embed/nb_5L9uiE-Q"
+        title="Стрім баскетболу — зразок №2 — Ultimate Streamer"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <iframe
+        src="https://www.youtube.com/embed/i7nSKwfhuU4"
+        title="Стрім баскетболу — зразок №3 — Ultimate Streamer"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="bball-cta reveal" aria-label="Завантажити Ultimate Streamer">
+    <h2 class="bball-cta__title">Готові стрімити свою наступну баскетбольну гру?</h2>
+    <p class="bball-cta__subtitle">Завантажте Ultimate Streamer, підключіть YouTube чи RTMP, додайте баскетбольне табло й виходьте в ефір зі свого iPhone за лічені хвилини.</p>
+    <a class="bball-cta__link" href="https://apps.apple.com/app/id6745222525" rel="noopener" aria-label="Завантажити Ultimate Streamer в App Store">
+      <img src="/assets/app-store-badge@3x.png" alt="Завантажити в App Store" width="162" height="54" loading="lazy"/>
+    </a>
+    <p class="bball-cta__note">Безкоштовне завантаження · лише для iPhone</p>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  {% include "partials/faq.njk" %}
+
+
+</main>
+
+{% endblock %}

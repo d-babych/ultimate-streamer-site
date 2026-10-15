@@ -22,5 +22,77 @@
       "guides": "Guides",
       "blog": "Blog articles"
     }
+  },
+  "es": {
+    "navAriaLabel": "Principal",
+    "brandAriaLabel": "Inicio de Ultimate Streamer",
+    "appIconAlt": "Ícono de la app Ultimate Streamer",
+    "menuToggleLabel": "Abrir el menú de navegación",
+    "storeLinkLabel": "Descarga Ultimate Streamer en el App Store",
+    "storeBadgeAlt": "Descárgala en el App Store",
+    "logoAlt": "Logo de {name}",
+    "footerTagline": "Hecho con ❤️ para creadores deportivos.",
+    "languageLabel": "Idioma",
+    "appDescription": "App de transmisión deportiva en vivo para iPhone con overlays, marcadores y repeticiones instantáneas. Haz stream a YouTube o a cualquier plataforma RTMP.",
+    "groups": {
+      "sports": "Deportes",
+      "features": "Funciones",
+      "guides": "Guías",
+      "blog": "Blog"
+    },
+    "groupAria": {
+      "sports": "Páginas de deportes",
+      "features": "Páginas de funciones",
+      "guides": "Guías",
+      "blog": "Artículos del blog"
+    }
+  },
+  "pt": {
+    "navAriaLabel": "Principal",
+    "brandAriaLabel": "Página inicial do Ultimate Streamer",
+    "appIconAlt": "Ícone do app Ultimate Streamer",
+    "menuToggleLabel": "Abrir o menu de navegação",
+    "storeLinkLabel": "Baixe o Ultimate Streamer na App Store",
+    "storeBadgeAlt": "Baixar na App Store",
+    "logoAlt": "Logo de {name}",
+    "footerTagline": "Feito com ❤️ para criadores de esporte.",
+    "languageLabel": "Idioma",
+    "appDescription": "App de transmissão esportiva ao vivo para iPhone com overlays, placares e replays instantâneos. Faça stream para o YouTube ou qualquer plataforma RTMP.",
+    "groups": {
+      "sports": "Esportes",
+      "features": "Recursos",
+      "guides": "Guias",
+      "blog": "Blog"
+    },
+    "groupAria": {
+      "sports": "Páginas de esportes",
+      "features": "Páginas de recursos",
+      "guides": "Guias",
+      "blog": "Artigos do blog"
+    }
+  },
+  "uk": {
+    "navAriaLabel": "Головне меню",
+    "brandAriaLabel": "Головна сторінка Ultimate Streamer",
+    "appIconAlt": "Іконка застосунку Ultimate Streamer",
+    "menuToggleLabel": "Відкрити меню навігації",
+    "storeLinkLabel": "Завантажити Ultimate Streamer в App Store",
+    "storeBadgeAlt": "Завантажити в App Store",
+    "logoAlt": "Логотип {name}",
+    "footerTagline": "Створено з ❤️ для спортивних авторів.",
+    "languageLabel": "Мова",
+    "appDescription": "Застосунок для прямих спортивних трансляцій з iPhone: оверлеї, табло та миттєві повтори. Стрімте на YouTube або будь-яку RTMP-платформу.",
+    "groups": {
+      "sports": "Спорт",
+      "features": "Можливості",
+      "guides": "Посібники",
+      "blog": "Блог"
+    },
+    "groupAria": {
+      "sports": "Сторінки про види спорту",
+      "features": "Сторінки про можливості",
+      "guides": "Посібники",
+      "blog": "Статті блогу"
+    }
   }
 }

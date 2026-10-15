@@ -1,0 +1,101 @@
+---
+title: "Enviar feedback – Ultimate Streamer"
+description: "Envie feedback, dúvidas ou pedidos de suporte para o Ultimate Streamer, o app de transmissão esportiva ao vivo para iPhone com YouTube e RTMP, placares, replays e overlays."
+ogType: "website"
+ogDescription: "Fale com o Ultimate Streamer para enviar feedback, dúvidas ou pedidos de suporte sobre transmissão esportiva ao vivo pelo iPhone."
+twitterDescription: "Fale com o Ultimate Streamer para enviar feedback, dúvidas ou pedidos de suporte sobre transmissão esportiva ao vivo pelo iPhone."
+appBanner: false
+lastmod: "2026-06-18"
+sourceLastmod: "2026-06-18"
+footerLabel: "Fale conosco"
+footer: false
+---
+{% extends "base.njk" %}
+
+{% block head_extra %}
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5.5rem 2rem 2rem;
+      line-height: 1.6;
+      background-color: #f3f4f5;
+      text-align: left;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container input,
+    .container textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .container button {
+      background-color: #2f7cf6;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .container button:hover {
+      background-color: #1e64d1;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+
+
+<main>
+<div class="container">
+    <h1>Enviar feedback para o Ultimate Streamer</h1>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Replace with your Web3Forms access key -->
+      <input type="hidden" name="access_key" value="80cb3bab-72ae-453f-807c-1f4032e6a6cd">
+
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <input type="text" name="subject" placeholder="Assunto" required>
+      <textarea name="message" placeholder="Sua mensagem" required></textarea>
+
+      <button type="submit">Enviar feedback</button>
+    </form>
+  </div>
+</main>
+{% endblock %}
