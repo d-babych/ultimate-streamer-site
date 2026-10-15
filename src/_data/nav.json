@@ -1,0 +1,88 @@
+{
+  "groups": [
+    {
+      "label": "Sports",
+      "aria": "Sports pages",
+      "items": [
+        {
+          "href": "ultimate-frisbee-live-streaming.html",
+          "label": "Ultimate frisbee"
+        },
+        {
+          "href": "flag-football-live-streaming.html",
+          "label": "Flag Football"
+        },
+        {
+          "href": "basketball-live-streaming.html",
+          "label": "Basketball"
+        },
+        {
+          "href": "tennis-live-streaming.html",
+          "label": "Tennis"
+        },
+        {
+          "href": "padel-live-streaming.html",
+          "label": "Padel"
+        },
+        {
+          "href": "volleyball-live-streaming.html",
+          "label": "Volleyball"
+        },
+        {
+          "href": "badminton-live-streaming.html",
+          "label": "Badminton"
+        },
+        {
+          "href": "youth-sports-live-streaming.html",
+          "label": "Youth Sports"
+        }
+      ]
+    },
+    {
+      "label": "Features",
+      "aria": "Feature pages",
+      "items": [
+        {
+          "href": "instant-replays.html",
+          "label": "Instant Replays"
+        }
+      ]
+    },
+    {
+      "label": "Guides",
+      "aria": "Guides",
+      "items": [
+        {
+          "href": "how-to-start-a-sports-live-stream-in-3-minutes.html",
+          "label": "Start a sports live stream"
+        },
+        {
+          "href": "how-to-enable-youtube-channel-for-live-streaming.html",
+          "label": "Enable YouTube Live"
+        },
+        {
+          "href": "how-to-redeem-app-store-offer-code-on-iphone.html",
+          "label": "Redeem an App Store offer code"
+        }
+      ]
+    },
+    {
+      "label": "Blog",
+      "aria": "Blog articles",
+      "items": [
+        {
+          "href": "make-your-team-visible-online.html",
+          "label": "Make your team visible online"
+        },
+        {
+          "href": "handheld-sports-streaming-iphone.html",
+          "label": "Streaming by hand"
+        },
+        {
+          "href": "best-sports-live-streaming-apps-with-scoreboard-overlays.html",
+          "label": "Best apps with scoreboard overlays"
+        }
+      ]
+    }
+  ]
+}

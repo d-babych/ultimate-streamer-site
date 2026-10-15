@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "partials/head.njk" %}
+{%- block head_extra %}{% endblock %}
+</head>
+<body>
+  {% include "partials/nav.njk" %}
+{% block content %}{% endblock %}
+  {%- if footer != false %}
+  {% include "partials/footer.njk" %}
+  {%- endif %}
+  <script src="/navigation.js" defer></script>
+</body>
+</html>

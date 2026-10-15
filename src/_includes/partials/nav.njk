@@ -1,0 +1,31 @@
+<nav class="page-nav" aria-label="Primary" data-site-nav>
+    <div class="page-nav__inner">
+      <a class="page-nav__brand" href="/" aria-label="{{ site.name }} home">
+        <img class="page-nav__icon" src="/icon-180.png" alt="{{ site.name }} app icon" width="32" height="32" loading="eager" />
+        <span class="page-nav__name">{{ site.name }}</span>
+      </a>
+
+      <button class="page-nav__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+        <span class="page-nav__toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <div class="page-nav__menu" id="primary-navigation">
+        <ul class="page-nav__links">
+          {%- for group in nav.groups %}
+          <li class="page-nav__item">
+            <button class="page-nav__root" type="button" aria-expanded="false" data-nav-root>{{ group.label }}</button>
+            <ul class="page-nav__submenu" aria-label="{{ group.aria }}">
+              {%- for item in group.items %}
+              <li><a href="/{{ item.href }}">{{ item.label }}</a></li>
+              {%- endfor %}
+            </ul>
+          </li>
+          {%- endfor %}
+        </ul>
+
+        <a class="page-nav__store" href="{{ site.appStoreUrl }}" rel="noopener" aria-label="Download {{ site.name }} on the App Store">
+          <img src="/assets/app-store-badge@3x.png" alt="Download on the App Store" width="121" height="40" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </nav>
