@@ -1,0 +1,30 @@
+{
+  "sections": [
+    {
+      "title": "Primary Pages",
+      "pages": [
+        {"key": "index", "label": "Ultimate Streamer home", "description": "Product overview, feature summary, pricing, examples and FAQ."},
+        {"key": "instant-replays", "label": "Instant Replays", "description": "Save big moments during a live game, replay them in the broadcast, then export and share highlights after the match."},
+        {"key": "basketball-live-streaming", "label": "Basketball live streaming", "description": "Basketball streaming from iPhone with scoreboard overlay, game clock, quarters, replays, sponsor ads and remote score control."},
+        {"key": "ultimate-frisbee-live-streaming", "label": "Ultimate frisbee live streaming", "description": "Ultimate frisbee streaming from iPhone with scoreboard overlay, game timer, replays, sponsor ads and tournament-friendly workflows."},
+        {"key": "flag-football-live-streaming", "label": "Flag football live streaming", "description": "Flag football streaming from iPhone with scoreboard overlay, timer, replays, sponsor ads and remote score control."},
+        {"key": "tennis-live-streaming", "label": "Tennis live streaming", "description": "Tennis streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control."},
+        {"key": "padel-live-streaming", "label": "Padel live streaming", "description": "Padel streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control."},
+        {"key": "volleyball-live-streaming", "label": "Volleyball live streaming", "description": "Volleyball streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control."},
+        {"key": "badminton-live-streaming", "label": "Badminton live streaming", "description": "Badminton streaming from iPhone with scoreboard overlay, match timer, replays, sponsor ads and remote score control."},
+        {"key": "youth-sports-live-streaming", "label": "Youth sports live streaming", "description": "Youth sports streaming for parents, schools, clubs and youth tournaments."}
+      ]
+    },
+    {
+      "title": "Guides",
+      "pages": [
+        {"key": "how-to-start-a-sports-live-stream-in-3-minutes", "label": "How to start a sports live stream in 3 minutes"},
+        {"key": "how-to-enable-youtube-channel-for-live-streaming", "label": "How to enable YouTube Live streaming"},
+        {"key": "best-sports-live-streaming-apps-with-scoreboard-overlays", "label": "Best sports live streaming apps with scoreboard overlays"},
+        {"key": "handheld-sports-streaming-iphone", "label": "Handheld sports streaming from iPhone"},
+        {"key": "make-your-team-visible-online", "label": "Make your team visible online"},
+        {"key": "how-to-redeem-app-store-offer-code-on-iphone", "label": "How to redeem an App Store offer code on iPhone"}
+      ]
+    }
+  ]
+}

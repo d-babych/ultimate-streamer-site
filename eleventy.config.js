@@ -1,4 +1,4 @@
-import { alternates, format, pageRef } from "./lib/lang.js";
+import { alternates, format, pageIn, pageRef } from "./lib/lang.js";
 import { paragraphs, toScript } from "./lib/schema.js";
 
 export default function (eleventyConfig) {
@@ -13,6 +13,7 @@ export default function (eleventyConfig) {
   // Language helpers (see lib/lang.js)
   eleventyConfig.addFilter("pageRef", pageRef);
   eleventyConfig.addFilter("alternates", alternates);
+  eleventyConfig.addFilter("pageIn", pageIn);
   eleventyConfig.addFilter("fmt", format);
 
   // Pages that have a lastmod date, home page first, then newest first.

@@ -25,7 +25,8 @@ npm run verify     # build + check
 | `src/_data/testimonials.json` | Customer quotes, referenced by id from pages |
 | `src/_data/eleventyComputed.js`, `lib/schema.js` | Build the JSON-LD blocks from a page's front matter |
 | `src/sitemap.njk` | Generates `sitemap.xml` (with hreflang alternates) from the pages' `lastmod` |
-| `public/` | Copied to the site root as is: `styles.css`, `navigation.js`, `site.js` (FAQ accordion, scroll reveal, hero typing), icons, `assets/`, `CNAME`, `robots.txt`, `llms.txt` |
+| `src/llms.njk`, `src/_data/llms.json` | Generate `llms.txt` for AI crawlers. The English page list (keys, link texts, descriptions) is in `llms.json`; a section per language is built automatically from the translated pages' `ogTitle` and `description`. A new page that should be listed: add its key to `llms.json` |
+| `public/` | Copied to the site root as is: `styles.css`, `navigation.js`, `site.js` (FAQ accordion, scroll reveal, hero typing), icons, `assets/`, `CNAME`, `robots.txt` |
 | `scripts/check.mjs`, `scripts/glossary.json` | `npm run check`: quality checks of the built site |
 
 Adding a page: copy an existing `src/en/<slug>.njk`, change `title`, `description`, `lastmod` (the URL is `/<slug>.html`, taken

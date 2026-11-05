@@ -5,7 +5,7 @@
 //   - a page in one language linking to another language's version of a page that exists in its own language
 //   - hreflang problems: missing self-link / x-default, an alternate that does not exist or does not link back,
 //     <html lang> or canonical not matching the page
-//   - a sitemap that does not list exactly the built pages
+//   - a sitemap that does not list exactly the built pages, or an llms.txt linking to a page that was not built
 //   - invalid JSON-LD, or an inLanguage that does not match the page
 //   - a term listed in scripts/glossary.json as forbidden (e.g. "Kiev")
 //   - a translated page without an English original
@@ -167,6 +167,17 @@ for (const [url, page] of pages) {
     if (!locs.has(site.url + url)) error("sitemap.xml", `does not list ${url}`);
   }
   for (const loc of locs) if (!pages.has(loc.slice(site.url.length))) error("sitemap.xml", `lists ${loc}, which was not built`);
+}
+
+// ---- 3b. llms.txt only links to pages that exist
+{
+  const llms = readFileSync(path.join(siteDir, "llms.txt"), "utf8");
+  const linked = new Set([...llms.matchAll(/\((https:\/\/[^)\s]+)\)|(?:^|\s)(https:\/\/\S+)/gm)].map((m) => m[1] || m[2]));
+  for (const u of linked) {
+    if (!u.startsWith(site.url + "/")) continue;
+    const rel = u.slice(site.url.length);
+    if (!pages.has(rel) && !["/sitemap.xml", "/robots.txt"].includes(rel)) error("llms.txt", `links to ${u}, which was not built`);
+  }
 }
 
 // ---- 4. JSON-LD

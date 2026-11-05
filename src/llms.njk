@@ -1,0 +1,51 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.name }}
+
+Ultimate Streamer is an iPhone sports live streaming app for YouTube and RTMP broadcasts. It helps teams, clubs, schools, parents and tournament organizers stream live games with scoreboard overlays, game timers, instant replays, sponsor ads, team branding, remote score control, Picture-in-Picture and adaptive bitrate.
+{% for section in llms.sections %}
+## {{ section.title }}
+
+{% for item in section.pages -%}
+{%- set page = collections.all | pageIn(item.key, "en", true) -%}
+- [{{ item.label | safe }}]({{ site.url }}{{ page.url }}){% if item.description %}: {{ item.description | safe }}{% endif %}
+{% endfor -%}
+{% endfor %}
+## App Facts
+
+- Platform: iPhone / iOS
+- App Store ID: {{ site.appStoreId }}
+- Streaming destinations: YouTube Live and RTMP-compatible platforms
+- Core features: scoreboard overlays, game timer, sport presets, instant replays, sponsor video ads, team logos, remote score control, Picture-in-Picture, adaptive bitrate and HD 1080 output
+- Common use cases: youth sports, amateur sports, school sports, club games, tournaments, basketball, ultimate frisbee, flag football, tennis, padel, volleyball and badminton
+
+## Languages
+
+The whole site is available in several languages. Every page exists in each language under the same file name; translated pages live under a language prefix and are linked to each other with hreflang.
+
+{% for code, lang in languages -%}
+{%- set home = collections.all | pageIn("index", code) -%}
+{%- if home -%}
+- {{ lang.native | safe }} ({{ lang.hreflang }}): {{ site.url }}{{ home.url }}
+{% endif -%}
+{%- endfor -%}
+{%- for code, lang in languages -%}
+{%- if not lang.default and (collections.all | pageIn("index", code)) %}
+## {{ lang.native | safe }} ({{ lang.hreflang }})
+
+{% for section in llms.sections -%}
+{% for item in section.pages -%}
+{%- set page = collections.all | pageIn(item.key, code) -%}
+{%- if page -%}
+- [{{ page.title | safe }}]({{ site.url }}{{ page.url }}): {{ page.description | safe }}
+{% endif -%}
+{% endfor -%}
+{% endfor -%}
+{%- endif -%}
+{%- endfor %}
+## Site Metadata
+
+- Sitemap: {{ site.url }}/sitemap.xml
+- Robots: {{ site.url }}/robots.txt
