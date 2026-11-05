@@ -26,6 +26,7 @@ npm run verify     # build + check
 | `src/_data/eleventyComputed.js`, `lib/schema.js` | Build the JSON-LD blocks from a page's front matter |
 | `src/sitemap.njk` | Generates `sitemap.xml` (with hreflang alternates) from the pages' `lastmod` |
 | `src/llms.njk`, `src/_data/llms.json` | Generate `llms.txt` for AI crawlers. The English page list (keys, link texts, descriptions) is in `llms.json`; a section per language is built automatically from the translated pages' `ogTitle` and `description`. A new page that should be listed: add its key to `llms.json` |
+| `lib/appstore.js`, `appStoreTracking` in `src/_data/site.json` | A build transform adds campaign tracking to every link to our App Store page (`pt`, `ct`, `mt`, `data-app-store-placement`, `data-site-language`) and `site.js` sends a GA4 `app_store_click` event on click. A new page needs its key in `appStoreTracking.pageKeys`, a new button class its placement in `placementClasses`. Rules and GA4 setup: [`docs/app-store-links.md`](docs/app-store-links.md) |
 | `public/` | Copied to the site root as is: `styles.css`, `navigation.js`, `site.js` (FAQ accordion, scroll reveal, hero typing), icons, `assets/`, `CNAME`, `robots.txt` |
 | `scripts/check.mjs`, `scripts/glossary.json` | `npm run check`: quality checks of the built site |
 

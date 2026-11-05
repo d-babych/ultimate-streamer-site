@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { tagAppStoreLinks } from "./lib/appstore.js";
 import { alternates, format, pageIn, pageRef } from "./lib/lang.js";
 import { paragraphs, toScript } from "./lib/schema.js";
 
@@ -15,6 +17,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("alternates", alternates);
   eleventyConfig.addFilter("pageIn", pageIn);
   eleventyConfig.addFilter("fmt", format);
+
+  // Campaign tracking of every link to our App Store page (see lib/appstore.js, docs/app-store-links.md)
+  const site = JSON.parse(readFileSync(new URL("./src/_data/site.json", import.meta.url), "utf8"));
+  eleventyConfig.addTransform("appStoreLinks", function (content) {
+    return this.page.outputPath?.endsWith(".html") ? tagAppStoreLinks(content, site, this.page) : content;
+  });
 
   // Pages that have a lastmod date, home page first, then newest first.
   eleventyConfig.addFilter("sortSitemap", (pages) =>

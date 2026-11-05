@@ -100,7 +100,37 @@
     })();
   }
 
+  // GA4 event for every click on a link to our App Store page. The build marks these links with
+  // data-app-store-placement (hero | bottom-cta | nav | inline) and data-site-language (en | uk | ...);
+  // the campaign token (ct) is read from the link's URL. See docs/app-store-links.md.
+  function initAppStoreClicks() {
+    const send = (event) => {
+      const link = event.target instanceof Element && event.target.closest('a[data-app-store-placement]');
+      if (!link || typeof window.gtag !== 'function') return;
+      let campaign = '';
+      try {
+        campaign = new URL(link.href).searchParams.get('ct') || '';
+      } catch (e) {
+        // an unparsable URL is sent without a campaign
+      }
+      window.gtag('event', 'app_store_click', {
+        placement: link.getAttribute('data-app-store-placement'),
+        store_campaign: campaign,
+        site_language: link.getAttribute('data-site-language'),
+        // the page is left right after the click: send the hit even if the page unloads
+        transport_type: 'beacon',
+      });
+    };
+
+    document.addEventListener('click', send);
+    // a middle click opens the link in a new tab and fires auxclick instead of click
+    document.addEventListener('auxclick', (event) => {
+      if (event.button === 1) send(event);
+    });
+  }
+
   initReveal();
   initFaq();
   initTyping();
+  initAppStoreClicks();
 })();

@@ -6,6 +6,8 @@
 //   - hreflang problems: missing self-link / x-default, an alternate that does not exist or does not link back,
 //     <html lang> or canonical not matching the page
 //   - a sitemap that does not list exactly the built pages, or an llms.txt linking to a page that was not built
+//   - a link to our App Store page without the right pt / ct / mt / data-app-store-placement / data-site-language,
+//     or a Smart App Banner (apple-itunes-app) that is missing, has wrong app-id / pt / ct, or is present where appBanner is false
 //   - invalid JSON-LD, or an inLanguage that does not match the page
 //   - a term listed in scripts/glossary.json as forbidden (e.g. "Kiev")
 //   - a translated page without an English original
@@ -19,6 +21,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import * as cheerio from "cheerio";
 import matter from "gray-matter";
+import { campaignOf, ownAppUrl } from "../lib/appstore.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const siteDir = path.join(root, "_site");
@@ -177,6 +180,57 @@ for (const [url, page] of pages) {
     if (!u.startsWith(site.url + "/")) continue;
     const rel = u.slice(site.url.length);
     if (!pages.has(rel) && !["/sitemap.xml", "/robots.txt"].includes(rel)) error("llms.txt", `links to ${u}, which was not built`);
+  }
+}
+
+// ---- 3c. App Store links and Smart App Banner carry the campaign tracking (docs/app-store-links.md)
+{
+  const tr = site.appStoreTracking;
+  const ctPattern = /^[a-z0-9-]+$/;
+  const keys = Object.values(tr.pageKeys);
+  if (new Set(keys).size !== keys.length) error("site.json", "appStoreTracking.pageKeys has duplicate keys");
+  for (const route of routes.values()) {
+    const name = path.basename(route.file, ".njk");
+    if (!tr.pageKeys[name]) { error(route.url, `${route.file} has no key in site.json appStoreTracking.pageKeys`); continue; }
+    const ct = campaignOf(tr, route.lang, name);
+    if (ct.length > 30 || !ctPattern.test(ct)) error(route.url, `campaign token "${ct}" must be up to 30 characters: lowercase letters, digits, hyphens`);
+  }
+  for (const [url, page] of pages) {
+    const { $, route } = page;
+    if (!route) continue;
+    const name = path.basename(route.file, ".njk");
+    const expectedCt = tr.pageKeys[name] && campaignOf(tr, route.lang, name);
+    $("a[href]").each((_, el) => {
+      const link = ownAppUrl(el.attribs.href, site.appStoreId);
+      if (!link) return;
+      const where = `App Store link ${el.attribs.href}`;
+      const ct = link.searchParams.get("ct");
+      if (link.searchParams.get("pt") !== tr.providerToken) error(url, `${where}: pt should be ${tr.providerToken}`);
+      if (link.searchParams.get("mt") !== tr.mediaType) error(url, `${where}: mt should be ${tr.mediaType}`);
+      if (!ct || ct.length > 30 || !ctPattern.test(ct)) error(url, `${where}: invalid ct "${ct}"`);
+      else if (ct !== expectedCt) error(url, `${where}: ct is "${ct}", expected "${expectedCt}"`);
+      const placement = el.attribs["data-app-store-placement"];
+      if (!tr.placements.includes(placement)) error(url, `${where}: data-app-store-placement "${placement}" is not one of ${tr.placements.join(", ")}`);
+      const siteLang = el.attribs["data-site-language"];
+      if (!siteLang) error(url, `${where}: no data-site-language`);
+      else if (!languages[siteLang]) error(url, `${where}: data-site-language "${siteLang}" is not a language of languages.json`);
+      else {
+        if (siteLang !== route.lang) error(url, `${where}: data-site-language is "${siteLang}", the page is ${route.lang}`);
+        const ctLang = ct && ct.match(/^site-([a-z]{2,3})-/)?.[1];
+        if (siteLang !== DEFAULT_LANG && ctLang !== siteLang) error(url, `${where}: language "${siteLang}" does not match ct "${ct}"`);
+        if (siteLang === DEFAULT_LANG && ctLang && languages[ctLang]) error(url, `${where}: ct "${ct}" has a language segment but data-site-language is "${siteLang}"`);
+      }
+    });
+    // Smart App Banner: on every page that has it enabled, nowhere else
+    const banner = $('meta[name="apple-itunes-app"]');
+    if (route.fm.appBanner === false) {
+      if (banner.length) error(url, "has a Smart App Banner although appBanner is false");
+    } else {
+      const content = banner.attr("content") || "";
+      const want = [`app-id=${site.appStoreId}`, `affiliate-data=pt=${tr.providerToken}&ct=${tr.bannerCampaign}`];
+      if (banner.length !== 1) error(url, `expected one apple-itunes-app meta tag, found ${banner.length}`);
+      else for (const part of want) if (!content.includes(part)) error(url, `apple-itunes-app does not contain "${part}" (content: "${content}")`);
+    }
   }
 }
 

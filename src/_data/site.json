@@ -4,6 +4,40 @@
   "gaId": "G-5B189B5SZW",
   "appStoreId": "6745222525",
   "appStoreUrl": "https://apps.apple.com/app/id6745222525",
+  "appStoreTracking": {
+    "providerToken": "2294460",
+    "mediaType": "8",
+    "bannerCampaign": "site-smart-app-banner",
+    "pageKeys": {
+      "index": "home",
+      "tennis-live-streaming": "tennis",
+      "basketball-live-streaming": "basketball",
+      "volleyball-live-streaming": "volleyball",
+      "badminton-live-streaming": "badminton",
+      "padel-live-streaming": "padel",
+      "flag-football-live-streaming": "flag-football",
+      "ultimate-frisbee-live-streaming": "ultimate-frisbee",
+      "instant-replays": "replays",
+      "youth-sports-live-streaming": "youth",
+      "handheld-sports-streaming-iphone": "handheld",
+      "how-to-redeem-app-store-offer-code-on-iphone": "redeem",
+      "how-to-enable-youtube-channel-for-live-streaming": "youtube-setup",
+      "how-to-start-a-sports-live-stream-in-3-minutes": "quickstart",
+      "make-your-team-visible-online": "team-visible",
+      "best-sports-live-streaming-apps-with-scoreboard-overlays": "best-apps",
+      "feedback": "feedback",
+      "privacy-policy": "privacy",
+      "terms-of-use": "terms"
+    },
+    "placements": ["hero", "bottom-cta", "nav", "inline"],
+    "placementClasses": {
+      "app-store-button": "hero",
+      "bball-hero__cta": "hero",
+      "replays-hero__cta": "hero",
+      "bball-cta__link": "bottom-cta",
+      "page-nav__store": "nav"
+    }
+  },
   "cssVersion": "20260825",
   "ogImage": "/assets/meta-og-image.jpg",
   "author": {

@@ -50,7 +50,7 @@ gtag('config', '{{ site.gaId }}');
 <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
 {%- if appBanner != false %}
 
-<meta name="apple-itunes-app" content="app-id={{ site.appStoreId }}" />
+<meta name="apple-itunes-app" content="app-id={{ site.appStoreId }}, affiliate-data=pt={{ site.appStoreTracking.providerToken }}&amp;ct={{ site.appStoreTracking.bannerCampaign }}" />
 {%- endif %}
 
 <link href="/styles.css?v={{ site.cssVersion }}" rel="stylesheet"/>
